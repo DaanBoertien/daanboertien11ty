@@ -5,33 +5,45 @@ backend:
 
 media_folder: assets/img/uploads/
 
+# collections:
+#   - name: "settings"
+#     label: "Site Settings"
+#     files:  # Path to your settings file
+#       file: "_data/sitesettings.yml"
+#       fields:
+# - label: "Colors"
+#   name: "colors"
+#   widget: "object"
+#   fields:
+#     - { label: "Primary Color", name: "clr_primary", widget: "color" }
+#     - { label: "Secondary Color", name: "clr_secondary", widget: "color" }
+#     - {
+#         label: "Secondary Hover Color",
+#         name: "clr_secondary_hover",
+#         widget: "color",
+#       }
+#     - { label: "Hero Text Color", name: "clr_hero_text", widget: "color" }
+#     - { label: "Button Color", name: "clr_btn", widget: "color" }
+#     - { label: "Background Color", name: "bg_color", widget: "color" }
+#     - {
+#         label: "Concerts Background Color",
+#         name: "clr_bg_concerts",
+#         widget: "color",
+#       }
+#     - { label: "Text Color", name: "text_color", widget: "color" }
+#     - {
+#         label: "Hamburger Background Color",
+#         name: "hamburger_bg_color",
+#         widget: "color",
+#       }
 collections:
   - name: "settings"
     label: "Site Settings"
-    file: "_data/sitesettings.yml" # Path to your settings file
-    fields:
-      - label: "Colors"
-        name: "colors"
-        widget: "object"
+    files:
+      - file: "_data/sitesettings.yml"
+        label: "Settings1"
+        name: "settings1"
         fields:
-          - { label: "Primary Color", name: "clr_primary", widget: "color" }
-          - { label: "Secondary Color", name: "clr_secondary", widget: "color" }
-          - {
-              label: "Secondary Hover Color",
-              name: "clr_secondary_hover",
-              widget: "color",
-            }
-          - { label: "Hero Text Color", name: "clr_hero_text", widget: "color" }
-          - { label: "Button Color", name: "clr_btn", widget: "color" }
-          - { label: "Background Color", name: "bg_color", widget: "color" }
-          - {
-              label: "Concerts Background Color",
-              name: "clr_bg_concerts",
-              widget: "color",
-            }
-          - { label: "Text Color", name: "text_color", widget: "color" }
-          - {
-              label: "Hamburger Background Color",
-              name: "hamburger_bg_color",
-              widget: "color",
-            }
+          - label: "Test"
+            name: "test"
+            widget: "string"
