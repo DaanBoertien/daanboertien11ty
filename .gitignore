@@ -1,2 +1,7 @@
-"node_modules/" 
-"_site/" 
+node_modules/
+.env
+dist/
+.cache/
+.DS_Store
+_site/
+.sass-cache
