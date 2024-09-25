@@ -54,15 +54,7 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-135437368-1"
     ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-135437368-1");
-    </script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     {% if lang == "nl" %} {% include "nav.njk" %} {% else %} {% include
@@ -88,5 +80,16 @@
     <script src="{{ '/assets/js/hamburger.js' | url }}"></script>
     <script src="{{ '/assets/js/animations.js' | url }}"></script>
     <script src="{{ '/assets/js/media.js' | url }}"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
