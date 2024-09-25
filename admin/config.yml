@@ -1,6 +1,7 @@
 backend:
   name: github
   branch: main
+  repo: DaanBoertien/daanboertien11ty
 
 media_folder: assets/img/uploads/
 
