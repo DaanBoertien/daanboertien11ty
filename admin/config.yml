@@ -1,0 +1,37 @@
+backend:
+  name: github
+  branch: main
+  repo: DaanBoertien/daanboertien11ty
+
+media_folder: assets/img/uploads/
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    file: "src/_data/site-settings.yml" # Path to your settings file
+    fields:
+      - label: "Colors"
+        name: "colors"
+        widget: "object"
+        fields:
+          - { label: "Primary Color", name: "clr_primary", widget: "color" }
+          - { label: "Secondary Color", name: "clr_secondary", widget: "color" }
+          - {
+              label: "Secondary Hover Color",
+              name: "clr_secondary_hover",
+              widget: "color",
+            }
+          - { label: "Hero Text Color", name: "clr_hero_text", widget: "color" }
+          - { label: "Button Color", name: "clr_btn", widget: "color" }
+          - { label: "Background Color", name: "bg_color", widget: "color" }
+          - {
+              label: "Concerts Background Color",
+              name: "clr_bg_concerts",
+              widget: "color",
+            }
+          - { label: "Text Color", name: "text_color", widget: "color" }
+          - {
+              label: "Hamburger Background Color",
+              name: "hamburger_bg_color",
+              widget: "color",
+            }

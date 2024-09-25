@@ -12,7 +12,6 @@ colors:
   clr_bg_concerts: aliceblue;
   text_color: "rgba(0, 0, 0, 0.85)" # Formerly --text-color
   hamburger_bg_color: white;
-  gradient: "linear-gradient(212deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 93%)"
 
 hero:
   focus:
