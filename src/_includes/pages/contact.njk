@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 class="page-title fadeIn">{{ contact["title_" + lang] }}</h1>
+  <p class="contact-invitation fadeIn">
+    {{ contact["information_" + lang] }}
+  </p>
+
+  <form
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    action="/{{
+      lang
+    }}/{% if lang == 'en' %}success{% else %}succes{% endif %}/"
+    class="fadeIn"
+  >
+    <label for="name">{{ contact["naam_" + lang] }}</label>
+    <input type="text" id="name" name="name" autofocus />
+    <label for="email">{{ contact["email_" + lang] }}</label>
+    <input type="email" id="email" name="email" />
+    <label for="message">{{ contact["message_" + lang] }}</label>
+    <textarea rows="4" cols="50" name="message"></textarea>
+    <input type="submit" value="{{ contact["send_" + lang] }}" />
+  </form>
+</div>

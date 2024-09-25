@@ -1,0 +1,13 @@
+<div class="page-bio container">
+  <div class="container-without-padding">
+    <h1 class="page-title fadeIn">
+      {{ legal["title_" + lang] }}
+    </h1>
+
+    <div class="">
+      <div class="biografie fadeIn">
+        {{ legal["content_" + lang] | fadeInMarkdown | safe }}
+      </div>
+    </div>
+  </div>
+</div>

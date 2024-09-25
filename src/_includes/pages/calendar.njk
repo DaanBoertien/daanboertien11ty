@@ -1,0 +1,98 @@
+<section class="concerts-page">
+  <div class="container">
+    <h1 class="page-title fadeIn">{{ concerts["title_" + lang] }}</h1>
+
+    {# Future Concerts #}
+    <h2>{{ concerts["upcoming_title_" + lang] }}</h2>
+    {% set future_concerts = collections.concerts | futureConcerts %} {% if
+    future_concerts.length > 0 %} {% for concert in future_concerts %}
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          {{ concert.data.date | formatDate('d MMMM yyyy', lang) }}
+          {% if concert.data.time %} |
+          {{ concert.data.time | formatTime }}
+          {% endif %}
+        </p>
+        <p class="concert-hall">
+          {{ concert.data["hall_" + lang] }}
+        </p>
+        <p class="concert-place">
+          {{ concert.data["place_" + lang] }}
+        </p>
+        <p class="concert-repertoire">
+          {{ concert.data["repertoire_" + lang] }}
+        </p>
+        <p class="concert-musicians">
+          {{ concert.data["musicians_" + lang] | markdown | safe }}
+        </p>
+        {% if concert.data.organizer_url %}
+        <p class="margin-top">
+          <a
+            href="{{ concert.data.organizer_url }}"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            {{ concerts["more_info_" + lang] | safe }}
+          </a>
+        </p>
+        {% endif %} {% if concert.data.cancelled %}
+        <p class="concert-cancelled">
+          {{ concerts["cancelled_" + lang] }}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %} {% else %}
+    <p class="no-concerts">{{ concerts["no_upcoming_" + lang] }}</p>
+    {% endif %}
+
+    <h1 class="page-title fadeIn">
+      {{ concerts["archive_title_" + lang] }}
+    </h1>
+
+    {# Past Concerts (Archive) #} {% set past_concerts = collections.concerts |
+    pastConcerts %} {% if past_concerts.length > 0 %} {% for concert in
+    past_concerts %}
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          {{ concert.data.date | formatDate('d MMMM yyyy', lang) }}
+          {% if concert.data.time %} |
+          {{ concert.data.time | formatTime }}
+          {% endif %}
+        </p>
+        <p class="concert-hall">
+          {{ concert.data["hall_" + lang] }}
+        </p>
+        <p class="concert-place">
+          {{ concert.data["place_" + lang] }}
+        </p>
+        <p class="concert-repertoire">
+          {{ concert.data["repertoire_" + lang] }}
+        </p>
+        <p class="concert-musicians">
+          {{ concert.data["musicians_" + lang] | markdown | safe }}
+        </p>
+        {% if concert.data.organizer_url %}
+        <p class="margin-top">
+          <a
+            href="{{ concert.data.organizer_url }}"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            {{ concerts["more_info_" + lang] }}
+          </a>
+        </p>
+        {% endif %} {% if concert.data.cancelled %}
+        <p class="concert-cancelled">
+          {{ concerts["cancelled_" + lang] }}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %} {% else %}
+    <p class="no-concerts">{{ concerts["no_past_" + lang] }}</p>
+    {% endif %}
+  </div>
+</section>

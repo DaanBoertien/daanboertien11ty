@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Home
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+          :root {
+            --clr-primary: rgb(190, 146, 64);
+            --clr-secondary: rgba(99, 136, 161, 1);
+            --clr-secondary-hover: rgba(99, 136, 161, 0.85);
+            --clr-btn: white;
+            --bg-color: white;
+            --bg-color-rgb: ;
+
+            --clr-bg-concerts: aliceblue;;
+            --text-color: rgba(0, 0, 0, 0.85);
+            --hamburger-bg-color:  white;;
+            --clr-hero-text:  white;;
+            --gradient: linear-gradient(212deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 93%);
+            --primary-font: Montserrat;
+            --secondary-font: Playfair Display;
+            --container-width: 1200px;
+            --section-padding: 2em;
+            --boxshadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            --border-radius: 50px;
+            --hero-photo-focus: center;
+            --hero-text-alignment: 70%;
+            --hero-arrow: false;
+            --border-size: 10px;;
+            --border-color: var(--clr-secondary);
+
+
+          }
+
+          body {
+          font-family: var(--primary-font);
+          }
+
+  /* FOR VERSION 2 */
+      /* .gradient-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(
+      to bottom,
+      rgba(var(--bg-color-rgb), 0) 0%,
+      rgba(var(--bg-color-rgb), 0.03) 8%,
+      rgba(var(--bg-color-rgb), 0.1) 15.4%,
+      rgba(var(--bg-color-rgb), 0.15) 22.1%,
+      rgba(var(--bg-color-rgb), 0.2) 28.4%,
+      rgba(var(--bg-color-rgb), 0.3) 34.4%,
+      rgba(var(--bg-color-rgb), 0.4) 40.1%,
+      rgba(var(--bg-color-rgb), 0.5) 45.7%,
+      rgba(var(--bg-color-rgb), 0.55) 51.3%,
+      rgba(var(--bg-color-rgb), 0.6) 57%,
+      rgba(var(--bg-color-rgb), 0.7) 63%,
+      rgba(var(--bg-color-rgb), 0.8) 69.2%,
+      rgba(var(--bg-color-rgb), 0.85) 76%,
+      rgba(var(--bg-color-rgb), 0.9) 83.3%,
+      rgba(var(--bg-color-rgb), 0.95) 91.2%,
+      rgba(var(--bg-color-rgb), 1) 100%
+      );
+      z-index: 1;
+      pointer-events: none;
+    } */
+</style>
+
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-135437368-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-135437368-1");
+    </script>
+  </head>
+  <body>
+     <nav>
+    <ul class="nl">
+       
+           <li class="fadeInNav">
+               <a href="/en/"   
+               
+                >Home</a>
+           </li>
+       
+           <li class="fadeInNav">
+               <a href="/en/biography/"   
+               
+                >Biography</a>
+           </li>
+       
+           <li class="fadeInNav">
+               <a href="/en/calendar/"   
+               
+                >Calendar</a>
+           </li>
+       
+           <li class="fadeInNav">
+               <a href="/en/media/"   
+               
+                >Media</a>
+           </li>
+       
+           <li class="fadeInNav">
+               <a href="/en/contact/"   
+               
+                >Contact</a>
+           </li>
+       
+       <li class="fadeInNav"><a href="" class="">NL</a>  <a href="" class="current">EN</a></li>
+       <li class="fadeInNav"><a href="https://www.instagram.com/daanboertien.pianist/" target="_blank"><i class="fa-brands fa-instagram"></i></a>  <a href="https://www.facebook.com/daan.boertien/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></li>
+       
+   </ul>
+   
+</nav>
+<div class="container-without-padding">
+<div class="hamburger-container">
+   <button class="hamburger hamburger--spin" type="button">
+       <span class="hamburger-box"></span>
+         <span class="hamburger-inner hamburger-black"></span>
+       </span>
+     </button>
+</div>
+</div>
+
+
+<div class="container navcontainer">
+    <div class="navdesktop glass">
+      <ul class="nl">
+        
+        <li class="fadeInTitle">
+          <a
+            href="/en/"
+            class="navblack "
+            >Home</a
+          >
+        </li>
+        
+        <li class="fadeInTitle">
+          <a
+            href="/en/biography/"
+            class="navblack "
+            >Biography</a
+          >
+        </li>
+        
+        <li class="fadeInTitle">
+          <a
+            href="/en/calendar/"
+            class="navblack "
+            >Calendar</a
+          >
+        </li>
+        
+        <li class="fadeInTitle">
+          <a
+            href="/en/media/"
+            class="navblack "
+            >Media</a
+          >
+        </li>
+        
+        <li class="fadeInTitle">
+          <a
+            href="/en/contact/"
+            class="navblack "
+            >Contact</a
+          >
+        </li>
+        
+        <li class="fadeInTitle">
+          <a href="" class="navblack">NL</a>
+          <a href="" class="current">EN</a>
+        </li>
+        <li class="fadeInTitle">
+          <a
+            href="https://www.instagram.com/daanboertien.pianist/"
+            target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.facebook.com/daan.boertien/" target="_blank"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </div> 
+
+    <main>
+      
+<section class="concerts-page">
+  <div class="container">
+    <h1 class="page-title fadeIn">Debug Concerts</h1>
+
+    <!-- Future Concerts Section -->
+    <h2>Future Concerts</h2>
+    <ul>
+      
+      <li>
+        October 3, 2024 |
+        15:00 -
+        Liedstadt Hamburg
+      </li>
+      
+      <li>
+        October 8, 2024 |
+        20:15 -
+        Concertgebouw
+      </li>
+      
+      <li>
+        October 18, 2024 |
+        20:15 -
+        Geertekerk
+      </li>
+      
+      <li>
+        October 19, 2024 |
+        20:15 -
+        Geertekerk
+      </li>
+      
+      <li>
+        October 20, 2024 |
+        15:00 -
+        Geertekerk
+      </li>
+      
+      <li>
+        October 25, 2024 |
+        20:15 -
+        De Leidse Salon
+      </li>
+      
+      <li>
+        November 3, 2024 |
+        14:00 -
+        De Hallen
+      </li>
+      
+      <li>
+        November 8, 2024 |
+        20:00 -
+        Koninklijk Conservatorium
+      </li>
+      
+      <li>
+        November 10, 2024 |
+        21:00 -
+        Orpheus
+      </li>
+      
+      <li>
+        November 16, 2024 |
+        21:00 -
+        Kapel Opveld
+      </li>
+      
+      <li>
+        November 17, 2024 |
+        15:30 -
+        De Schutse
+      </li>
+      
+      <li>
+        November 24, 2024 |
+        16:00 -
+        Concert aan Zee
+      </li>
+      
+      <li>
+        December 14, 2024 |
+        20:00 -
+        Tonalisaal
+      </li>
+      
+      <li>
+        December 22, 2024 |
+        13:00 -
+        De Vest
+      </li>
+      
+      <li>
+        December 22, 2024 |
+        15:30 -
+        Slotzolder
+      </li>
+      
+    </ul>
+
+    <h2>Aankomende concerten</h2>
+    <ul>
+      
+      <li>
+        3 Oktober, 2024 |
+        15:00 -
+        Liedstadt Hamburg
+      </li>
+      
+      <li>
+        8 Oktober, 2024 |
+        20:15 -
+        Concertgebouw
+      </li>
+      
+      <li>
+        18 Oktober, 2024 |
+        20:15 -
+        Geertekerk
+      </li>
+      
+      <li>
+        19 Oktober, 2024 |
+        20:15 -
+        Geertekerk
+      </li>
+      
+      <li>
+        20 Oktober, 2024 |
+        15:00 -
+        Geertekerk
+      </li>
+      
+      <li>
+        25 Oktober, 2024 |
+        20:15 -
+        De Leidse Salon
+      </li>
+      
+      <li>
+        3 November, 2024 |
+        14:00 -
+        De Hallen
+      </li>
+      
+      <li>
+        8 November, 2024 |
+        20:00 -
+        Koninklijk Conservatorium
+      </li>
+      
+      <li>
+        10 November, 2024 |
+        21:00 -
+        Orpheus
+      </li>
+      
+      <li>
+        16 November, 2024 |
+        21:00 -
+        Kapel Opveld
+      </li>
+      
+      <li>
+        17 November, 2024 |
+        15:30 -
+        De Schutse
+      </li>
+      
+      <li>
+        24 November, 2024 |
+        16:00 -
+        Concert aan Zee
+      </li>
+      
+      <li>
+        14 December, 2024 |
+        20:00 -
+        Tonalisaal
+      </li>
+      
+      <li>
+        22 December, 2024 |
+        13:00 -
+        De Vest
+      </li>
+      
+      <li>
+        22 December, 2024 |
+        15:30 -
+        Slotzolder
+      </li>
+      
+    </ul>
+
+    <!-- Past Concerts (Archive) Section -->
+    <h2>Past Concerts (Archive)</h2>
+    <ul>
+      
+      <li>
+        September 15 2024 -
+        Dutch Centre
+      </li>
+      
+      <li>
+        August 31 2024 -
+        Concertgebouw
+      </li>
+      
+      <li>
+        August 31 2024 -
+        Concertgebouw
+      </li>
+      
+      <li>
+        August 31 2024 -
+        Concertgebouw
+      </li>
+      
+      <li>
+        August 31 2024 -
+        Concertgebouw
+      </li>
+      
+      <li>
+        August 6 2024 -
+        Lindegrachtconcert
+      </li>
+      
+      <li>
+        August 3 2024 -
+        Muziekgebouw aan &#39;t IJ
+      </li>
+      
+      <li>
+        July 21 2024 -
+        Catharijn Classique
+      </li>
+      
+      <li>
+        July 21 2024 -
+        Catharijn Classique
+      </li>
+      
+      <li>
+        July 19 2024 -
+        Wonderfeel
+      </li>
+      
+      <li>
+        July 14 2024 -
+        Internationaal Barok Festival
+      </li>
+      
+      <li>
+        July 12 2024 -
+        La Coume
+      </li>
+      
+      <li>
+        June 16 2024 -
+        Vondelpark
+      </li>
+      
+      <li>
+        May 31 2024 -
+        The Garrick Club
+      </li>
+      
+      <li>
+        May 31 2024 -
+        The Garrick Club
+      </li>
+      
+      <li>
+        May 29 2024 -
+        TivoliVredenburg 
+      </li>
+      
+      <li>
+        May 19 2024 -
+        Internationaal Liedfestival Zeist
+      </li>
+      
+      <li>
+        May 15 2024 -
+        Concertgebouw
+      </li>
+      
+      <li>
+        May 10 2024 -
+        Haags Pianohuis
+      </li>
+      
+      <li>
+        April 17 2024 -
+        Concertgebouw 
+      </li>
+      
+      <li>
+        April 11 2024 -
+        The Garrick Club 
+      </li>
+      
+      <li>
+        April 7 2024 -
+        Huisconcert Grote Zangers
+      </li>
+      
+      <li>
+        March 15 2024 -
+        Lakehouse Rotterdam
+      </li>
+      
+      <li>
+        March 8 2024 -
+        De Heerd
+      </li>
+      
+      <li>
+        March 1 2024 -
+        Het Depot
+      </li>
+      
+      <li>
+        February 24 2024 -
+        Teatro del Títere
+      </li>
+      
+      <li>
+        February 23 2024 -
+        Finca
+      </li>
+      
+      <li>
+        February 4 2024 -
+        Huisconcert
+      </li>
+      
+      <li>
+        January 28 2024 -
+        Rathaus
+      </li>
+      
+      <li>
+        January 21 2024 -
+        Theater Veerensmederij
+      </li>
+      
+      <li>
+        January 18 2024 -
+        Muziekgebouw aan ‘t IJ
+      </li>
+      
+      <li>
+        January 1 2024 -
+        Protestantse Kerk
+      </li>
+      
+      <li>
+        December 31 2023 -
+        Lutherse Kerk
+      </li>
+      
+      <li>
+        December 16 2023 -
+        Hoge Veluwe
+      </li>
+      
+      <li>
+        December 9 2023 -
+        La Coume
+      </li>
+      
+      <li>
+        December 6 2023 -
+        Concertgebouw
+      </li>
+      
+      <li>
+        December 2 2023 -
+        NPO Radio 4 
+      </li>
+      
+      <li>
+        November 12 2023 -
+        Kasteel Geldrop
+      </li>
+      
+      <li>
+        October 29 2023 -
+        De Leyhoeve
+      </li>
+      
+      <li>
+        October 19 2023 -
+        Kunsthalle
+      </li>
+      
+      <li>
+        October 15 2023 -
+        Artis
+      </li>
+      
+      <li>
+        September 21 2023 -
+        Muziekcentrum
+      </li>
+      
+      <li>
+        September 17 2023 -
+        Musica Sacra Festival
+      </li>
+      
+      <li>
+        September 17 2023 -
+        NPO Radio 4
+      </li>
+      
+      <li>
+        August 19 2023 -
+        Zeister Muziekdagen
+      </li>
+      
+      <li>
+        August 18 2023 -
+        Grachtenfestival
+      </li>
+      
+      <li>
+        August 13 2023 -
+        Cenakelkerk
+      </li>
+      
+      <li>
+        August 12 2023 -
+        Cenakelkerk
+      </li>
+      
+      <li>
+        August 11 2023 -
+        Cenakelkerk
+      </li>
+      
+      <li>
+        August 10 2023 -
+        Cenakelkerk
+      </li>
+      
+      <li>
+        July 23 2023 -
+        Aurora Festival
+      </li>
+      
+      <li>
+        June 18 2023 -
+        American Cathedral
+      </li>
+      
+      <li>
+        June 11 2023 -
+        Slotzolder
+      </li>
+      
+      <li>
+        May 6 2023 -
+        Landgoed Linschoten 
+      </li>
+      
+      <li>
+        April 17 2023 -
+        Theater Junushoff
+      </li>
+      
+      <li>
+        April 15 2023 -
+        Hochschule für Musik FRANZ LISZT, Festsaal Fürstenhaus
+      </li>
+      
+      <li>
+        April 13 2023 -
+        Theater Regensburg
+      </li>
+      
+      <li>
+        April 12 2023 -
+        Leithenzaal
+      </li>
+      
+      <li>
+        April 10 2023 -
+        Dominicuskerk
+      </li>
+      
+      <li>
+        March 17 2023 -
+        Torenlaantheater
+      </li>
+      
+      <li>
+        March 4 2023 -
+        Teatro del Títere
+      </li>
+      
+      <li>
+        February 26 2023 -
+        Dominicuskerk
+      </li>
+      
+      <li>
+        February 14 2023 -
+        Sint Aegtenkapel
+      </li>
+      
+      <li>
+        January 29 2023 -
+        Parc Broekhuizen
+      </li>
+      
+      <li>
+        January 22 2023 -
+        Amare, Concervatorium zaal
+      </li>
+      
+      <li>
+        January 21 2023 -
+        Amare, Concervatorium zaal
+      </li>
+      
+      <li>
+        January 19 2023 -
+        Amare, Concervatorium zaal
+      </li>
+      
+      <li>
+        January 18 2023 -
+        Amare, Concervatorium zaal
+      </li>
+      
+      <li>
+        November 27 2022 -
+        Muziekcentrum van de Omroep
+      </li>
+      
+      <li>
+        November 18 2022 -
+        Concertgebouw
+      </li>
+      
+      <li>
+        November 13 2022 -
+        Splendor
+      </li>
+      
+      <li>
+        November 13 2022 -
+        Splendor
+      </li>
+      
+      <li>
+        November 11 2022 -
+        Het Depot
+      </li>
+      
+      <li>
+        November 7 2022 -
+        Theater Junushoff
+      </li>
+      
+      <li>
+        November 6 2022 -
+        Muziekgebouw Eindhoven
+      </li>
+      
+      <li>
+        October 29 2022 -
+        De Vereeniging
+      </li>
+      
+      <li>
+        October 23 2022 -
+        Grote Kerk
+      </li>
+      
+      <li>
+        October 19 2022 -
+        Wilminktheater
+      </li>
+      
+      <li>
+        October 11 2022 -
+        Jheronimus Bosch Art Center
+      </li>
+      
+      <li>
+        October 6 2022 -
+        St. Martin in the Fields
+      </li>
+      
+      <li>
+        October 2 2022 -
+        Kasteel Heeswijk
+      </li>
+      
+      <li>
+        September 25 2022 -
+        Theater de Veste
+      </li>
+      
+      <li>
+        September 24 2022 -
+        Tindal Villa
+      </li>
+      
+      <li>
+        September 18 2022 -
+        Kunsthalle
+      </li>
+      
+      <li>
+        September 10 2022 -
+        Lutherkirche
+      </li>
+      
+      <li>
+        September 8 2022 -
+        Axel Springer Verlag
+      </li>
+      
+      <li>
+        August 28 2022 -
+        Parc Broekhuizen
+      </li>
+      
+      <li>
+        August 21 2022 -
+        Cenakelkerk
+      </li>
+      
+      <li>
+        August 20 2022 -
+        Cenakelkerk
+      </li>
+      
+      <li>
+        August 19 2022 -
+        Cenakelkerk
+      </li>
+      
+      <li>
+        July 27 2022 -
+        Zomeravond Concerten aan Zee
+      </li>
+      
+      <li>
+        July 21 2022 -
+        Park Sessies
+      </li>
+      
+      <li>
+        July 2 2022 -
+        Paradiso
+      </li>
+      
+      <li>
+        June 4 2022 -
+        De Nationale Opera
+      </li>
+      
+      <li>
+        May 29 2022 -
+        Parc Broekhuizen
+      </li>
+      
+      <li>
+        May 28 2022 -
+        Lokhorstkerk
+      </li>
+      
+      <li>
+        April 22 2022 -
+        Concertgebouw - Kleine Zaal
+      </li>
+      
+      <li>
+        April 17 2022 -
+        Podium Witteman
+      </li>
+      
+      <li>
+        April 3 2022 -
+        Theaterkerk Nes
+      </li>
+      
+      <li>
+        March 23 2022 -
+        Leithenzaal
+      </li>
+      
+      <li>
+        March 7 2022 -
+        Deutsches Historisches Museum
+      </li>
+      
+      <li>
+        March 2 2022 -
+        Schloss Elmau
+      </li>
+      
+      <li>
+        January 27 2022 -
+        Podium
+      </li>
+      
+      <li>
+        January 23 2022 -
+        Het Concertgebouw - Spiegelzaal
+      </li>
+      
+      <li>
+        November 21 2021 -
+        Verkadefabriek
+      </li>
+      
+      <li>
+        October 25 2021 -
+        Internationaal Liedfestival Zeist
+      </li>
+      
+      <li>
+        October 23 2021 -
+        Jacqueline du Pré Music Building
+      </li>
+      
+      <li>
+        October 12 2021 -
+        TivoliVredenburg
+      </li>
+      
+      <li>
+        September 25 2021 -
+        Schloss Belvedere
+      </li>
+      
+      <li>
+        September 4 2021 -
+        Walkartkerk
+      </li>
+      
+      <li>
+        August 23 2021 -
+        O. Festival
+      </li>
+      
+      <li>
+        August 23 2021 -
+        O. Festival
+      </li>
+      
+      <li>
+        June 11 2021 -
+        De Nationale Opera
+      </li>
+      
+      <li>
+        May 24 2021 -
+        Internationaal Liedfestival Zeist, Broederkerk
+      </li>
+      
+      <li>
+        April 1 2021 -
+        Concertgebouw
+      </li>
+      
+      <li>
+        January 24 2021 -
+        Philharmonie Haarlem
+      </li>
+      
+      <li>
+        December 6 2020 -
+        Opera Aperitief
+      </li>
+      
+      <li>
+        November 13 2020 -
+        Konzertsaal
+      </li>
+      
+      <li>
+        November 12 2020 -
+        Konzertsaal
+      </li>
+      
+      <li>
+        October 8 2020 -
+        Hamburger Kunsthalle
+      </li>
+      
+      <li>
+        August 18 2020 -
+        TivoliVredenburg
+      </li>
+      
+      <li>
+        August 14 2020 -
+        Grachtenfestival: Hotel Krasnapolsky
+      </li>
+      
+      <li>
+        August 12 2020 -
+        Grachtenfestival: De Duif
+      </li>
+      
+      <li>
+        August 7 2020 -
+        Grachtenfestival: Zuiderkerk
+      </li>
+      
+      <li>
+        February 25 2020 -
+        De Nationale Opera
+      </li>
+      
+      <li>
+        February 18 2020 -
+        Deutschlandfunk Kultur
+      </li>
+      
+      <li>
+        January 23 2020 -
+        Hamburger Kunsthalle
+      </li>
+      
+      <li>
+        January 14 2020 -
+        De Nationale Opera
+      </li>
+      
+      <li>
+        October 1 2019 -
+        Hamburger Kunsthalle
+      </li>
+      
+      <li>
+        August 17 2019 -
+        Prinsengracht concert
+      </li>
+      
+      <li>
+        August 2 2019 -
+        Internationaal Kamermuziek Festival Delft
+      </li>
+      
+      <li>
+        February 10 2019 -
+        Waalse Kerk
+      </li>
+      
+      <li>
+        January 28 2019 -
+        Laeiszhalle
+      </li>
+      
+    </ul>
+
+    <!-- Next Concert -->
+    <h2>Next Concert</h2>
+     
+    <p>
+      Next concert is on October 3 2024 at
+      Liedstadt Hamburg
+    </p>
+    
+  </div>
+
+  >
+</section>
+
+    </main>
+
+    <section class="footer">
+  <div class="container">
+    <p class="fadeIn footer-text">
+      ©Daan Boertien | 2024 |
+      <a
+        href="/en/legalpolicy/"
+      >
+         Legal Policy 
+      </a>
+    </p>
+  </div>
+</section>
+
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"
+      integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/assets/js/hamburger.js"></script>
+    <script src="/assets/js/animations.js"></script>
+    <script src="/assets/js/media.js"></script>
+  </body>
+</html>

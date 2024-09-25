@@ -1,0 +1,31 @@
+<div class="">
+  <div class="page-bio container">
+    <div class="container-without-padding">
+      <h1 class="page-title fadeIn">
+        {{ biography["title_" + lang] }}
+      </h1>
+
+      <div class="">
+        <div class="biografie fadeIn">
+          {{ biography["bio_" + lang] | fadeInMarkdown | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-without-padding">
+    <section class="section-quote">
+      <p class="quote fadeIn">
+        {{ biography["quote_" + lang] | safe }}
+      </p>
+      <p class="quote-author fadeIn">
+        {{ biography["quote_author_" + lang] }}
+      </p>
+    </section>
+    <div
+      class="image-container fadeIn container-without-padding bio-image-container"
+    >
+      <img src="{{ biography.image }}" alt="" class="bio-image" />
+      <p class="photographer">© {{ biography.photographer }}</p>
+    </div>
+  </div>
+</div>

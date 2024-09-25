@@ -1,0 +1,70 @@
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  max-width: 500px;
+}
+
+button[type="submit"],
+input,
+textarea {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  border: 0;
+  box-shadow: var(--boxshadow);
+  border-radius: 5px;
+}
+
+input,
+textarea {
+  padding: 1em;
+  margin-bottom: 1.5em;
+}
+
+textarea {
+  margin-bottom: 2em;
+  resize: vertical;
+  min-height: 100px;
+}
+
+label {
+  color: var(--clr-secondary);
+  margin-bottom: 0.2em;
+}
+
+input[type="submit"] {
+  background: var(--clr-secondary);
+  padding: 0.75em 0;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  outline: 5px solid var(--clr-secondary);
+  outline-offset: -5px;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background: var(--clr-btn);
+  color: var(--clr-secondary);
+}
+
+.contact-invitation {
+  color: var(--text-color);
+}
+
+.margin-bottom {
+  margin-bottom: 2em;
+}
+
+.thank-you {
+  margin-bottom: 1em;
+}
+
+.photographer-list li {
+  line-height: 1.6;
+  list-style: none;
+}

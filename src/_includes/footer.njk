@@ -1,0 +1,15 @@
+<section class="footer">
+  <div class="container">
+    <p class="fadeIn footer-text">
+      {{ home.footer_text }} | {{ "" | currentYear }} |
+      <a
+        href="/{{
+          lang
+        }}/{% if lang == 'nl' %}algemenevoorwaarden{% else %}legalpolicy{% endif %}/"
+      >
+        {% if lang == "nl" %} Algemene Voorwaarden {% else %} Legal Policy {%
+        endif %}
+      </a>
+    </p>
+  </div>
+</section>

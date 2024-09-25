@@ -1,0 +1,5291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Home
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+          :root {
+            --clr-primary: rgb(190, 146, 64);
+            --clr-secondary: rgba(99, 136, 161, 1);
+            --clr-secondary-hover: rgba(99, 136, 161, 0.85);
+            --clr-btn: white;
+            --bg-color: white;
+            --bg-color-rgb: ;
+
+            --clr-bg-concerts: aliceblue;;
+            --text-color: rgba(0, 0, 0, 0.85);
+            --hamburger-bg-color:  white;;
+            --clr-hero-text:  white;;
+            --gradient: linear-gradient(212deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 93%);
+            --primary-font: Montserrat;
+            --secondary-font: Playfair Display;
+            --container-width: 1200px;
+            --section-padding: 2em;
+            --boxshadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            --border-radius: 50px;
+            --hero-photo-focus: center;
+            --hero-text-alignment: 70%;
+            --hero-arrow: false;
+            --border-size: 10px;;
+            --border-color: var(--clr-secondary);
+
+
+          }
+
+          body {
+          font-family: var(--primary-font);
+          }
+
+  /* FOR VERSION 2 */
+      /* .gradient-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(
+      to bottom,
+      rgba(var(--bg-color-rgb), 0) 0%,
+      rgba(var(--bg-color-rgb), 0.03) 8%,
+      rgba(var(--bg-color-rgb), 0.1) 15.4%,
+      rgba(var(--bg-color-rgb), 0.15) 22.1%,
+      rgba(var(--bg-color-rgb), 0.2) 28.4%,
+      rgba(var(--bg-color-rgb), 0.3) 34.4%,
+      rgba(var(--bg-color-rgb), 0.4) 40.1%,
+      rgba(var(--bg-color-rgb), 0.5) 45.7%,
+      rgba(var(--bg-color-rgb), 0.55) 51.3%,
+      rgba(var(--bg-color-rgb), 0.6) 57%,
+      rgba(var(--bg-color-rgb), 0.7) 63%,
+      rgba(var(--bg-color-rgb), 0.8) 69.2%,
+      rgba(var(--bg-color-rgb), 0.85) 76%,
+      rgba(var(--bg-color-rgb), 0.9) 83.3%,
+      rgba(var(--bg-color-rgb), 0.95) 91.2%,
+      rgba(var(--bg-color-rgb), 1) 100%
+      );
+      z-index: 1;
+      pointer-events: none;
+    } */
+</style>
+
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <style>
+  @media (min-width: 490px) {
+    .video-container img {
+      object-position: var(--hero-photo-focus) 0px;
+    }
+  }
+  @media (min-width: 1063px) {
+    .video-container .landing-title-container {
+      left: var(--hero-text-alignment);
+      width: max-content;
+    }
+  }
+</style>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+     
+
+    <!-- Google Fonts Import based on user choice -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Playfair+Display:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-135437368-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-135437368-1");
+    </script>
+  </head>
+  <body>
+     <nav>
+    <ul class="nl">
+       
+           <li class="fadeInNav">
+               <a href="/en/"   
+               
+                >Home</a>
+           </li>
+       
+           <li class="fadeInNav">
+               <a href="/en/biography/"   
+               
+                >Biography</a>
+           </li>
+       
+           <li class="fadeInNav">
+               <a href="/en/calendar/"   
+               
+               class="current" >Calendar</a>
+           </li>
+       
+           <li class="fadeInNav">
+               <a href="/en/media/"   
+               
+                >Media</a>
+           </li>
+       
+           <li class="fadeInNav">
+               <a href="/en/contact/"   
+               
+                >Contact</a>
+           </li>
+       
+       <li class="fadeInNav"><a href="/nl/agenda/" class="">NL</a>  <a href="/en/calendar/" class="current">EN</a></li>
+       <li class="fadeInNav"><a href="https://www.instagram.com/daanboertien.pianist/" target="_blank"><i class="fa-brands fa-instagram"></i></a>  <a href="https://www.facebook.com/daan.boertien/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></li>
+       
+   </ul>
+   
+</nav>
+<div class="container-without-padding">
+<div class="hamburger-container">
+   <button class="hamburger hamburger--spin" type="button">
+       <span class="hamburger-box"></span>
+         <span class="hamburger-inner hamburger-black"></span>
+       </span>
+     </button>
+</div>
+</div>
+
+
+<div class="container navcontainer">
+    <div class="navdesktop glass">
+      <ul class="nl">
+        
+        <li class="fadeInTitle">
+          <a
+            href="/en/"
+            class="navblack "
+            >Home</a
+          >
+        </li>
+        
+        <li class="fadeInTitle">
+          <a
+            href="/en/biography/"
+            class="navblack "
+            >Biography</a
+          >
+        </li>
+        
+        <li class="fadeInTitle">
+          <a
+            href="/en/calendar/"
+            class="navblack current "
+            >Calendar</a
+          >
+        </li>
+        
+        <li class="fadeInTitle">
+          <a
+            href="/en/media/"
+            class="navblack "
+            >Media</a
+          >
+        </li>
+        
+        <li class="fadeInTitle">
+          <a
+            href="/en/contact/"
+            class="navblack "
+            >Contact</a
+          >
+        </li>
+        
+        <li class="fadeInTitle">
+          <a href="/nl/agenda/" class="navblack">NL</a>
+          <a href="/en/calendar/" class="current">EN</a>
+        </li>
+        <li class="fadeInTitle">
+          <a
+            href="https://www.instagram.com/daanboertien.pianist/"
+            target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.facebook.com/daan.boertien/" target="_blank"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </div> 
+
+    <main>
+      
+<section class="concerts-page">
+  <div class="container">
+    <h1 class="page-title fadeIn">Calendar</h1>
+
+    
+    <h2></h2>
+      
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          3 October 2024
+           |
+          15:00
+          
+        </p>
+        <p class="concert-hall">
+          Liedstadt Hamburg
+        </p>
+        <p class="concert-place">
+          Hamburg
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Mahler
+        </p>
+        <p class="concert-musicians">
+          <p>Ida Aldrian, Mezzo Soprano<br>
+Volodymir Milushkin, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://liedstadt.de/calendar/liedstadt-opening/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          8 October 2024
+           |
+          20:15
+          
+        </p>
+        <p class="concert-hall">
+          Concertgebouw
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Poulenc and Vaughan Williams
+        </p>
+        <p class="concert-musicians">
+          <p>Will Liverman, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.concertgebouw.nl/concerten/5149923-will-liverman-en-daan-boertien-burleigh-vaughan-williams-en-still"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          18 October 2024
+           |
+          20:15
+          
+        </p>
+        <p class="concert-hall">
+          Geertekerk
+        </p>
+        <p class="concert-place">
+          Utrecht
+        </p>
+        <p class="concert-repertoire">
+          F. Schubert - Die schöne Müllerin
+        </p>
+        <p class="concert-musicians">
+          <p>Raoul Steffani, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.klassiekemuziek.nl/e/18683/een-weekend-met-schubert-voordracht-en-die-schone-mullerin-utrecht"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          19 October 2024
+           |
+          20:15
+          
+        </p>
+        <p class="concert-hall">
+          Geertekerk
+        </p>
+        <p class="concert-place">
+          Utrecht
+        </p>
+        <p class="concert-repertoire">
+          F. Schubert - Winterreise
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.klassiekemuziek.nl/e/18684/een-weekend-met-schubert-masterclass-en-winterreise-utrecht"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          20 October 2024
+           |
+          15:00
+          
+        </p>
+        <p class="concert-hall">
+          Geertekerk
+        </p>
+        <p class="concert-place">
+          Utrecht
+        </p>
+        <p class="concert-repertoire">
+          F. Schubert - Schwanengesang
+        </p>
+        <p class="concert-musicians">
+          <p>Marc Pantus, Bass-Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.klassiekemuziek.nl/e/18685/een-weekend-met-schubert-masterclass-en-schwanengesang-utrecht"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          25 October 2024
+           |
+          20:15
+          
+        </p>
+        <p class="concert-hall">
+          De Leidse Salon
+        </p>
+        <p class="concert-place">
+          Leiden
+        </p>
+        <p class="concert-repertoire">
+          Songs about Goethe&#39;s Faust
+        </p>
+        <p class="concert-musicians">
+          <p>Marc Pantus, Bass-Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.leidsesalon.nl/agenda/goethes-faust"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          3 November 2024
+           |
+          14:00
+          
+        </p>
+        <p class="concert-hall">
+          De Hallen
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          J. Brahms - Liebesliederwalzer
+        </p>
+        <p class="concert-musicians">
+          <p>Students of the Dutch National Opera Academy<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://dehallen-amsterdam.nl/agenda/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          8 November 2024
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Royal Conservatory
+        </p>
+        <p class="concert-place">
+          The Hague
+        </p>
+        <p class="concert-repertoire">
+          J. Brahms - Liebesliederwalzer
+        </p>
+        <p class="concert-musicians">
+          <p>Students of the Dutch National Opera Academy<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.opera-academy.nl/performances/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          10 November 2024
+           |
+          21:00
+          
+        </p>
+        <p class="concert-hall">
+          Orpheus
+        </p>
+        <p class="concert-place">
+          Apeldoorn
+        </p>
+        <p class="concert-repertoire">
+          J. Brahms - Liebesliederwalzer
+        </p>
+        <p class="concert-musicians">
+          <p>Students of the Dutch National Opera Academy<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.opera-academy.nl/performances/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          16 November 2024
+           |
+          21:00
+          
+        </p>
+        <p class="concert-hall">
+          Kapel Opveld
+        </p>
+        <p class="concert-place">
+          Maastricht
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Rachmaninov
+        </p>
+        <p class="concert-musicians">
+          <p>Maria Warenberg, Mezzosopraan<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://kapelopveld.nl/event/liedrecital-bariton-vincent-kusteres-en-mezzosopraan-maria-warenberg/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          17 November 2024
+           |
+          15:30
+          
+        </p>
+        <p class="concert-hall">
+          De Schutse
+        </p>
+        <p class="concert-place">
+          Uithoorn
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Saint-Saens and Pfitzner
+        </p>
+        <p class="concert-musicians">
+          <p>Raoul Steffani, Baritone<br>
+Lena ter Schegget, Violin<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.scau.nl/meer-informatie-november/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          24 November 2024
+           |
+          16:00
+          
+        </p>
+        <p class="concert-hall">
+          Concert aan Zee
+        </p>
+        <p class="concert-place">
+          Muiderberg
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Saint-Saens and Pfitzner
+        </p>
+        <p class="concert-musicians">
+          <p>Raoul Steffani, Baritone<br>
+Lena ter Schegget, Violin<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://concertaanzee.com/online-kaarten-bestellen/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          14 December 2024
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Tonalisaal
+        </p>
+        <p class="concert-place">
+          Hamburg
+        </p>
+        <p class="concert-repertoire">
+          Solo Recital: Music by Bach/Busoni, Rachmaninov and Beethoven
+        </p>
+        <p class="concert-musicians">
+          <p>Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.tonali.de/termine/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          22 December 2024
+           |
+          13:00
+          
+        </p>
+        <p class="concert-hall">
+          De Vest
+        </p>
+        <p class="concert-place">
+          Alkmaar
+        </p>
+        <p class="concert-repertoire">
+          J. Brahms - Liebesliederwalzer
+        </p>
+        <p class="concert-musicians">
+          <p>Students of the Dutch National Opera Academy<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://theaterdevest.nl/tickets/seizoen-24-25/dutch-national-opera-academy-brahms-liebeslieder-walzer/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn">
+      <div class="concert-location">
+        <p class="concert-date">
+          22 December 2024
+           |
+          15:30
+          
+        </p>
+        <p class="concert-hall">
+          Slotzolder
+        </p>
+        <p class="concert-place">
+          Zeist
+        </p>
+        <p class="concert-repertoire">
+          F. Schubert - Winterreise
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.slotzeist.nl/agenda/michael-wilmering-bariton-&amp;-daan-boertien-piano"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+     
+
+    <h1 class="page-title fadeIn">
+      Archive
+    </h1>
+
+       
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          15 September 2024
+           |
+          14:00
+          
+        </p>
+        <p class="concert-hall">
+          Dutch Centre
+        </p>
+        <p class="concert-place">
+          London
+        </p>
+        <p class="concert-repertoire">
+          a.o. Schumann&#39;s Kerner Lieder
+        </p>
+        <p class="concert-musicians">
+          <p>Quirijn de Lang, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://dutchcentre.com/eventer/sunday-matinee-chamber-music-concerts-quirijndelang-daanboertien/edate/2024-09-15"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          31 August 2024
+           |
+          11:40
+          
+        </p>
+        <p class="concert-hall">
+          Concertgebouw
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          A.o. Songs by Finzi and Surinamian folk songs
+        </p>
+        <p class="concert-musicians">
+          <p>Arturo den Hartog, Counter Tenor<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.concertgebouw.nl/concerten/5297436-concertgebouw-open-gratis-miniconcerten-voor-iedereen"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          31 August 2024
+           |
+          12:20
+          
+        </p>
+        <p class="concert-hall">
+          Concertgebouw
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          A.o. Songs by Finzi and Surinamian folk songs
+        </p>
+        <p class="concert-musicians">
+          <p>Arturo den Hartog, Counter Tenor<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.concertgebouw.nl/concerten/5297436-concertgebouw-open-gratis-miniconcerten-voor-iedereen"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          31 August 2024
+           |
+          13:00
+          
+        </p>
+        <p class="concert-hall">
+          Concertgebouw
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          A.o. Songs by Finzi and Surinamian folk songs
+        </p>
+        <p class="concert-musicians">
+          <p>Arturo den Hartog, Counter Tenor<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.concertgebouw.nl/concerten/5297436-concertgebouw-open-gratis-miniconcerten-voor-iedereen"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          31 August 2024
+           |
+          11:00
+          
+        </p>
+        <p class="concert-hall">
+          Concertgebouw
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          A.o. Songs by Finzi and Surinamian folk songs
+        </p>
+        <p class="concert-musicians">
+          <p>Arturo den Hartog, Counter Tenor<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.concertgebouw.nl/concerten/5297436-concertgebouw-open-gratis-miniconcerten-voor-iedereen"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          6 August 2024
+           |
+          20:15
+          
+        </p>
+        <p class="concert-hall">
+          Lindegrachtconcert
+        </p>
+        <p class="concert-place">
+          Alkmaar
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Weill, Piazzolla, Bolcom and Beijer
+        </p>
+        <p class="concert-musicians">
+          <p>Isabel Pronk, Mezzo Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://lindegrachtconcert.nl/concerten-actueel/19-isabel-pronk-en-daan-boertien-camerata-rco"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          3 August 2024
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Muziekgebouw aan &#39;t IJ
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Ravel, Piazolla and Ramírez
+        </p>
+        <p class="concert-musicians">
+          <p>Ana-Carmen Balestra, Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.muziekgebouw.nl/nl/agenda/14797/ana-carmen-balestra-daan-boertien/gracias-a-la-vida"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          21 July 2024
+           |
+          16:00
+          
+        </p>
+        <p class="concert-hall">
+          Catharijn Classique
+        </p>
+        <p class="concert-place">
+          Utrecht
+        </p>
+        <p class="concert-repertoire">
+          A.o. Songs by Finzi and Surinamian folk songs
+        </p>
+        <p class="concert-musicians">
+          <p>Arturo den Hartog, Counter Tenor<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          21 July 2024
+           |
+          15:00
+          
+        </p>
+        <p class="concert-hall">
+          Catharijn Classique
+        </p>
+        <p class="concert-place">
+          Utrecht
+        </p>
+        <p class="concert-repertoire">
+          A.o. Songs by Finzi and Surinamian folk songs
+        </p>
+        <p class="concert-musicians">
+          <p>Arturo den Hartog, Counter Tenor<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          19 July 2024
+           |
+          14:00
+          
+        </p>
+        <p class="concert-hall">
+          Wonderfeel
+        </p>
+        <p class="concert-place">
+          &#39;s Graveland
+        </p>
+        <p class="concert-repertoire">
+          A.o. Songs by Finzi and Surinamian folk songs
+        </p>
+        <p class="concert-musicians">
+          <p>Arturo den Hartog, Counter Tenor<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://wonderfeel.nl/programma/arturo-den-hartog-daan-boertien/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          14 July 2024
+           |
+          11:30
+          
+        </p>
+        <p class="concert-hall">
+          Internationaal Barok Festival
+        </p>
+        <p class="concert-place">
+          Zutphen
+        </p>
+        <p class="concert-repertoire">
+          Songs by Schubert and Loewe
+        </p>
+        <p class="concert-musicians">
+          <p>Henk Neven, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://ibfzutphen.nl/agenda/dag-5/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          12 July 2024
+           |
+          18:00
+          
+        </p>
+        <p class="concert-hall">
+          La Coume
+        </p>
+        <p class="concert-place">
+          Mosset
+        </p>
+        <p class="concert-repertoire">
+          Arias by Wagner, Puccini and Verdi
+        </p>
+        <p class="concert-musicians">
+          <p>Participants Master Course<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          16 June 2024
+           |
+          12:00
+          
+        </p>
+        <p class="concert-hall">
+          Vondelpark
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          J. Brahms - Liebesliederwalzer
+        </p>
+        <p class="concert-musicians">
+          <p>Students of the Dutch National Opera Academy<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.opera-academy.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          31 May 2024
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          The Garrick Club
+        </p>
+        <p class="concert-place">
+          London
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Schubert, Clara Schumann and Grieg
+        </p>
+        <p class="concert-musicians">
+          <p>Polly Leech, Mezzo Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          31 May 2024
+           |
+          18:00
+          
+        </p>
+        <p class="concert-hall">
+          The Garrick Club
+        </p>
+        <p class="concert-place">
+          London
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Ravel and Schubert
+        </p>
+        <p class="concert-musicians">
+          <p>Polly Leech, Mezzo Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          29 May 2024
+           |
+          22:45
+          
+        </p>
+        <p class="concert-hall">
+          TivoliVredenburg 
+        </p>
+        <p class="concert-place">
+          Utrecht
+        </p>
+        <p class="concert-repertoire">
+          Songs by Weil, Piazolla and Bolcom
+        </p>
+        <p class="concert-musicians">
+          <p>Isabel Pronk, Mezzo Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          19 May 2024
+           |
+          15:00
+          
+        </p>
+        <p class="concert-hall">
+          Internationaal Liedfestival Zeist
+        </p>
+        <p class="concert-place">
+          Zeist
+        </p>
+        <p class="concert-repertoire">
+          Songs by Vaughan Williams, Britten and Barber
+        </p>
+        <p class="concert-musicians">
+          <p>Robin Tritschler, Tenor<br>
+Rosanne van Sandwijk, Mezzo Soprano<br>
+Dana Zemtsov, Viola<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://ilfz.nl/agenda/une-parole-de-tes-levres/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          15 May 2024
+           |
+          12:30
+          
+        </p>
+        <p class="concert-hall">
+          Concertgebouw
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          J. Brahms - Liebesliederwalzer
+        </p>
+        <p class="concert-musicians">
+          <p>Students of the Dutch National Opera Academy<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.opera-academy.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          10 May 2024
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Haags Pianohuis
+        </p>
+        <p class="concert-place">
+          Den Haag
+        </p>
+        <p class="concert-repertoire">
+          Songs by Strauss, Brahms and Schumann
+        </p>
+        <p class="concert-musicians">
+          <p>Elvire Beekhuizen, Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://denhaag.com/nl/agenda/ophelia-ophelia"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          17 April 2024
+           |
+          13:30
+          
+        </p>
+        <p class="concert-hall">
+          Concertgebouw 
+        </p>
+        <p class="concert-place">
+          Amsterdam 
+        </p>
+        <p class="concert-repertoire">
+          Songs by Berlioz and Santoliquido 
+        </p>
+        <p class="concert-musicians">
+          <p>Martina Myskohlid, Mezzo Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="Concertgebouw.nl"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          11 April 2024
+           |
+          09:38
+          
+        </p>
+        <p class="concert-hall">
+          The Garrick Club 
+        </p>
+        <p class="concert-place">
+          London
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Schubert, Ravel and Bridge
+        </p>
+        <p class="concert-musicians">
+          <p>Polly Leech, Mezzo Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          7 April 2024
+           |
+          15:00
+          
+        </p>
+        <p class="concert-hall">
+          House Concert &quot;Grote Zangers&quot;
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          To be announced
+        </p>
+        <p class="concert-musicians">
+          <p>Ana Balestra, Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          15 March 2024
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Lakehouse Rotterdam
+        </p>
+        <p class="concert-place">
+          Rotterdam
+        </p>
+        <p class="concert-repertoire">
+          To be announced
+        </p>
+        <p class="concert-musicians">
+          <p>Isabel Pronk, Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://lakehouserotterdam.nl/events/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          8 March 2024
+           |
+          21:15
+          
+        </p>
+        <p class="concert-hall">
+          De Heerd
+        </p>
+        <p class="concert-place">
+          Heerde
+        </p>
+        <p class="concert-repertoire">
+          Opera Arias from Mozart to Kurt Weill
+        </p>
+        <p class="concert-musicians">
+          <p>Esther Kouwenhoven, Soprano<br>
+Linsey Coppens, Mezzo Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.dorpshuisheerde.nl/theateragenda.php"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          1 March 2024
+           |
+          20:30
+          
+        </p>
+        <p class="concert-hall">
+          Het Depot
+        </p>
+        <p class="concert-place">
+          Wageningen
+        </p>
+        <p class="concert-repertoire">
+          F. Schubert - die schöne Müllerin
+        </p>
+        <p class="concert-musicians">
+          <p>Marc Pantus, Bass Baritone<br>
+Daan Boertien</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          24 February 2024
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Teatro del Títere
+        </p>
+        <p class="concert-place">
+          Cádiz
+        </p>
+        <p class="concert-repertoire">
+          F. Schubert - die schöne Müllerin
+        </p>
+        <p class="concert-musicians">
+          <p>Marc Pantus, Bass Baritone<br>
+Daan Boertien</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          23 February 2024
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Finca
+        </p>
+        <p class="concert-place">
+          Jimena de la Frontera
+        </p>
+        <p class="concert-repertoire">
+          F. Schubert - die schöne Müllerin
+        </p>
+        <p class="concert-musicians">
+          <p>Marc Pantus, Bass Baritone<br>
+Daan Boertien</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          4 February 2024
+           |
+          16:00
+          
+        </p>
+        <p class="concert-hall">
+          House Concert
+        </p>
+        <p class="concert-place">
+          Ulvenhout
+        </p>
+        <p class="concert-repertoire">
+          J. Sibelius - 5 Stukken Op. 75,
+F. Chopin - Fantaisie-Impromptu, Op. 66, 
+F. Chopin - Ballade No. 4 in f, Op. 52, 
+L.v. Beethoven - Sonate Nr. 32 in c, Op. 111
+
+
+
+        </p>
+        <p class="concert-musicians">
+          <p>Daan Boertien, Piano</p>
+<p>Limited places available. Secure your spot via <a href="mailto:kathinka-minzinga@ziggo.nl">kathinka-minzinga@ziggo.nl</a></p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          28 January 2024
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Rathaus
+        </p>
+        <p class="concert-place">
+          Landsberg am Lech (DE)
+        </p>
+        <p class="concert-repertoire">
+          F. Schubert - Winterreise
+        </p>
+        <p class="concert-musicians">
+          <p>Benjamin Appl, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.rathauskonzerte-landsberg.de/konzerte/28-01-2024-appl-boertien/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          21 January 2024
+           |
+          16:00
+          
+        </p>
+        <p class="concert-hall">
+          Theater Veerensmederij
+        </p>
+        <p class="concert-place">
+          Amersfoort
+        </p>
+        <p class="concert-repertoire">
+          Songs by o.a. Spohr, Saint-Saens en Alma Mahler
+        </p>
+        <p class="concert-musicians">
+          <p>Raoul Steffani, Baritone<br>
+Lena ter Schegget, Violin<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.theaterveerensmederij.nl/voorstelling/91/winnaar-nederlandse-muziekprijs/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          18 January 2024
+           |
+          20:30
+          
+        </p>
+        <p class="concert-hall">
+          Muziekgebouw aan ‘t IJ
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          R. Wagner - Wesendoncklieder
+        </p>
+        <p class="concert-musicians">
+          <p>Christian Gerhaher, Baritone<br>
+Gerold Huber, Piano<br>
+Rommie Rochel, Mezzo Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.muziekgebouw.nl/nl/agenda/12841/christian-gerhaher-gerold-huber/faure-tsjaikovski-en-chopin"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          1 January 2024
+           |
+          16:30
+          
+        </p>
+        <p class="concert-hall">
+          Protestantse Kerk
+        </p>
+        <p class="concert-place">
+          Hummelo
+        </p>
+        <p class="concert-repertoire">
+          Music by a.o. Saint-Saens, Gershwin and Spohr
+        </p>
+        <p class="concert-musicians">
+          <p>Lisa Jacobs, Violin<br>
+Raoul Steffani, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="Www.nieuwjaarsconcerthummelo.nl"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          31 December 2023
+           |
+          11:30
+          
+        </p>
+        <p class="concert-hall">
+          Lutherse Kerk
+        </p>
+        <p class="concert-place">
+          Breda
+        </p>
+        <p class="concert-repertoire">
+          L.v. Beethoven - Sonata No. 32, Op. 111
+        </p>
+        <p class="concert-musicians">
+          <p>Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          16 December 2023
+           |
+          15:30
+          
+        </p>
+        <p class="concert-hall">
+          Hoge Veluwe
+        </p>
+        <p class="concert-place">
+          Otterlo
+        </p>
+        <p class="concert-repertoire">
+          Schubert - Winterreise
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.hogeveluwe.nl/nl/agenda/winterconcert-winterreise-door-bariton-michael-wilmering"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          9 December 2023
+           |
+          11:00
+          
+        </p>
+        <p class="concert-hall">
+          La Coume
+        </p>
+        <p class="concert-place">
+          Mosset
+        </p>
+        <p class="concert-repertoire">
+          Masterclass together with Eva-Maria Westbroek en Frank van Aken from December 9th to 16th
+        </p>
+        <p class="concert-musicians">
+          <p>Eva-Maria Westbroek, Soprano<br>
+Frank van Aken, Tenor<br>
+Daan Boertien, Vocal Coach</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          6 December 2023
+           |
+          21:15
+          
+        </p>
+        <p class="concert-hall">
+          Concertgebouw
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          A.o. Songs by Finzi and Surinamian folk songs
+        </p>
+        <p class="concert-musicians">
+          <p>Arturo den Hartog, Counter Tenor<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.concertgebouw.nl/concerten/2612324-jonge-nederlanders-arturo-den-hartog"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          2 December 2023
+           |
+          13:30
+          
+        </p>
+        <p class="concert-hall">
+          NPO Radio 4 
+        </p>
+        <p class="concert-place">
+          De Muziekfabriek
+        </p>
+        <p class="concert-repertoire">
+          G.F. Handel - Ombra mai fu 
+        </p>
+        <p class="concert-musicians">
+          <p>Arturo den Hartog, Counter Tenor<br>
+Daan Boertien, Piano<br>
+Jet Berkhout, Presentation</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          12 November 2023
+           |
+          13:00
+          
+        </p>
+        <p class="concert-hall">
+          Kasteel Geldrop
+        </p>
+        <p class="concert-place">
+          Geldrop
+        </p>
+        <p class="concert-repertoire">
+          Schubert - Winterreise
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://kasteelgeldrop.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          29 October 2023
+           |
+          13:00
+          
+        </p>
+        <p class="concert-hall">
+          De Leyhoeve
+        </p>
+        <p class="concert-place">
+          Tilburg
+        </p>
+        <p class="concert-repertoire">
+          C. Franck - Prelude, Choral et Fugue
+F. Chopin - 4th Ballade
+L.v. Beethoven - Sonate No. 32 in c, Op. 111
+
+        </p>
+        <p class="concert-musicians">
+          <p>Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          19 October 2023
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Kunsthalle
+        </p>
+        <p class="concert-place">
+          Hamburg
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Mahler and Vaughan Williams
+        </p>
+        <p class="concert-musicians">
+          <p>Roderick Williams, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          15 October 2023
+           |
+          11:00
+          
+        </p>
+        <p class="concert-hall">
+          Artis
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          To be anounced
+        </p>
+        <p class="concert-musicians">
+          <p>Raoul Steffani, Baritone<br>
+Lena ter Schegget, Violin<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.wilminktheater.nl/nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          21 September 2023
+           |
+          20:15
+          
+        </p>
+        <p class="concert-hall">
+          Muziekcentrum
+        </p>
+        <p class="concert-place">
+          Enschede
+        </p>
+        <p class="concert-repertoire">
+          To be anounced
+        </p>
+        <p class="concert-musicians">
+          <p>Raoul Steffani, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.wilminktheater.nl/nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          17 September 2023
+           |
+          15:30
+          
+        </p>
+        <p class="concert-hall">
+          Musica Sacra Festival
+        </p>
+        <p class="concert-place">
+          Maastricht
+        </p>
+        <p class="concert-repertoire">
+          R. Wagner - Parsifal: Act 3
+        </p>
+        <p class="concert-musicians">
+          <p>Frank van Aken, Tenor<br>
+Marc Pantus, Baritone<br>
+Merlijn Runia, Mezzo Soprano<br>
+Andrea Friggi, Conductor<br>
+Dirk Luijmes, Harmonium<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://parsifal3.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          17 September 2023
+           |
+          09:30
+          
+        </p>
+        <p class="concert-hall">
+          NPO Radio 4 
+        </p>
+        <p class="concert-place">
+          Maastricht
+        </p>
+        <p class="concert-repertoire">
+          R. Wagner - Parsifal: Act 3
+        </p>
+        <p class="concert-musicians">
+          <p>Marc Pantus, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://parsifal3.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          19 August 2023
+           |
+          20:15
+          
+        </p>
+        <p class="concert-hall">
+          Zeister Muziekdagen
+        </p>
+        <p class="concert-place">
+          Zeist
+        </p>
+        <p class="concert-repertoire">
+          Liederen van o.a. Schumann, Mahler en Brahms
+        </p>
+        <p class="concert-musicians">
+          <p>Éva Fahidi, Speaker<br>
+Benjamin Appl, Bariton<br>
+Daan Boertien, Piano<br>
+Jennifer Wilton, Introduction</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          18 August 2023
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Grachtenfestival
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Liederen van o.a. Schumann, Mahler en Brahms
+        </p>
+        <p class="concert-musicians">
+          <p>Éva Fahidi, Speaker<br>
+Benjamin Appl, Baritone<br>
+Daan Boertien, Piano<br>
+Jennifer Wilton, Introduction</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          13 August 2023
+           |
+          13:30
+          
+        </p>
+        <p class="concert-hall">
+          Cenakelkerk
+        </p>
+        <p class="concert-place">
+          Heilig Land Stichting
+        </p>
+        <p class="concert-repertoire">
+          R. Wagner - Parsifal: Act 3
+        </p>
+        <p class="concert-musicians">
+          <p>Frank van Aken, Tenor<br>
+Marc Pantus, Baritone<br>
+Merlijn Runia, Mezzo Soprano<br>
+Andrea Friggi, Conductor<br>
+Dirk Luijmes, Harmonium<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://parsifal3.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          12 August 2023
+           |
+          13:30
+          
+        </p>
+        <p class="concert-hall">
+          Cenakelkerk
+        </p>
+        <p class="concert-place">
+          Heilig Land Stichting
+        </p>
+        <p class="concert-repertoire">
+          R. Wagner - Parsifal: Act 3
+        </p>
+        <p class="concert-musicians">
+          <p>Frank van Aken, Tenor<br>
+Marc Pantus, Baritone<br>
+Merlijn Runia, Mezzo Soprano<br>
+Andrea Friggi, Conductor<br>
+Dirk Luijmes, Harmonium<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://parsifal3.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          11 August 2023
+           |
+          13:30
+          
+        </p>
+        <p class="concert-hall">
+          Cenakelkerk
+        </p>
+        <p class="concert-place">
+          Heilig Land Stichting
+        </p>
+        <p class="concert-repertoire">
+          R. Wagner - Parsifal: Act 3
+        </p>
+        <p class="concert-musicians">
+          <p>Frank van Aken, Tenor<br>
+Marc Pantus, Baritone<br>
+Merlijn Runia, Mezzo Soprano<br>
+Andrea Friggi, Conductor<br>
+Dirk Luijmes, Harmonium<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://parsifal3.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          10 August 2023
+           |
+          19:30
+          
+        </p>
+        <p class="concert-hall">
+          Cenakelkerk
+        </p>
+        <p class="concert-place">
+          Heilig Land Stichting
+        </p>
+        <p class="concert-repertoire">
+          R. Wagner - Parsifal: Act 3
+        </p>
+        <p class="concert-musicians">
+          <p>Frank van Aken, Tenor<br>
+Marc Pantus, Baritone<br>
+Merlijn Runia, Mezzo Soprano<br>
+Andrea Friggi, Conductor<br>
+Dirk Luijmes, Harmonium<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://parsifal3.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          23 July 2023
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Aurora Festival
+        </p>
+        <p class="concert-place">
+          Groningen
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Schumann, Mahler en Britten
+        </p>
+        <p class="concert-musicians">
+          <p>Marion v/d Akker, Mezzo Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="Https://aurorafestival.nl"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          18 June 2023
+           |
+          16:00
+          
+        </p>
+        <p class="concert-hall">
+          American Cathedral
+        </p>
+        <p class="concert-place">
+          Paris
+        </p>
+        <p class="concert-repertoire">
+          TBA
+        </p>
+        <p class="concert-musicians">
+          <p>Alexander York, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          11 June 2023
+           |
+          15:00
+          
+        </p>
+        <p class="concert-hall">
+          Slotzolder
+        </p>
+        <p class="concert-place">
+          Zeist
+        </p>
+        <p class="concert-repertoire">
+          Music by Schubert and Liszt
+        </p>
+        <p class="concert-musicians">
+          <p>Aidan Mikdad, Piano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.klassiekemuziek.nl/e/17282/pianoconcert-schubert-%E2%80%93-liszt-door-aidan-mikdad-en-daan-boertien-zeist"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          6 May 2023
+           |
+          20:15
+          
+        </p>
+        <p class="concert-hall">
+          Landgoed Linschoten 
+        </p>
+        <p class="concert-place">
+          Linschoten 
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Tchaikovsky, Duparc and Viardot
+        </p>
+        <p class="concert-musicians">
+          <p>Maria Warenberg, Mezzo Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          17 April 2023
+           |
+          20:15
+          
+        </p>
+        <p class="concert-hall">
+          Theater Junushoff
+        </p>
+        <p class="concert-place">
+          Wageningen
+        </p>
+        <p class="concert-repertoire">
+          R. Wagner - Parsifal: Act 3
+        </p>
+        <p class="concert-musicians">
+          <p>Frank van Aken, Tenor<br>
+Marc Pantus, Baritone<br>
+Merlijn Runia, Mezzo Soprano<br>
+Andrea Friggi, Conductor<br>
+Dirk Luijmes, Harmonium<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://parsifal3.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          15 April 2023
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Hochschule für Musik FRANZ LISZT, Festsaal Fürstenhaus
+        </p>
+        <p class="concert-place">
+          Weimar
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Mahler, Strauss and Schubert
+        </p>
+        <p class="concert-musicians">
+          <p>Benjamin Appl, Baritone<br>
+Éva Fahidi, Speaker<br>
+Daan Boertien, Piano<br>
+Jennifer Wilton, Moderator</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.buchenwald.de/en/47/date/2023/03/13/78-jahrestag-der-befreiung-der-kz-buchenwald-und-mittelbau-dora/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          13 April 2023
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Theater Regensburg
+        </p>
+        <p class="concert-place">
+          Regensburg
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Mahler, Strauss and Schubert
+        </p>
+        <p class="concert-musicians">
+          <p>Benjamin Appl, Baritone<br>
+Éva Fahidi, Speaker<br>
+Daan Boertien, Piano<br>
+Jennifer Wilton, Moderator</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://allevents.in/regensburg/konzert-mit-%C3%89va-fahidi-zeitzeugin-des-holocaust-benjamin-appl-bariton-und-daan-boertien-piano/200024250507331"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          12 April 2023
+           |
+          20:15
+          
+        </p>
+        <p class="concert-hall">
+          Leithenzaal
+        </p>
+        <p class="concert-place">
+          Leiden
+        </p>
+        <p class="concert-repertoire">
+          Songs by Dutch composers on texts of Heinrich Heine
+        </p>
+        <p class="concert-musicians">
+          <p>Marc Pantus, Bass-Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.leidsesalon.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          10 April 2023
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Dominicuskerk
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          R. Wagner - Parsifal: Act 3
+        </p>
+        <p class="concert-musicians">
+          <p>Frank van Aken, Tenor<br>
+Marc Pantus, Baritone<br>
+Merlijn Runia, Mezzo Soprano<br>
+Andrea Friggi, Conductor<br>
+Dirk Luijmes, Harmonium<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://parsifal3.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          17 March 2023
+           |
+          21:00
+          
+        </p>
+        <p class="concert-hall">
+          Torenlaantheater
+        </p>
+        <p class="concert-place">
+          Zeist
+        </p>
+        <p class="concert-repertoire">
+          Schubertiade
+        </p>
+        <p class="concert-musicians">
+          <p>Marlen Korf, Sopraan<br>
+Berend Eijkhout, Bariton<br>
+Flo, Tekenaar<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="Https://torenlaantheater.nl"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          4 March 2023
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Teatro del Títere
+        </p>
+        <p class="concert-place">
+          Cádiz
+        </p>
+        <p class="concert-repertoire">
+          F. Schubert - Winterreise
+        </p>
+        <p class="concert-musicians">
+          <p>Marc Pantus, Bass Baritone<br>
+Daan Boertien</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://tickentradas.com/eventos/winterreise-asociacion-qultura-2023"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          26 February 2023
+           |
+          21:15
+          
+        </p>
+        <p class="concert-hall">
+          Dominicuskerk
+        </p>
+        <p class="concert-place">
+          Amsterdam 
+        </p>
+        <p class="concert-repertoire">
+          Schubert - Winterreise 
+        </p>
+        <p class="concert-musicians">
+          <p>Marc Pantus, Bass-Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.klassiekemuziek.nl/p/17006/schubert-winterreise-met-marc-pantus-en-daan-boertien"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          14 February 2023
+           |
+          21:15
+          
+        </p>
+        <p class="concert-hall">
+          Sint Aegtenkapel
+        </p>
+        <p class="concert-place">
+          Amersfoort
+        </p>
+        <p class="concert-repertoire">
+          R. Wagner - Parsifal: Act 3
+        </p>
+        <p class="concert-musicians">
+          <p>Frank van Aken, Tenor<br>
+Marc Pantus, Baritone<br>
+Merlijn Runia, Mezzo Soprano<br>
+Andrea Friggi, Conductor<br>
+Tommy van Doorn, Harmonium<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://parsifal3.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          29 January 2023
+           |
+          17:00
+          
+        </p>
+        <p class="concert-hall">
+          Parc Broekhuizen
+        </p>
+        <p class="concert-place">
+          Leersum
+        </p>
+        <p class="concert-repertoire">
+          F. Schubert - Winterreise
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.parcbroekhuizen.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          22 January 2023
+           |
+          15:15
+          
+        </p>
+        <p class="concert-hall">
+          Amare, Conservatory Hall
+        </p>
+        <p class="concert-place">
+          The Hague
+        </p>
+        <p class="concert-repertoire">
+          E. Krenek - What Price Confidence
+        </p>
+        <p class="concert-musicians">
+          <p>Hannah Gries, Soprano<br>
+Rommie Rochell, Mezzo<br>
+Theodor Uggla, Tenor<br>
+Jitze van der Land, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.opera-academy.nl/performances/triptych/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          21 January 2023
+           |
+          20:30
+          
+        </p>
+        <p class="concert-hall">
+          Amare, Conservatory Hall
+        </p>
+        <p class="concert-place">
+          The Hague
+        </p>
+        <p class="concert-repertoire">
+          E. Krenek - What Price Confidence
+        </p>
+        <p class="concert-musicians">
+          <p>Taylor Burgess, Soprano<br>
+Sterre Decru, Mezzo<br>
+Theodor Uggla, Tenor<br>
+Fabian Homburg, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.opera-academy.nl/performances/triptych/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          19 January 2023
+           |
+          20:30
+          
+        </p>
+        <p class="concert-hall">
+          Amare, Conservatory Hall
+        </p>
+        <p class="concert-place">
+          The Hague
+        </p>
+        <p class="concert-repertoire">
+          E. Krenek - What Price Confidence
+        </p>
+        <p class="concert-musicians">
+          <p>Hannah Gries, Soprano<br>
+Rommie Rochell, Mezzo<br>
+Theodor Uggla, Tenor<br>
+Jitze van der Land, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.opera-academy.nl/performances/triptych/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          18 January 2023
+           |
+          20:30
+          
+        </p>
+        <p class="concert-hall">
+          Amare, Conservatory Hall
+        </p>
+        <p class="concert-place">
+          The Hague
+        </p>
+        <p class="concert-repertoire">
+          E. Krenek - What Price Confidence
+        </p>
+        <p class="concert-musicians">
+          <p>Taylor Burgess, Soprano<br>
+Sterre Decru, Mezzo<br>
+Theodor Uggla, Tenor<br>
+Fabian Homburg, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.opera-academy.nl/performances/triptych/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          27 November 2022
+           |
+          17:00
+          
+        </p>
+        <p class="concert-hall">
+          Muziekcentrum van de Omroep
+        </p>
+        <p class="concert-place">
+          Hilversum
+        </p>
+        <p class="concert-repertoire">
+          Songs By a.o. Vaughan Williams and Rachmaninov.
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.mcogebouw.nl/agenda/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          18 November 2022
+           |
+          21:30
+          
+        </p>
+        <p class="concert-hall">
+          Concertgebouw
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Purcell, Grieg &amp; Mahler
+        </p>
+        <p class="concert-musicians">
+          <p>Raoul Steffani, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.concertgebouw.nl/concerten/1104697-klapstuk-raoul-steffani-en-daan-boertien"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          13 November 2022
+           |
+          21:00
+          
+        </p>
+        <p class="concert-hall">
+          Splendor
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Arias by a.o. Mozart, Donizetti and Gounod
+        </p>
+        <p class="concert-musicians">
+          <p>Margreet Honig Foundation Festival</p>
+<p>Selma Harkink, Soprano<br>
+Linsey Coppens, Mezzo<br>
+André Morsch, Baritone<br>
+Martijn Cornet, Baritone<br>
+Henk Neven, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://splendoramsterdam.com/agenda/678232/voice-festival"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          13 November 2022
+           |
+          15:00
+          
+        </p>
+        <p class="concert-hall">
+          Splendor
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Songs by Schubert, Schumann, Strauss and Fauré 
+        </p>
+        <p class="concert-musicians">
+          <p>André Morsch, Baritone<br>
+Kirila Kraal, Soprano<br>
+Maarten Koningsberger, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          11 November 2022
+           |
+          21:15
+          
+        </p>
+        <p class="concert-hall">
+          Het Depot
+        </p>
+        <p class="concert-place">
+          Wageningen
+        </p>
+        <p class="concert-repertoire">
+          F. Schubert - Winterreise
+        </p>
+        <p class="concert-musicians">
+          <p>Peter Gijsbertsen, Tenor<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          7 November 2022
+           |
+          21:15
+          
+        </p>
+        <p class="concert-hall">
+          Theater Junushoff
+        </p>
+        <p class="concert-place">
+          Wageningen
+        </p>
+        <p class="concert-repertoire">
+          F. Schubert - Winterreise
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.junushoff.nl/programma/7212/Michael_Wilmering_en_Daan_Boertien/Winterreise"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          6 November 2022
+           |
+          13:00
+          
+        </p>
+        <p class="concert-hall">
+          Muziekgebouw Eindhoven
+        </p>
+        <p class="concert-place">
+          Eindhoven
+        </p>
+        <p class="concert-repertoire">
+          H. Wolf - Italienisches Liederbuch
+        </p>
+        <p class="concert-musicians">
+          <p>Laetitia Gerards, Soprano<br>
+Raoul Steffani, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.muziekgebouweindhoven.nl/nl/agenda/4124//Laetitia_Gerards_Raoul_Steffani_Daan_Boertien"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          29 October 2022
+           |
+          20:15
+          
+        </p>
+        <p class="concert-hall">
+          De Vereeniging
+        </p>
+        <p class="concert-place">
+          Nijmegen
+        </p>
+        <p class="concert-repertoire">
+          H. Wolf - Italienisches Liederbuch
+        </p>
+        <p class="concert-musicians">
+          <p>Laetitia Gerards, Soprano<br>
+Raoul Steffani, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.stadsschouwburgendevereeniging.nl/programma/6238/Laetitia_Gerards_Raoul_Steffani/Italienisches_Liederbuch"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          23 October 2022
+           |
+          15:30
+          
+        </p>
+        <p class="concert-hall">
+          Grote Kerk
+        </p>
+        <p class="concert-place">
+          Blokzijl
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Purcell, Grieg &amp; Mahler
+        </p>
+        <p class="concert-musicians">
+          <p>Raoul Steffani, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.blokzijlklassiek.nl/concert/raoul-steffani-en-daan-boertien/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          19 October 2022
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Wilminktheater
+        </p>
+        <p class="concert-place">
+          Enschede
+        </p>
+        <p class="concert-repertoire">
+          H. Wolf - Italienisches Liederbuch
+        </p>
+        <p class="concert-musicians">
+          <p>Laetitia Gerards, Soprano<br>
+Raoul Steffani, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          11 October 2022
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Jheronimus Bosch Art Center
+        </p>
+        <p class="concert-place">
+          Den Bosch
+        </p>
+        <p class="concert-repertoire">
+          H. Wolf - Italienisches Liederbuch
+        </p>
+        <p class="concert-musicians">
+          <p>Laetitia Gerards, Soprano<br>
+Raoul Steffani, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://jheronimusbosch-artcenter.nl/actueel/#jbac-concert"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          6 October 2022
+           |
+          19:30
+          
+        </p>
+        <p class="concert-hall">
+          St Martin in the Fields
+        </p>
+        <p class="concert-place">
+          London
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Mahler, Strauss and Schubert
+        </p>
+        <p class="concert-musicians">
+          <p>Benjamin Appl, Baritone<br>
+Éva Fahidi, Speaker<br>
+Daan Boertien, Piano<br>
+Jennifer Wilton, Moderator</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.stmartin-in-the-fields.org/whatson-event/eva-fahidi-benjamin-appl-i-know-for-certain-that-ill-see-you-again/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          2 October 2022
+           |
+          14:30
+          
+        </p>
+        <p class="concert-hall">
+          Kasteel Heeswijk
+        </p>
+        <p class="concert-place">
+          Heeswijk
+        </p>
+        <p class="concert-repertoire">
+          H. Wolf - Italienisches Liederbuch
+        </p>
+        <p class="concert-musicians">
+          <p>Laetitia Gerards, Soprano<br>
+Raoul Steffani, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.kasteelheeswijk.nl/agenda/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          25 September 2022
+           |
+          11:30
+          
+        </p>
+        <p class="concert-hall">
+          Theater de Veste
+        </p>
+        <p class="concert-place">
+          Delft
+        </p>
+        <p class="concert-repertoire">
+          H. Wolf - Italienisches Liederbuch
+        </p>
+        <p class="concert-musicians">
+          <p>Laetitia Gerards, Soprano<br>
+Raoul Steffani, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.theaterdeveste.nl/programma/8409/_Laetitia_Gerards_Raoul_Steffani_Daan_Boertien/Zondagochtendconcert"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          24 September 2022
+           |
+          20:30
+          
+        </p>
+        <p class="concert-hall">
+          Tindal Villa
+        </p>
+        <p class="concert-place">
+          Bussum
+        </p>
+        <p class="concert-repertoire">
+          H. Wolf - Italienisches Liederbuch
+        </p>
+        <p class="concert-musicians">
+          <p>Laetitia Gerards, Soprano<br>
+Raoul Steffani, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          18 September 2022
+           |
+          12:00
+          
+        </p>
+        <p class="concert-hall">
+          Kunsthalle
+        </p>
+        <p class="concert-place">
+          Hamburg
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Mahler, Strauss and Schubert
+        </p>
+        <p class="concert-musicians">
+          <p>Benjamin Appl, Baritone<br>
+Éva Fahidi, Speaker<br>
+Daan Boertien, Piano<br>
+Jennifer Wilton, Moderator</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.hamburger-kunsthalle.de/programmformat/musik-der-hamburger-kunsthalle"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          10 September 2022
+           |
+          19:30
+          
+        </p>
+        <p class="concert-hall">
+          Lutherkirche
+        </p>
+        <p class="concert-place">
+          Wiesbaden
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Mahler, Strauss and Schubert
+        </p>
+        <p class="concert-musicians">
+          <p>Benjamin Appl, Baritone<br>
+Éva Fahidi, Speaker<br>
+Daan Boertien, Piano<br>
+Jennifer Wilton, Moderator</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          8 September 2022
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Axel Springer Verlag
+        </p>
+        <p class="concert-place">
+          Berlin
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Mahler, Strauss and Schubert
+        </p>
+        <p class="concert-musicians">
+          <p>Benjamin Appl, Baritone<br>
+Éva Fahidi, Speaker<br>
+Daan Boertien, Piano<br>
+Jennifer Wilton, Moderator</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          28 August 2022
+           |
+          15:30
+          
+        </p>
+        <p class="concert-hall">
+          Parc Broekhuizen
+        </p>
+        <p class="concert-place">
+          Leersum
+        </p>
+        <p class="concert-repertoire">
+          Schumann - Dichterliebe and songs by a.o. Rachmaninov and Quilter
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.parcbroekhuizen.nl/wilmering-boertien/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          21 August 2022
+           |
+          16:00
+          
+        </p>
+        <p class="concert-hall">
+          Cenakelkerk
+        </p>
+        <p class="concert-place">
+          Nijmegen
+        </p>
+        <p class="concert-repertoire">
+          R. Wagner - Parsifal: Act 3
+        </p>
+        <p class="concert-musicians">
+          <p>Frank van Aken, Tenor<br>
+Marc Pantus, Baritone<br>
+Merlijn Runia, Mezzo Soprano<br>
+Andrea Friggi, Conductor<br>
+Tommy van Doorn, Harmonium<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://parsifal3.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          20 August 2022
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Cenakelkerk
+        </p>
+        <p class="concert-place">
+          Nijmegen
+        </p>
+        <p class="concert-repertoire">
+          R. Wagner - Parsifal: Act 3
+        </p>
+        <p class="concert-musicians">
+          <p>Frank van Aken, Tenor<br>
+Marc Pantus, Baritone<br>
+Merlijn Runia, Mezzo Soprano<br>
+Andrea Friggi, Conductor<br>
+Tommy van Doorn, Harmonium<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://parsifal3.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          19 August 2022
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Cenakelkerk
+        </p>
+        <p class="concert-place">
+          Nijmegen
+        </p>
+        <p class="concert-repertoire">
+          R. Wagner - Parsifal: Act 3
+        </p>
+        <p class="concert-musicians">
+          <p>Frank van Aken, Tenor<br>
+Marc Pantus, Baritone<br>
+Merlijn Runia, Mezzo Soprano<br>
+Andrea Friggi, Conductor<br>
+Tommy van Doorn, Harmonium<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://parsifal3.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          27 July 2022
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Zomeravond Concerten aan Zee
+        </p>
+        <p class="concert-place">
+          Cadzand
+        </p>
+        <p class="concert-repertoire">
+          Opera Arias from Mozart to Kurt Weill
+        </p>
+        <p class="concert-musicians">
+          <p>Esther Kouwenhoven, Soprano<br>
+Linsey Coppens, Mezzo Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://zomeravondconcertenaanzee.nl/27-07-2022-cadzand/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          21 July 2022
+           |
+          17:30
+          
+        </p>
+        <p class="concert-hall">
+          Park Sessies
+        </p>
+        <p class="concert-place">
+          Haarlem
+        </p>
+        <p class="concert-repertoire">
+          Arias and songs by Liszt and Rachmaninov
+        </p>
+        <p class="concert-musicians">
+          <p>Jeannette van Schaik, Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://parksessies.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          2 July 2022
+           |
+          20:30
+          
+        </p>
+        <p class="concert-hall">
+          Paradiso
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Purcell - Dido &amp; Aeneas 
+        </p>
+        <p class="concert-musicians">
+          <p>Members of the Dutch National Opera Studio<br>
+Members of the NedPho<br>
+Andreas Küppers, Conductor<br>
+Daan Boertien, Continuo</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.paradiso.nl/nl/programma/opera-in-paradiso-dido-and-aeneas-opera-van-henry-purcell-door-nederlands-kamerorkest-en-de-nationale-opera-studio/95749/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          4 June 2022
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Dutch National Opera
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Young Patrons Gala 
+        </p>
+        <p class="concert-musicians">
+          <p>Members of the Dutch National Opera Studio<br>
+Lochlan Brown, Conductor<br>
+Ballet Orchestra<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          29 May 2022
+           |
+          15:30
+          
+        </p>
+        <p class="concert-hall">
+          Parc Broekhuizen
+        </p>
+        <p class="concert-place">
+          Leersum
+        </p>
+        <p class="concert-repertoire">
+          Schumann - Dichterliebe and songs by a.o. Rachmaninov and Quilter
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.parcbroekhuizen.nl/wilmering-boertien/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+        <p class="concert-cancelled">
+          Cancelled
+        </p>
+        
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          28 May 2022
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Lokhorstkerk
+        </p>
+        <p class="concert-place">
+          Leiden
+        </p>
+        <p class="concert-repertoire">
+          Songs by Schubert, Schumann and Ravel
+        </p>
+        <p class="concert-musicians">
+          <p>Marlen Korf, Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          22 April 2022
+           |
+          20:30
+          
+        </p>
+        <p class="concert-hall">
+          Concertgebouw - Recital Hall
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Klapstuk
+Songs by Schubert, Rachmaninoff, Schumann, Ravel and Bernstein
+
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.concertgebouw.nl/concerten/klapstuk-michael-wilmering-daan-boertien/22-04-2022"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          17 April 2022
+           |
+          18:15
+          
+        </p>
+        <p class="concert-hall">
+          Podium Witteman
+        </p>
+        <p class="concert-place">
+          NPO 2
+        </p>
+        <p class="concert-repertoire">
+          Frühlingstraum - F. Schubert
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          3 April 2022
+           |
+          16:00
+          
+        </p>
+        <p class="concert-hall">
+          Theaterkerk Nes
+        </p>
+        <p class="concert-place">
+          Nes
+        </p>
+        <p class="concert-repertoire">
+          Music by a.o. Puccini, Bellini and Dvořák.
+        </p>
+        <p class="concert-musicians">
+          <p>Jeannette van Schaik, Soprano<br>
+Marion van den Akker, Mezzo<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          23 March 2022
+           |
+          21:15
+          
+        </p>
+        <p class="concert-hall">
+          Leithenzaal
+        </p>
+        <p class="concert-place">
+          Leiden
+        </p>
+        <p class="concert-repertoire">
+          Songs by Dutch composers on texts of Heinrich Heine
+        </p>
+        <p class="concert-musicians">
+          <p>Marc Pantus, Bass-Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.leidsesalon.nl/agenda/dichters-muziek-3"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+        <p class="concert-cancelled">
+          Cancelled
+        </p>
+        
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          7 March 2022
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Deutsches Historisches Museum
+        </p>
+        <p class="concert-place">
+          Berlin
+        </p>
+        <p class="concert-repertoire">
+          Songs by Mahler, Strauss and Schubert
+        </p>
+        <p class="concert-musicians">
+          <p>Benjamin Appl, Baritone<br>
+Éva Fahidi, Speaker<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.dhm.de/museumsverein/veranstaltung/mitgliederprogramm/#c13409"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          2 March 2022
+           |
+          18:00
+          
+        </p>
+        <p class="concert-hall">
+          Schloss Elmau
+        </p>
+        <p class="concert-place">
+          Krün
+        </p>
+        <p class="concert-repertoire">
+          Songs by Mahler, Strauss and Schubert
+        </p>
+        <p class="concert-musicians">
+          <p>Benjamin Appl, Bariton<br>
+Éva Fahidi, Speaker<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://reservations.schloss-elmau.de/ShowCalendarEvents.aspx/ShowCalendarEvents.aspx?startDate=01/03/2022#"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          27 January 2022
+           |
+          18:00
+          
+        </p>
+        <p class="concert-hall">
+          Podium
+        </p>
+        <p class="concert-place">
+          NPO Radio 4
+        </p>
+        <p class="concert-repertoire">
+          Songs from Schuberts Winterreise, Live on NPO Radio 4
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, Baritone<br>
+Daan Boertien, Piano<br>
+Hans Haffmans, Host</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          23 January 2022
+           |
+          11:00
+          
+        </p>
+        <p class="concert-hall">
+          Concertgebouw - Mirror Hall
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Songs from Schuberts Winterreise, Live on NPO Radio 4
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, Baritone<br>
+Daan Boertien, Piano<br>
+Hans van den Boom, Host</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          21 November 2021
+           |
+          12:00
+          
+        </p>
+        <p class="concert-hall">
+          Verkadefabriek
+        </p>
+        <p class="concert-place">
+          Den Bosch
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Wolf, Loewe and Schumann
+        </p>
+        <p class="concert-musicians">
+          <p>Marc Pantus, Bass-Bariton<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.verkadefabriek.nl/agenda/ivc-liedduo-wolf-leeuw-en-123818"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          25 October 2021
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Internationaal Liedfestival Zeist
+        </p>
+        <p class="concert-place">
+          Zeist
+        </p>
+        <p class="concert-repertoire">
+          Songs by Schubert, Beethoven, Rachmaninov and Wolf
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://ilfz.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          23 October 2021
+           |
+          14:00
+          
+        </p>
+        <p class="concert-hall">
+          Jacqueline du Pré Music Building
+        </p>
+        <p class="concert-place">
+          Oxford
+        </p>
+        <p class="concert-repertoire">
+          Finale Concert Mastercourse
+Songs by Schubert and Rachmaninov
+
+        </p>
+        <p class="concert-musicians">
+          <p>Alexander York, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.oxfordlieder.co.uk/events/forthcoming?jumptodate=&amp;category=mastercourse"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          12 October 2021
+           |
+          14:00
+          
+        </p>
+        <p class="concert-hall">
+          TivoliVredenburg
+        </p>
+        <p class="concert-place">
+          Utrecht
+        </p>
+        <p class="concert-repertoire">
+          Songs by Berg, Korngold and Alma Mahler
+        </p>
+        <p class="concert-musicians">
+          <p>Raoul Steffani, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.tivolivredenburg.nl/agenda/raoul-steffani-daan-boertien-12-10-2021/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          25 September 2021
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Schloss Belvedere
+        </p>
+        <p class="concert-place">
+          Weimar
+        </p>
+        <p class="concert-repertoire">
+          Songs by Mahler, Strauss and Schubert
+        </p>
+        <p class="concert-musicians">
+          <p>Benjamin Appl, Baritone<br>
+Éva Fahidi, Speaker<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          4 September 2021
+           |
+          15:30
+          
+        </p>
+        <p class="concert-hall">
+          Walkartkerk
+        </p>
+        <p class="concert-place">
+          Zeist
+        </p>
+        <p class="concert-repertoire">
+          F. Schubert - Winterreise
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          23 August 2021
+           |
+          14:00
+          
+        </p>
+        <p class="concert-hall">
+          O. Festival
+        </p>
+        <p class="concert-place">
+          Rotterdam
+        </p>
+        <p class="concert-repertoire">
+          Songs by Schubert and Hahn
+        </p>
+        <p class="concert-musicians">
+          <p>Hi Hawaii<br>
+Michael Wilmering, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://o-festival.nl/voorstelling/first-dates-hi-hawaii-x-michael-wilmering/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          23 August 2021
+           |
+          12:00
+          
+        </p>
+        <p class="concert-hall">
+          O. Festival
+        </p>
+        <p class="concert-place">
+          Rotterdam
+        </p>
+        <p class="concert-repertoire">
+          Songs by Schubert and Hahn
+        </p>
+        <p class="concert-musicians">
+          <p>Hi Hawaii<br>
+Michael Wilmering, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://o-festival.nl/voorstelling/first-dates-hi-hawaii-x-michael-wilmering/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          11 June 2021
+           |
+          17:00
+          
+        </p>
+        <p class="concert-hall">
+          Dutch National Opera
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Songs by Schoenberg
+        </p>
+        <p class="concert-musicians">
+          <p>Members of the DNOS<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          24 May 2021
+           |
+          16:00
+          
+        </p>
+        <p class="concert-hall">
+          Internationaal Liedfestival Zeist, Broederkerk
+        </p>
+        <p class="concert-place">
+          Zeist
+        </p>
+        <p class="concert-repertoire">
+          Songs by a.o. Rachmaninov and Ravel
+        </p>
+        <p class="concert-musicians">
+          <p>Michael Wilmering, baritone<br>
+Daan Boertien, piano</p>
+<p>Postponed until October</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://ilfz.nl/"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+        <p class="concert-cancelled">
+          Cancelled
+        </p>
+        
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          1 April 2021
+           |
+          20:30
+          
+        </p>
+        <p class="concert-hall">
+          Concertgebouw
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Ralph Vaughan Williams
+        </p>
+        <p class="concert-musicians">
+          <p>Roderick Williams, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.concertgebouw.nl"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          24 January 2021
+           |
+          21:15
+          
+        </p>
+        <p class="concert-hall">
+          Philharmonie Haarlem
+        </p>
+        <p class="concert-place">
+          Haarlem
+        </p>
+        <p class="concert-repertoire">
+          Songs and piano works by Mendelssohn
+        </p>
+        <p class="concert-musicians">
+          <p>Judith van Wanroij, soprano<br>
+Raoul Steffani, baritone<br>
+Daan Boertien, piano</p>
+
+        </p>
+         
+        <p class="concert-cancelled">
+          Cancelled
+        </p>
+        
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          6 December 2020
+           |
+          17:00
+          
+        </p>
+        <p class="concert-hall">
+          Opera Aperitief
+        </p>
+        <p class="concert-place">
+          Zutphen
+        </p>
+        <p class="concert-repertoire">
+          Arias by Mozart and songs by Schumann
+        </p>
+        <p class="concert-musicians">
+          <p>Rosina Fabius, Mezzo Soprano<br>
+Elvire Beekhuizen, Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+        <p class="concert-cancelled">
+          Cancelled
+        </p>
+        
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          13 November 2020
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Konzertsaal
+        </p>
+        <p class="concert-place">
+          Blaibach
+        </p>
+        <p class="concert-repertoire">
+          Songs by Schumann, Schubert and Mahler
+        </p>
+        <p class="concert-musicians">
+          <p>Benjamin Appl, Baritone<br>
+Daan Boertien, Pianist</p>
+
+        </p>
+         
+        <p class="concert-cancelled">
+          Cancelled
+        </p>
+        
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          12 November 2020
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Konzertsaal
+        </p>
+        <p class="concert-place">
+          Blaibach
+        </p>
+        <p class="concert-repertoire">
+          Songs by Schumann, Schubert, Poulenc, Strauss and Vaughan Williams
+        </p>
+        <p class="concert-musicians">
+          <p>Benjamin Appl, Baritone<br>
+Daan Boertien, Pianist</p>
+
+        </p>
+         
+        <p class="concert-cancelled">
+          Cancelled
+        </p>
+        
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          8 October 2020
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Hamburger Kunsthalle
+        </p>
+        <p class="concert-place">
+          Hamburg
+        </p>
+        <p class="concert-repertoire">
+          Songs by Schumann, Schubert, Poulenc, Strauss and Vaughan Williams
+        </p>
+        <p class="concert-musicians">
+          <p>Benjamin Appl, Baritone<br>
+Daan Boertien, Pianist</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          18 August 2020
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          TivoliVredenburg
+        </p>
+        <p class="concert-place">
+          Utrecht
+        </p>
+        <p class="concert-repertoire">
+          F. Poulenc - La voix humaine
+        </p>
+        <p class="concert-musicians">
+          <p>Cora Burggraaf, Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          14 August 2020
+           |
+          21:00
+          
+        </p>
+        <p class="concert-hall">
+          Grachtenfestival: Hotel Krasnapolsky
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Music by Chopin, Schumann, de Falla and Ravel
+        </p>
+        <p class="concert-musicians">
+          <p>Shin Sihan, Violin<br>
+Channa Malkin, Soprano<br>
+Emmy Storms, Violin<br>
+Marlen Korf, Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.grachtenfestival.nl"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          12 August 2020
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Grachtenfestival: De Duif
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Music by Mozart, Rachmaninov and Massenet
+        </p>
+        <p class="concert-musicians">
+          <p>Frederik Bergman, Bas Baritone<br>
+Sam Carl, Bas Baritone<br>
+Daan Boertien, Piano<br>
+Meisje Barbara, Director</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.grachtenfestival.nl"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          7 August 2020
+           |
+          21:00
+          
+        </p>
+        <p class="concert-hall">
+          Grachtenfestival: Zuiderkerk
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Music by Poulenc, Franck, de Falla and Ravel
+        </p>
+        <p class="concert-musicians">
+          <p>Shin Sihan, Violin<br>
+Channa Malkin, Soprano<br>
+Emmy Storms, Violin<br>
+Daan Boertien, Piano</p>
+
+        </p>
+        
+        <p class="margin-top">
+          <a
+            href="https://www.grachtenfestival.nl"
+            target="_blank"
+            class="concert-tickets btn"
+          >
+            More Information
+          </a>
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          25 February 2020
+           |
+          13:30
+          
+        </p>
+        <p class="concert-hall">
+          Dutch National Opera
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Songs by Glinka, Tschaikovsky and Rachmaninov
+        </p>
+        <p class="concert-musicians">
+          <p>Julietta Aleksanyan, Sopraan<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          18 February 2020
+           |
+          22:30
+          
+        </p>
+        <p class="concert-hall">
+          Deutschlandfunk Kultur
+        </p>
+        <p class="concert-place">
+          Hamburg
+        </p>
+        <p class="concert-repertoire">
+          Songs by Schumann and Schubert
+        </p>
+        <p class="concert-musicians">
+          <p>Geng Lee, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          23 January 2020
+           |
+          20:00
+          
+        </p>
+        <p class="concert-hall">
+          Hamburger Kunsthalle
+        </p>
+        <p class="concert-place">
+          Hamburg
+        </p>
+        <p class="concert-repertoire">
+          Songs by Beethoven, Grieg and Sibelius
+        </p>
+        <p class="concert-musicians">
+          <p>Raoul Steffani, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          14 January 2020
+           |
+          13:30
+          
+        </p>
+        <p class="concert-hall">
+          Dutch National Opera
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Songs by Purcel and Britten
+        </p>
+        <p class="concert-musicians">
+          <p>Cameron Shahbazi, Countertenor<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          1 October 2019
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Hamburger Kunsthalle
+        </p>
+        <p class="concert-place">
+          Hamburg
+        </p>
+        <p class="concert-repertoire">
+          Songs by Schumann, Rubinstein and Mendelssohn
+        </p>
+        <p class="concert-musicians">
+          <p>Benjamin Appl, Baritone<br>
+Daan Boertien, Pianist</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          17 August 2019
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Prinsengracht concert
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Liederen van Strauss en Grieg
+        </p>
+        <p class="concert-musicians">
+          <p>Raoul Steffani, Baritone<br>
+Vanessa Waldhart, Soprano<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          2 August 2019
+           |
+          20:15
+          
+        </p>
+        <p class="concert-hall">
+          International Chambermusic Festival Delft
+        </p>
+        <p class="concert-place">
+          Delft
+        </p>
+        <p class="concert-repertoire">
+          a.o. Songs by Strauss
+        </p>
+        <p class="concert-musicians">
+          <p>Daan Boertien, Piano<br>
+Olga Pashchenko, Fortepiano<br>
+Judith van Wanroij, Soprano<br>
+Amarins Wierdsma, Violin<br>
+Jeanette Landré, Flute</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          10 February 2019
+           |
+          17:00
+          
+        </p>
+        <p class="concert-hall">
+          Waalse Kerk
+        </p>
+        <p class="concert-place">
+          Amsterdam
+        </p>
+        <p class="concert-repertoire">
+          Schubert - Winterreise
+        </p>
+        <p class="concert-musicians">
+          <p>Marc Pantus, Bass Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+    
+    <div class="concert-poster fadeIn archive-poster">
+      <div class="concert-location">
+        <p class="concert-date">
+          28 January 2019
+           |
+          19:00
+          
+        </p>
+        <p class="concert-hall">
+          Laeiszhalle
+        </p>
+        <p class="concert-place">
+          Hamburg
+        </p>
+        <p class="concert-repertoire">
+          Songs by Berg, Mahler and Brahms
+        </p>
+        <p class="concert-musicians">
+          <p>Michaela Kaune, Soprano<br>
+Geng Lee, Baritone<br>
+Andreas Heinemeyer, Baritone<br>
+Daan Boertien, Piano</p>
+
+        </p>
+         
+      </div>
+    </div>
+     
+  </div>
+</section>
+
+
+    </main>
+
+    <section class="footer">
+  <div class="container">
+    <p class="fadeIn footer-text">
+      ©Daan Boertien | 2024 |
+      <a
+        href="/en/legalpolicy/"
+      >
+         Legal Policy 
+      </a>
+    </p>
+  </div>
+</section>
+
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"
+      integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/assets/js/hamburger.js"></script>
+    <script src="/assets/js/animations.js"></script>
+    <script src="/assets/js/media.js"></script>
+  </body>
+</html>

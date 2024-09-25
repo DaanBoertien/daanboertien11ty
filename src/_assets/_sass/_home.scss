@@ -1,0 +1,278 @@
+.section-landing {
+  position: relative;
+}
+
+.video-container {
+  width: 100%;
+  height: 105vh;
+  display: flex;
+  align-content: center;
+  background: black;
+  position: relative;
+}
+
+.video-container video,
+.video-container img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  object-position: top;
+  transition: all 2s ease-in-out;
+}
+
+.video-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  z-index: 1;
+  transition: all 1s ease-in-out;
+  pointer-events: none;
+}
+
+.video-container.loaded::before {
+  background: rgba(92, 59, 33, 0.1);
+}
+
+.video-container img.imglarge {
+  display: none;
+}
+
+.video-container img.imgsmall {
+  display: block;
+}
+
+.video-container .landing-title-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* Ensure it's above the gradient */
+  margin: 0 auto;
+}
+
+// .landing-title-container {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(0%, -50%);
+//   text-align: center; /* Default alignment */
+// }
+
+.landing-title,
+.landing-subtitle {
+  text-align: center;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.landing-title {
+  font-size: 65px;
+  color: var(--clr-hero-text);
+  margin-bottom: 10px;
+}
+
+.landing-subtitle {
+  font-size: 50px;
+  color: var(--clr-hero-text);
+  // filter: brightness(80%);
+  font-weight: 200;
+}
+
+.fa-angle-down {
+  position: absolute;
+  color: var(--clr-hero-text);
+  left: 50%;
+  bottom: 2em;
+  transform: translateX(-50%);
+  font-size: 50px;
+  font-weight: 300;
+  opacity: 70%;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s ease-out;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.bounce-7 {
+  animation-name: bounce-7;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+@keyframes bounce-7 {
+  0% {
+    transform: scale(1, 1) translateY(0) translateX(-50%);
+  }
+  15% {
+    transform: scale(1.05, 0.95) translateY(0) translateX(-50%);
+  }
+  30% {
+    transform: scale(0.95, 1.05) translateY(-20px) translateX(-50%);
+  }
+  45% {
+    transform: scale(1.02, 0.98) translateY(0) translateX(-50%);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-0px) translateX(-50%);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0) translateX(-50%);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0) translateX(-50%);
+  }
+}
+
+.fa-angle-down:hover {
+  opacity: 100%;
+}
+
+.section-bio {
+  padding-top: 2em;
+}
+
+.section-bio .btn,
+.section-media .btn,
+.section-cd .btn,
+.section-more-concerts .btn {
+  margin: 2em auto 3em;
+}
+
+.cd-image-container {
+  position: relative;
+  box-shadow: var(--boxshadow);
+  overflow: hidden;
+}
+
+.cd-image {
+  transition: transform 0.2s ease-out;
+}
+
+.cd-image:hover {
+  transform: scale(1.05);
+}
+
+.spotify {
+  box-shadow: var(--boxshadow);
+}
+
+.cd-image-container::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: -1;
+}
+.more-concerts {
+  margin: 1em auto 2em;
+}
+
+.bio-teaser a {
+  color: var(--clr-primary);
+  transition: color 0.2s ease-out;
+}
+
+.bio-teaser a:hover {
+  color: red;
+}
+
+.section-media .btn {
+  margin-top: 2em;
+}
+
+.next-concert {
+  font-weight: 200;
+  color: var(--clr-primary);
+  // filter: brightness(90%);
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+.section-quote {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.2px;
+  font-size: 1.1rem;
+  position: relative;
+  padding: 2em 1.5em;
+  margin: 0em;
+  overflow: hidden;
+  //TODO: change before/after in svg
+}
+
+.section-quote::before,
+.section-quote::after {
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-size: 500px;
+  color: var(--clr-primary);
+  opacity: 0.2;
+  // z-index: -1;
+  font-style: normal;
+}
+
+.section-quote::before {
+  content: "“";
+  top: -180px;
+  left: -80px;
+}
+
+.section-quote::after {
+  content: "”";
+  right: -50px;
+  bottom: -350px;
+}
+
+.quote-author {
+  margin-top: 1em;
+  text-align: right;
+}
+
+.iframe-container {
+  overflow: hidden;
+  position: relative;
+  padding-top: 56.25%;
+  box-shadow: var(--boxshadow);
+}
+
+.iframe-container iframe,
+.iframe-container .youtubethumbnail {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.youtubethumbnail {
+  z-index: 100;
+  object-position: center;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.iframe {
+  pointer-events: all;
+}
+
+.home-last-image {
+  position: relative;
+  box-shadow: var(--boxshadow);
+}
+
+.section-onemore {
+  padding: 0;
+}

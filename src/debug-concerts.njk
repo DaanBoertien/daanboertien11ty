@@ -1,0 +1,60 @@
+---
+layout: layouts/layout
+title: "Debug Concerts"
+permalink: "/debug-concerts/"
+lang: "en" # Adjust as needed for testing
+---
+
+<section class="concerts-page">
+  <div class="container">
+    <h1 class="page-title fadeIn">Debug Concerts</h1>
+
+    <!-- Future Concerts Section -->
+    <h2>Future Concerts</h2>
+    <ul>
+      {% for concert in collections.concerts | futureConcerts %}
+      <li>
+        {{ concert.data.date | date("MMMM d, yyyy") }} |
+        {{ concert.data.time | formatTime }} -
+        {{ concert.data.hall_nl }}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <h2>Aankomende concerten</h2>
+    <ul>
+      {% for concert in collections.concerts | futureConcerts %}
+      <li>
+        {{ concert.data.date | formatDateNL("d MMMM, yyyy") }} |
+        {{ concert.data.time | formatTime }} -
+        {{ concert.data.hall_nl }}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <!-- Past Concerts (Archive) Section -->
+    <h2>Past Concerts (Archive)</h2>
+    <ul>
+      {% for concert in collections.concerts | pastConcerts %}
+      <li>
+        {{ concert.data.date | date("MMMM d yyyy") }} -
+        {{ concert.data.hall_nl }}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <!-- Next Concert -->
+    <h2>Next Concert</h2>
+    {% set next_concert = collections.concerts | nextConcert %} {% if
+    next_concert %}
+    <p>
+      Next concert is on {{ next_concert.data.date | date("MMMM d yyyy") }} at
+      {{ next_concert.data.hall_nl }}
+    </p>
+    {% else %}
+    <p>No upcoming concerts found.</p>
+    {% endif %}
+  </div>
+
+  >
+</section>

@@ -1,0 +1,25 @@
+.btn {
+  border: 0px;
+  background: var(--clr-secondary);
+  color: var(--clr-btn);
+  display: block;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2), 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.7em 1.5em;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  display: block;
+  text-decoration: none;
+  width: max-content;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  font-weight: 400;
+  outline: 5px solid var(--clr-secondary); /* Use outline instead of border */
+  outline-offset: -5px;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--clr-btn);
+  color: var(--clr-secondary);
+  /* Move the outline inside the button */
+}

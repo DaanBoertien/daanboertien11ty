@@ -1,0 +1,55 @@
+<nav>
+    <ul class="nl">
+       {% for item in navigation %}
+           <li class="fadeInNav">
+               <a href="{{item.url_en}}"   
+               
+               {% if page.url == item.url_en %}class="current"{% endif %} >{{item.name_en}}</a>
+           </li>
+       {% endfor %}
+       <li class="fadeInNav"><a href="{{absolute_path_nl}}" class="">NL</a>  <a href="{{absolute_path_en}}" class="current">EN</a></li>
+       <li class="fadeInNav"><a href="https://www.instagram.com/daanboertien.pianist/" target="_blank"><i class="fa-brands fa-instagram"></i></a>  <a href="https://www.facebook.com/daan.boertien/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></li>
+       
+   </ul>
+   
+</nav>
+<div class="container-without-padding">
+<div class="hamburger-container">
+   <button class="hamburger hamburger--spin" type="button">
+       <span class="hamburger-box"></span>
+         <span class="hamburger-inner hamburger-black"></span>
+       </span>
+     </button>
+</div>
+</div>
+
+
+<div class="container navcontainer">
+    <div class="navdesktop glass">
+      <ul class="nl">
+        {% for item in navigation %}
+        <li class="fadeInTitle">
+          <a
+            href="{{item.url_en}}"
+            class="navblack {% if page.url == item.url_en %}current {% endif %}"
+            >{{item.name_en}}</a
+          >
+        </li>
+        {% endfor %}
+        <li class="fadeInTitle">
+          <a href="{{absolute_path_nl}}" class="navblack">NL</a>
+          <a href="{{absolute_path_en}}" class="current">EN</a>
+        </li>
+        <li class="fadeInTitle">
+          <a
+            href="https://www.instagram.com/daanboertien.pianist/"
+            target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.facebook.com/daan.boertien/" target="_blank"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </div>
