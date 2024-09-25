@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean-build": "rimraf _site && eleventy",
+    "clean-build": "rimraf _site && npm run build",
     "build:sass": "sass src/_assets/_sass/styles.scss src/_assets/styles.css --style=compressed",
+    "build:eleventy": "eleventy",
+    "build": "npm run build:sass && npm run build:eleventy",
     "watch:sass": "sass --watch src/_assets/_sass/styles.scss:src/_assets/styles.css",
     "serve": "npm-run-all --parallel watch:sass eleventy-serve",
     "eleventy-serve": "eleventy --serve"

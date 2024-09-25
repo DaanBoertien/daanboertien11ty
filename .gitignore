@@ -5,3 +5,5 @@ dist/
 .DS_Store
 _site/
 .sass-cache
+# Local Netlify folder
+.netlify
