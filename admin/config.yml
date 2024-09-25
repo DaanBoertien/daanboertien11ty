@@ -8,7 +8,7 @@ media_folder: assets/img/uploads/
 collections:
   - name: "settings"
     label: "Site Settings"
-    file: "src/_data/site-settings.yml" # Path to your settings file
+    file: "src/_data/sitesettings.yml" # Path to your settings file
     fields:
       - label: "Colors"
         name: "colors"
