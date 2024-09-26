@@ -39,7 +39,7 @@ collections:
   - name: "settings"
     label: "Site Settings"
     files:
-      - file: "_data/sitesettings.yml"
+      - file: "src/_data/sitesettings.yml"
         label: "Settings1"
         name: "settings1"
         fields:
