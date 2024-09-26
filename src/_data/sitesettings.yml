@@ -13,6 +13,8 @@ colors:
   text_color: "rgba(0, 0, 0, 0.85)" # Formerly --text-color
   hamburger_bg_color: white;
 
+test: doetiehet
+
 hero:
   focus:
     options:
