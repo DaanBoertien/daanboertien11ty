@@ -9,10 +9,12 @@ title_alignment: center
 arrow: false
 bottomborder: false
 image_desktop: /assets/img/uploads/Daan_22_PMT0770_.jpg
-image_mobile: /assets/img/uploads/web_daan_22_kl1_pmt0723.jpg
+image_mobile: /assets/img/uploads/DaanBoertienSebastianGaltier.jpg
 last_image: /assets/img/uploads/Musica en Segura Solo - J. Ortega.jpg
 showvideo: true
 youtube_id: krrw7utSaio
+showspotify: true
+spotify_embed: 2P0c0b7sAoJCjnGGqQl00X
 show_bio_teaser: true
 bio_teaser_nl: >
   Daan Boertien is een Nederlandse concertpianist die zich heeft gespecialiseerd
@@ -64,7 +66,5 @@ next_concert_en: Next Concert
 more_videos_nl: Meer video's
 more_videos_en: More Videos
 cancelled_nl: Geannuleerd
-photographer: ""
-showspotify: true
-spotify_embed: 2P0c0b7sAoJCjnGGqQl00X
 cancelled_en: Cancelled
+photographer: ""
