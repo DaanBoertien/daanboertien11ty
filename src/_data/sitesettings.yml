@@ -10,28 +10,7 @@ hero:
   text_alignment: 70%
   arrow: false
   bottomborder: false
-fonts:
-  options:
-    - Roboto
-    - Playfair Display
-    - Montserrat
-    - Lora
-    - Open Sans
-    - Raleway
-    - Merriweather
-    - Poppins
-    - Oswald
-    - Nunito
-    - Work Sans
-    - Rubik
-    - Lato
-    - Josefin Sans
-    - Fira Sans
-    - Quicksand
-    - Source Sans Pro
-    - PT Sans
-  primary_font: Montserrat
-  secondary_font: Playfair Display
+
 buttons:
   border_radius: 50px
 borders:
