@@ -127,10 +127,6 @@ collections:
             default: "©Daan Boertien"
 
           # Hero Section (Landing Section)
-          - label: "Show Hero Section"
-            name: "show_hero"
-            widget: "boolean"
-            default: true
           - label: "Name"
             name: "name"
             widget: "string"
