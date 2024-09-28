@@ -46,61 +46,39 @@ collections:
           - label: "Test"
             name: "test"
             widget: "string"
-          - label: "Colors"
-            name: "colors"
-            widget: "object"
-            fields:
-              - {
-                  label: "Button Color",
-                  name: "clr_btn",
-                  widget: "color",
-                  default: "#ffffff",
-                }
-              - {
-                  label: "Background Color",
-                  name: "bg_color",
-                  widget: "color",
-                  default: "#ffffff",
-                }
-              - {
-                  label: "Primary Color",
-                  name: "clr_primary",
-                  widget: "color",
-                  default: "rgb(190, 146, 64)",
-                }
-              - {
-                  label: "Text Color",
-                  name: "text_color",
-                  widget: "color",
-                  default: "rgba(0, 0, 0, 0.85)",
-                }
-              - {
-                  label: "Concerts Background Color",
-                  name: "clr_bg_concerts",
-                  widget: "color",
-                  default: "aliceblue",
-                }
-              - {
-                  label: "Secondary Hover Color",
-                  name: "clr_secondary_hover",
-                  widget: "color",
-                  default: "rgba(99, 136, 161, 0.85)",
-                }
-              - {
-                  label: "Hero Text Color",
-                  name: "clr_hero_text",
-                  widget: "color",
-                  default: "#ffffff",
-                }
-              - {
-                  label: "Secondary Color",
-                  name: "clr_secondary",
-                  widget: "color",
-                  default: "rgba(99, 136, 161, 1)",
-                }
-              - {
-                  label: "Hamburger Background Color",
-                  name: "hamburger_bg_color",
-                  widget: "color",
-                  default: "#ffffff",
-                }
+          - label: "Button Color"
+            name: "clr_btn"
+            widget: "color"
+            default: "#ffffff"
+          - label: "Background Color"
+            name: "bg_color"
+            widget: "color"
+            default: "#ffffff"
+          - label: "Primary Color"
+            name: "clr_primary"
+            widget: "color"
+            default: "rgb(190, 146, 64)"
+          - label: "Text Color"
+            name: "text_color"
+            widget: "color"
+            default: "rgba(0, 0, 0, 0.85)"
+          - label: "Concerts Background Color"
+            name: "clr_bg_concerts"
+            widget: "color"
+            default: "aliceblue"
+          - label: "Secondary Hover Color"
+            name: "clr_secondary_hover"
+            widget: "color"
+            default: "rgba(99, 136, 161, 0.85)"
+          - label: "Hero Text Color"
+            name: "clr_hero_text"
+            widget: "color"
+            default: "#ffffff"
+          - label: "Secondary Color"
+            name: "clr_secondary"
+            widget: "color"
+            default: "rgba(99, 136, 161, 1)"
+          - label: "Hamburger Background Color"
+            name: "hamburger_bg_color"
+            widget: "color"
+            default: "#ffffff"
