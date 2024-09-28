@@ -39,13 +39,10 @@ collections:
   - name: "settings"
     label: "Site Settings"
     files:
-      - file: "src/_data/sitesettings.yml"
-        label: "Settings1"
-        name: "settings1"
+      - file: "src/_data/settingscolors.yml"
+        label: "Colors"
+        name: "colors"
         fields:
-          - label: "Test"
-            name: "test"
-            widget: "string"
           - label: "Button Color"
             name: "clr_btn"
             widget: "color"

@@ -1,0 +1,9 @@
+clr_btn: white
+bg_color: white
+clr_primary: "#79551c"
+text_color: rgba(151, 91, 91, 0.85)
+clr_bg_concerts: "#3a2020"
+clr_secondary_hover: rgba(99, 136, 161, 0.85)
+clr_hero_text: white;
+clr_secondary: "#51791a"
+hamburger_bg_color: white;
