@@ -199,6 +199,12 @@ collections:
             name: "bio_teaser_en"
             widget: "text"
             required: false
+          - label: "Read More (NL)"
+            name: "read_more_nl"
+            widget: "string"
+          - label: "Read More (EN)"
+            name: "read_more_en"
+            widget: "string"
 
           # Quotes Section
           - label: "Show Quote 1"
