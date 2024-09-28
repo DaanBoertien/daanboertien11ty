@@ -145,10 +145,10 @@ collections:
             name: "text_alignment"
             widget: "select"
             options:
-              - { label: "Left", value: 30 }
-              - { label: "Center", value: 50 }
-              - { label: "Right", value: 70 }
-            default: 70
+              - { label: "Left", value: 30% }
+              - { label: "Center", value: 50% }
+              - { label: "Right", value: 70% }
+            default: 70%
           - label: "Title Alignment"
             name: "title_alignment"
             widget: "select"
