@@ -149,7 +149,7 @@ collections:
               - { label: "Center", value: 50% }
               - { label: "Right", value: 70% }
             default: 70%
-          - label: "Title Alignment"
+          - label: "Background image focus"
             name: "title_alignment"
             widget: "select"
             options:
