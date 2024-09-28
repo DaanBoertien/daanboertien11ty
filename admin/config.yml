@@ -43,6 +43,8 @@ collections:
       - file: "src/_data/settingscolors.yml"
         label: "Colors"
         name: "colors"
+        editor:
+          preview: false
         fields:
           - label: "Primary Color"
             name: "clr_primary"
@@ -79,6 +81,8 @@ collections:
       - file: "src/_data/settingsfonts.yml"
         label: "Fonts"
         name: "fonts"
+        editor:
+          preview: false
         fields:
           - label: "Primary Font"
             name: "primary_font"
@@ -93,6 +97,8 @@ collections:
       - file: "src/_data/settingsbuttons.yml"
         label: "Buttons"
         name: "buttons"
+        editor:
+          preview: false
         fields:
           - label: "Button Color"
             name: "button_color"
@@ -112,6 +118,8 @@ collections:
       - file: "src/_data/home.yml"
         label: "Homepage"
         name: "home"
+        editor:
+          preview: false
         fields:
           # General Page Info
           - label: "Title (NL)"
