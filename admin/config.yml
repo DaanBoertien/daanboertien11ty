@@ -242,7 +242,7 @@ collections:
 
           # Concerts
           - label: "Show Next Concert"
-            name: "show_concerts_videos"
+            name: "show_next_concert"
             widget: "boolean"
             default: true
           - label: "More Concerts Button (NL)"
