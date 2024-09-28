@@ -1,6 +1,6 @@
 clr_primary: "#563c13"
-clr_secondary: "#51791a"
-text_color: rgba(151, 91, 91, 0.85)
+clr_secondary: "#2f4270"
+text_color: rgba(0, 0, 0, 0.85)
 bg_color: white
 clr_btn: white
 clr_bg_concerts: "#f5f7f9"
