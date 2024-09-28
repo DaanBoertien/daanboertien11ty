@@ -1,22 +1,2 @@
-fonts:
-  options:
-    - Roboto
-    - Playfair Display
-    - Montserrat
-    - Lora
-    - Open Sans
-    - Raleway
-    - Merriweather
-    - Poppins
-    - Oswald
-    - Nunito
-    - Work Sans
-    - Rubik
-    - Lato
-    - Josefin Sans
-    - Fira Sans
-    - Quicksand
-    - Source Sans Pro
-    - PT Sans
 primary_font: Montserrat
 secondary_font: Playfair Display
