@@ -122,10 +122,9 @@
     </a>
   </p>
 </section>
-{% endif %}
-
+{% endif %} {% if home.showspotify %}
 <div class="container">
-  <section class="section-cd fadeIn">
+  <section class="section-cd fadeIn margin-bottom">
     <iframe
       class="spotify"
       style="border-radius: 12px"
@@ -142,16 +141,16 @@
   </section>
 </div>
 
+{% endif %} {% if home.show_quote2 %}
 <div class="container-without-padding fadeIn">
   <section class="section-quote">
     <p class="quote fadeIn">
       {{ home["quote_cd_" + lang] | markdown | safe }}
     </p>
-    <p class="quote-author fadeIn">
-      {{ home["quote_cd_author"] | markdown | safe }}
-    </p>
+    <p class="quote-author fadeIn">{{ home.quote_cd_author }}</p>
   </section>
 </div>
+{% endif %}
 
 <section class="section-onemore fadeIn">
   <div class="container-without-padding home-last-image border-top">

@@ -186,6 +186,14 @@ collections:
             widget: "string"
             default: "krrw7utSaio"
             required: false
+          - label: "Show Spotify Player"
+            name: "showspotify"
+            widget: "boolean"
+            default: true
+          - label: "Spotify Embed ID"
+            name: "spotify_embed"
+            widget: "string"
+            required: false
 
           # Bio Teaser Section
           - label: "Show Bio Teaser"
