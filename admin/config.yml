@@ -105,3 +105,189 @@ collections:
             widget: "string"
             default: "50px"
             hint: "Border radius in pixels. A value higher than 30px will result in a pill-shaped button"
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/_data/home.yml"
+        label: "Homepage"
+        name: "home"
+        fields:
+          # General Page Info
+          - label: "Title (NL)"
+            name: "title_nl"
+            widget: "string"
+            default: "Home"
+          - label: "Title (EN)"
+            name: "title_en"
+            widget: "string"
+            default: "Home"
+          - label: "Footer Text"
+            name: "footer_text"
+            widget: "string"
+            default: "©Daan Boertien"
+
+          # Hero Section (Landing Section)
+          - label: "Show Hero Section"
+            name: "show_hero"
+            widget: "boolean"
+            default: true
+          - label: "Name"
+            name: "name"
+            widget: "string"
+            default: "Daan Boertien"
+          - label: "Profession (NL)"
+            name: "occupation_nl"
+            widget: "string"
+            default: "Pianist"
+            required: false
+          - label: "Profession (EN)"
+            name: "occupation_en"
+            widget: "string"
+            default: "Pianist"
+            required: false
+          - label: "Text Alignment"
+            name: "text_alignment"
+            widget: "select"
+            options:
+              - { label: "Left", value: 30 }
+              - { label: "Center", value: 50 }
+              - { label: "Right", value: 70 }
+            default: 70
+          - label: "Title Alignment"
+            name: "title_alignment"
+            widget: "select"
+            options:
+              - { label: "Left", value: "left" }
+              - { label: "Center", value: "center" }
+              - { label: "Right", value: "right" }
+            default: "right"
+          - label: "Show Arrow"
+            name: "arrow"
+            widget: "boolean"
+          - label: "Show Bottom Border"
+            name: "bottomborder"
+            widget: "boolean"
+
+          # Background Images
+          - label: "Desktop Image"
+            name: "image_desktop"
+            widget: "image"
+          - label: "Mobile Image"
+            name: "image_mobile"
+            widget: "image"
+          - label: "Last Image"
+            name: "last_image"
+            widget: "image"
+
+          # Youtube Video Section
+          - label: "Show Video"
+            name: "showvideo"
+            widget: "boolean"
+            default: true
+          - label: "Youtube ID"
+            name: "youtube_id"
+            widget: "string"
+            default: "krrw7utSaio"
+            required: false
+
+          # Bio Teaser Section
+          - label: "Show Bio Teaser"
+            name: "show_bio_teaser"
+            widget: "boolean"
+            default: true
+          - label: "Bio Teaser (NL)"
+            name: "bio_teaser_nl"
+            widget: "text"
+            required: false
+          - label: "Bio Teaser (EN)"
+            name: "bio_teaser_en"
+            widget: "text"
+            required: false
+
+          # Quotes Section
+          - label: "Show Quote 1"
+            name: "show_quote1"
+            widget: "boolean"
+            default: true
+          - label: "Quote (NL)"
+            name: "quote_nl"
+            widget: "text"
+            required: false
+          - label: "Quote (EN)"
+            name: "quote_en"
+            widget: "text"
+            required: false
+          - label: "Quote Author"
+            name: "quote_author"
+            widget: "string"
+            required: false
+
+          # CD Review Section
+          - label: "Show Quote 2"
+            name: "show_quote2"
+            widget: "boolean"
+            default: true
+          - label: "Quote 2 (NL)"
+            name: "quote_cd_nl"
+            widget: "text"
+            required: false
+          - label: "Quote 2 (EN)"
+            name: "quote_cd_en"
+            widget: "text"
+            required: false
+          - label: "Quote 2 Author"
+            name: "quote_cd_author"
+            widget: "string"
+            required: false
+
+          # Concerts
+          - label: "Show Next Concert"
+            name: "show_concerts_videos"
+            widget: "boolean"
+            default: true
+          - label: "More Concerts Button (NL)"
+            name: "more_concerts_nl"
+            widget: "string"
+            default: "Meer concerten"
+            required: false
+          - label: "More Concerts Button (EN)"
+            name: "more_concerts_en"
+            widget: "string"
+            default: "More Concerts"
+            required: false
+          - label: "Next Concert Button (NL)"
+            name: "next_concert_nl"
+            widget: "string"
+            default: "Volgende concert"
+            required: false
+          - label: "Next Concert Button (EN)"
+            name: "next_concert_en"
+            widget: "string"
+            default: "Next Concert"
+            required: false
+          - label: "More Videos Button (NL)"
+            name: "more_videos_nl"
+            widget: "string"
+            default: "Meer video's"
+            required: false
+          - label: "More Videos Button (EN)"
+            name: "more_videos_en"
+            widget: "string"
+            default: "More Videos"
+            required: false
+          - label: "Cancelled (NL)"
+            name: "cancelled_nl"
+            widget: "string"
+            default: "Geannuleerd"
+            required: false
+          - label: "Cancelled (EN)"
+            name: "cancelled_en"
+            widget: "string"
+            default: "Cancelled"
+            required: false
+
+          # Photographer Credits (Optional)
+          - label: "Photographer"
+            name: "photographer"
+            widget: "string"
+            required: false
