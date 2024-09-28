@@ -1,5 +1,5 @@
-clr_primary: "#563c13"
-clr_secondary: "#2f4270"
+clr_primary: "#b48231"
+clr_secondary: "#3d9367"
 text_color: rgba(0, 0, 0, 0.85)
 bg_color: white
 clr_btn: white
