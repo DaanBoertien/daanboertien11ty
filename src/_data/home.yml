@@ -65,7 +65,7 @@ quote_cd_en: >
 quote_cd_author: "[ - Musicweb
   International](https://www.musicweb-international.com/classrev/2022/Apr/Schub\
   ert-winterreise-TTK0078.htm)"
-show_next_concert: false
+show_next_concert: true
 more_concerts_nl: Meer concerten
 more_concerts_en: More Concerts
 next_concert_nl: Volgende concert
