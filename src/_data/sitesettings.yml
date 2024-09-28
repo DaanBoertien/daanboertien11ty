@@ -1,18 +1,3 @@
-test: Hij doet het!!
-
-hero:
-  focus:
-    options:
-      - left
-      - right
-      - center
-  photo_focus: center
-  text_alignment: 70%
-  arrow: false
-  bottomborder: false
-
-buttons:
-  border_radius: 50px
 borders:
   border_size: 10px;
   color:

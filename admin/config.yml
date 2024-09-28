@@ -89,19 +89,19 @@ collections:
             widget: "string"
             default: "Bodoni Moda"
             hint: "Please ensure this is a valid Google Font name. You can find fonts at fonts.google.com."
-          - file: "src/_data/settingsbuttons.yml"
-            label: "Buttons"
-            name: "buttons"
-            fields:
-              - label: "Button Color"
-                name: "button_color"
-                widget: "select"
-                default: "var(--clr-secondary)"
-                options:
-                  - { label: "Primary Color", value: "var(--clr-primary)" }
-                  - { label: "Secondary Color", value: "var(--clr-secondary)" }
-              - label: "Border Radius"
-                name: "border_radius"
-                widget: "string"
-                default: "50px"
-                hint: "Border radius in pixels. A value higher than 30px will result in a pill-shaped button"
+      - file: "src/_data/settingsbuttons.yml"
+        label: "Buttons"
+        name: "buttons"
+        fields:
+          - label: "Button Color"
+            name: "button_color"
+            widget: "select"
+            default: "var(--clr-secondary)"
+            options:
+              - { label: "Primary Color", value: "var(--clr-primary)" }
+              - { label: "Secondary Color", value: "var(--clr-secondary)" }
+          - label: "Border Radius"
+            name: "border_radius"
+            widget: "string"
+            default: "50px"
+            hint: "Border radius in pixels. A value higher than 30px will result in a pill-shaped button"
