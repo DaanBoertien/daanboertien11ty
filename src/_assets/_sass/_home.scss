@@ -201,7 +201,7 @@
 }
 
 .section-quote {
-  font-family: "Playfair Display", serif;
+  font-family: var(--secondary-font), serif;
   font-weight: 400;
   font-style: italic;
   letter-spacing: 0.2px;
@@ -216,7 +216,7 @@
 .section-quote::before,
 .section-quote::after {
   position: absolute;
-  font-family: "Playfair Display", serif;
+  font-family: var(--secondary-font), serif;
   font-size: 500px;
   color: var(--clr-primary);
   opacity: 0.2;

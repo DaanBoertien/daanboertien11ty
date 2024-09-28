@@ -18,5 +18,5 @@ fonts:
     - Quicksand
     - Source Sans Pro
     - PT Sans
-  primary_font: Montserrat
-  secondary_font: Playfair Display
+primary_font: Montserrat
+secondary_font: Playfair Display

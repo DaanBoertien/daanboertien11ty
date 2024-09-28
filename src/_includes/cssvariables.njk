@@ -12,8 +12,8 @@
             --hamburger-bg-color:  {{ settingscolors.hamburger_bg_color }};
             --clr-hero-text:  {{ settingscolors.clr_hero_text }};
             --gradient: {{ settingscolors.gradient }};
-            --primary-font: {{ sitesettings.fonts.primary_font }};
-            --secondary-font: {{ sitesettings.fonts.secondary_font }};
+            --primary-font: {{ settingsfonts.primary_font }};
+            --secondary-font: {{ settingsfonts.secondary_font }};
             --container-width: {{ sitesettings.spacing.container_width }};
             --section-padding: {{ sitesettings.spacing.section_padding }};
             --boxshadow: {{ sitesettings.effects.box_shadow }};
@@ -27,9 +27,6 @@
 
           }
 
-          body {
-          font-family: var(--primary-font);
-          }
 
   /* FOR VERSION 2 */
       /* .gradient-overlay {
