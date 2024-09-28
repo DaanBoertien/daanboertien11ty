@@ -8,19 +8,17 @@ text_alignment: 70%
 title_alignment: center
 arrow: false
 bottomborder: false
-image_desktop: /assets/img/uploads/Daan_22_PMT0770_.jpg
+image_desktop: /assets/img/uploads/pxl_20240815_111308990.jpg
 image_mobile: /assets/img/uploads/DaanBoertienSebastianGaltier.jpg
 last_image: /assets/img/uploads/Musica en Segura Solo - J. Ortega.jpg
 showvideo: true
 youtube_id: krrw7utSaio
 show_bio_teaser: true
-read_more_nl: Lees Meer
-read_more_en: Read More
 bio_teaser_nl: >
-  Daan Boertien is een Nederlandse concertpianist die zich heeft
-  gespecialiseerd in liedbegeleiding. Recentelijk trad hij op met internationaal
-  gevierde zangers zoals Benjamin Appl, Roderick Williams en Thomas Oliemans.
-  Zijn debuut-cd met bariton Michael Wilmering werd door de internationale pers
+  Daan Boertien is een Nederlandse concertpianist die zich heeft gespecialiseerd
+  in liedbegeleiding. Recentelijk trad hij op met internationaal gevierde
+  zangers zoals Benjamin Appl, Roderick Williams en Thomas Oliemans. Zijn
+  debuut-cd met bariton Michael Wilmering werd door de internationale pers
   lovend ontvangen. Sinds 2020 is Daan Boertien als Associate Artist verbonden
   aan de Dutch National Opera Studio.
 bio_teaser_en: >
@@ -30,6 +28,8 @@ bio_teaser_en: >
   with baritone Michael Wilmering was praised by the international press. Since
   2020, Daan Boertien has been affiliated with the Dutch National Opera Studio
   as an Associate Artist.
+read_more_nl: Lees Meer
+read_more_en: Read More
 show_quote1: true
 quote_nl: >
   Gespecialiseerd in het begeleiden van liederen toonde Daan Boertien zich een
@@ -56,7 +56,6 @@ quote_cd_en: >
   live version with Bostridge. Boertien is a similarly endless source of
   delight.
 quote_cd_author: "- Musicweb International"
-spotify_embed: 2P0c0b7sAoJCjnGGqQl00X
 show_next_concert: true
 more_concerts_nl: Meer concerten
 more_concerts_en: More Concerts
@@ -65,5 +64,6 @@ next_concert_en: Next Concert
 more_videos_nl: Meer video's
 more_videos_en: More Videos
 cancelled_nl: Geannuleerd
-cancelled_en: Cancelled
 photographer: ""
+spotify_embed: 2P0c0b7sAoJCjnGGqQl00X
+cancelled_en: Cancelled
