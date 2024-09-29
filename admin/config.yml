@@ -310,3 +310,43 @@ collections:
             name: "photographer"
             widget: "string"
             required: false
+      - name: "biography"
+        label: "Biography"
+        file: "src/_data/biography.yml"
+        fields:
+          - label: "Page Title (NL)"
+            name: "title_nl"
+            widget: "string"
+          - label: "Page Title (EN)"
+            name: "title_en"
+            widget: "string"
+          - label: "Biography (NL)"
+            name: "bio_nl"
+            widget: "markdown"
+          - label: "Biography (EN)"
+            name: "bio_en"
+            widget: "markdown"
+          - label: "Quote (NL)"
+            name: "quote_nl"
+            widget: "markdown"
+            required: false
+          - label: "Quote (EN)"
+            name: "quote_en"
+            widget: "markdown"
+            required: false
+          - label: "Quote Author (NL)"
+            name: "quote_author_nl"
+            widget: "string"
+            required: false
+          - label: "Quote Author (EN)"
+            name: "quote_author_en"
+            widget: "string"
+            required: false
+          - label: "Image"
+            name: "image"
+            widget: "image"
+            required: false
+          - label: "Photographer"
+            name: "photographer"
+            widget: "string"
+            required: false
