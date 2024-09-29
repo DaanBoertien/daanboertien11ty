@@ -1509,12 +1509,14 @@ nav li,
   content: "“";
   top: -180px;
   left: -80px;
+  overflow-y: hidden;
 }
 
 .section-quote::after {
   content: "”";
   right: -50px;
   bottom: -350px;
+  overflow-y: hidden;
 }
 
 .quote-author {

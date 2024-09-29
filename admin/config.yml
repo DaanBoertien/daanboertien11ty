@@ -342,6 +342,10 @@ collections:
             name: "quote_author_en"
             widget: "string"
             required: false
+          - label: "Show Image"
+            name: "show_image"
+            widget: "boolean"
+            required: false
           - label: "Image"
             name: "image"
             widget: "image"
@@ -350,3 +354,59 @@ collections:
             name: "photographer"
             widget: "string"
             required: false
+  - name: "concerts"
+    label: "Concerts"
+    folder: "concerts" # The folder containing your concert markdown files
+    create: true
+    slug: "{{date}}-{{hall_nl | slugify}}"
+    summary: "{{date | date('D-M-YYYY')}} - {{hall_nl}}"
+    fields:
+      - label: Tags
+        name: tags
+        widget: hidden
+        default: ["concerts"]
+      - label: "City (Dutch)"
+        name: "place_nl"
+        widget: "string"
+      - label: "City (English)"
+        name: "place_en"
+        widget: "string"
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: "HH:mm"
+        format: "YYYY-MM-DDTHH:mm:ssZ"
+      - label: "Time"
+        name: "time"
+        widget: "time"
+        format: "HH:mm:ss.SSS"
+      - label: "Hall (Dutch)"
+        name: "hall_nl"
+        widget: "string"
+      - label: "Hall (English)"
+        name: "hall_en"
+        widget: "string"
+      - label: "Repertoire (Dutch)"
+        name: "repertoire_nl"
+        widget: "string"
+      - label: "Repertoire (English)"
+        name: "repertoire_en"
+        widget: "string"
+      - label: "Musicians (Dutch)"
+        name: "musicians_nl"
+        widget: "text"
+      - label: "Musicians (English)"
+        name: "musicians_en"
+        widget: "text"
+      - label: "Organizer URL"
+        name: "organizer_url"
+        widget: "string"
+      - label: "Archived"
+        name: "in_archive"
+        widget: "boolean"
+        default: true
+      - label: "Cancelled"
+        name: "cancelled"
+        widget: "boolean"
+        default: false
