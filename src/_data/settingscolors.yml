@@ -1,9 +1,10 @@
 clr_primary: "#b48231"
 clr_secondary: "#3d9367"
 text_color: rgba(0, 0, 0, 0.85)
-bg_color: white
+bg_color: "#ffffff"
 clr_btn: white
 clr_bg_concerts: "#f5f7f9"
 clr_secondary_hover: rgba(99, 136, 161, 0.85)
 clr_hero_text: "#ffffff"
 hamburger_bg_color: "#ffffff"
+bg_color_rgb: 255,255,255

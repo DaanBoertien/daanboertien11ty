@@ -22,7 +22,7 @@
         {{ home["occupation_" + lang] }}
       </p>
     </div>
-    {% if sitesettings.hero.arrow %}
+    {% if home.arrow %}
     <a href="#section-bio">
       <i class="fa fa-angle-down bounce-7" aria-hidden="true"></i>
     </a>
@@ -31,7 +31,7 @@
 </section>
 
 <section
-  class="section-bio {% if sitesettings.hero.bottomborder %}border-top{% endif %}"
+  class="section-bio {% if home.bottomborder %}border-top{% endif %}"
   id="section-bio"
 >
   <div class="container bio-teaser fadeIn">
