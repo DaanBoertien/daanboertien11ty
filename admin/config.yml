@@ -356,7 +356,7 @@ collections:
             required: false
   - name: "concerts"
     label: "Concerts"
-    folder: "concerts" # The folder containing your concert markdown files
+    folder: "src/concerts" # The folder containing your concert markdown files
     create: true
     slug: "{{date}}-{{hall_nl | slugify}}"
     summary: "{{date | date('D-M-YYYY')}} - {{hall_nl}}"
