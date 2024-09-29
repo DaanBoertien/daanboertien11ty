@@ -356,7 +356,7 @@ collections:
             required: false
   - name: "concerts"
     label: "Concerts"
-    singular_label: "Add New Concert"
+    label_singular: "Add New Concert"
     folder: "src/concerts" # The folder containing your concert markdown files
     create: true
     slug: "{{date}}-{{hall_nl | slugify}}"
@@ -383,7 +383,7 @@ collections:
         format: "YYYY-MM-DDTHH:mm:ssZ"
       - label: "Time"
         name: "time"
-        widget: "time"
+        widget: "datetime"
         format: "HH:mm:ss.SSS"
       - label: "Hall (Dutch)"
         name: "hall_nl"
