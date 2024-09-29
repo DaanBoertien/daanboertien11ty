@@ -9,7 +9,7 @@
     <div class="concert-poster fadeIn">
       <div class="concert-location">
         <p class="concert-date">
-          {{ concert.data.date | formatDate('d MMMM yyyy', lang) }}
+          {{ concert.data.date |  formatDate('d MMMM yyyy', lang) }}
           {% if concert.data.time %} |
           {{ concert.data.time | formatTime }}
           {% endif %}

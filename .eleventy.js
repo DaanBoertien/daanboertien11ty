@@ -88,6 +88,10 @@ module.exports = function(eleventyConfig) {
         return format(new Date(date), dateFormat, { locale });
     });
 
+    
+    
+    
+
     // Concert Date Filters
     eleventyConfig.addFilter("concertDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj).setLocale('de').toLocaleString(DateTime.DATE_FULL);
@@ -210,6 +214,14 @@ eleventyConfig.addFilter("formatTime", function(time) {
     .setZone('Europe/Amsterdam')                 // Convert to Amsterdam timezone
     .toFormat('HH:mm');                          // Format in 24-hour format
 });
+eleventyConfig.addTransform("postProcessDates", function(content, outputPath) {
+  if( outputPath && outputPath.endsWith(".html") ) {
+    // Replace any date or time fields that are not quoted and wrap them in quotes
+    content = content.replace(/(date: |time: )(\d{4}-\d{2}-\d{2}|\d{2}:\d{2})/g, '$1"$2"');
+  }
+  return content;
+});
+
 
 
 

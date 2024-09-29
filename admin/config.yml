@@ -381,12 +381,14 @@ collections:
         date_format: "YYYY-MM-DD"
         time_format: false
         format: "YYYY-MM-DD"
+        data_type: "string"
       - label: "Time"
         name: "time"
         widget: "datetime"
         time_format: "HH:mm"
         date_format: false
         format: "HH:mm"
+        data_type: "string"
       - label: "Hall (Dutch)"
         name: "hall_nl"
         widget: "string"
