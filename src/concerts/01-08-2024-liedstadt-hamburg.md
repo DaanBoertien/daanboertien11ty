@@ -7,8 +7,8 @@ date: 2024-10-03
 time: 15:00
 hall_nl: Liedstadt Hamburg
 hall_en: Liedstadt Hamburg
-repertoire_nl: Liederen van o.a. Mahler
-repertoire_en: Songs by a.o. Mahler
+repertoire_nl: Liederen van o.a. Brahms
+repertoire_en: Songs by a.o. Brahms
 musicians_nl: |
   Ida Aldrian, Mezzosopraan
   Volodymir Milushkin, Bariton
