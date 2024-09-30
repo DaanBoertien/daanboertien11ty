@@ -4,7 +4,7 @@ tags:
 place_nl: Hamburg
 place_en: Hamburg
 date: 2024-10-03
-time: 17:00
+time: 18:00
 hall_nl: Liedstadt Hamburg - Lutherkirche
 hall_en: Liedstadt Hamburg - Lutherkirche
 repertoire_nl: Liederen van Vaughan Williams
