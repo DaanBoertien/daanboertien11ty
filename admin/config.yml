@@ -360,7 +360,7 @@ collections:
     folder: "src/concerts" # The folder containing your concert markdown files
     create: true
     slug: "{{date}}-{{hall_nl | slugify | uniqueSlug('src/concerts'}}"
-    summary: "{{date | date('D-M-YYYY')}} - {{hall_nl}}"
+    summary: "{{date | date('D-M-YYYY')}} | {{time}} - {{hall_nl}}"
     editor:
       preview: false # Disable preview
     sort: "date:desc"
