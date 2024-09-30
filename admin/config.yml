@@ -374,6 +374,7 @@ collections:
         widget: "string"
       - label: "City (English)"
         name: "place_en"
+        required: false
         widget: "string"
       - label: "Date"
         name: "date"
@@ -384,6 +385,7 @@ collections:
         name: "time"
         widget: "datetime"
         time_format: "HH:mm"
+        required: false
         date_format: false
       - label: "Hall (Dutch)"
         name: "hall_nl"
@@ -391,18 +393,21 @@ collections:
       - label: "Hall (English)"
         name: "hall_en"
         widget: "string"
+        required: false
       - label: "Repertoire (Dutch)"
         name: "repertoire_nl"
         widget: "string"
       - label: "Repertoire (English)"
         name: "repertoire_en"
         widget: "string"
+        required: false
       - label: "Musicians (Dutch)"
         name: "musicians_nl"
         widget: "text"
       - label: "Musicians (English)"
         name: "musicians_en"
         widget: "text"
+        required: false
       - label: "Organizer URL"
         name: "organizer_url"
         widget: "string"
