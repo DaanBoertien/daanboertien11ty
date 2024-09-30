@@ -185,6 +185,22 @@ module.exports = function(eleventyConfig) {
 //     .toFormat('HH:mm');                          // Format in 24-hour format
 // });
 
+const fs = require("fs");
+  const path = require("path");
+
+  // Custom slug filter to handle duplicates
+  eleventyConfig.addFilter("uniqueSlug", (baseSlug, folder) => {
+    let counter = 1;
+    let slug = baseSlug;
+
+    // Check if the file already exists
+    while (fs.existsSync(path.join(folder, `${slug}.md`))) {
+      slug = `${baseSlug}-${counter++}`;
+    }
+
+    return slug;
+  });
+
 function parseDate(value) {
   console.log(`parseDate called with value:`, value);
 
