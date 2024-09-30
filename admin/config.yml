@@ -359,7 +359,7 @@ collections:
     label_singular: "Concert123"
     folder: "src/concerts" # The folder containing your concert markdown files
     create: true
-    slug: "{{date}}-{{hall_nl | slugify | uniqueSlug('src/concerts'}}"
+    slug: "{{date}} | {{time}} -{{hall_nl | slugify | uniqueSlug('src/concerts'}}"
     summary: "{{date | date('D-M-YYYY')}} - {{hall_nl}}"
     editor:
       preview: false # Disable preview
