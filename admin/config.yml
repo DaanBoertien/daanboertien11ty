@@ -411,6 +411,7 @@ collections:
       - label: "Organizer URL"
         name: "organizer_url"
         widget: "string"
+        required: false
       - label: "Archived"
         name: "in_archive"
         widget: "boolean"
