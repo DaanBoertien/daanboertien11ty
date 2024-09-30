@@ -20,6 +20,8 @@
   "dependencies": {
     "date-fns": "^4.1.0",
     "front-matter": "^4.0.2",
+    "fs-extra": "^11.2.0",
+    "glob": "^11.0.0",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
     "luxon": "^3.5.0",

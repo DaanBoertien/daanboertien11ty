@@ -74,45 +74,7 @@ module.exports = function(eleventyConfig) {
     // Set Markdown Library
     eleventyConfig.setLibrary("md", markdownLib);
 
-    // Custom Date Formatter using Luxon and date-fns
-    eleventyConfig.addFilter("formatDate", function(date, format, lang) {
-      const locale = lang === "nl" ? 'nl' : 'en'; // Set locale based on language
-      return DateTime.fromISO(date).setLocale(locale).toFormat(format);
-    });
-    
-    
 
-    // **date Filter**: Define 'date' filter using date-fns with locale support
-    eleventyConfig.addFilter('date', (date, dateFormat, localeString = 'en') => {
-        const locale = localeString === 'de' ? de : en;
-        return format(new Date(date), dateFormat, { locale });
-    });
-
-    
-    
-    
-
-    // Concert Date Filters
-    eleventyConfig.addFilter("concertDate", (dateObj) => {
-        return DateTime.fromJSDate(dateObj).setLocale('de').toLocaleString(DateTime.DATE_FULL);
-    });
-    eleventyConfig.addFilter("concertTime", (dateObj) => {
-      // Explicitly use the 'Europe/Amsterdam' time zone
-      return DateTime.fromJSDate(dateObj, {zone: 'Europe/Amsterdam'}).setLocale('de').toLocaleString(DateTime.TIME_24_SIMPLE);
-    });
-
-    eleventyConfig.addFilter("formatDateNL", function(date, format) {
-      const formattedDate = DateTime.fromISO(date).setLocale('nl').toFormat(format);
-      
-      // Capitalize the first letter after the day (the start of the month)
-      return formattedDate.replace(/(^\d{1,2})\s+(\w)/, function(_, day, monthFirstLetter) {
-        return `${day} ${monthFirstLetter.toUpperCase()}`;
-      });
-    });
-    
-    
-
-  
 
     // **fadeInMarkdown Filter**
     // Converts Markdown to HTML and adds class="fadeIn" to each <p> tag
@@ -130,99 +92,241 @@ module.exports = function(eleventyConfig) {
     });
     
 
-    // **Custom Filters for Concerts**
-// Future Concerts Filter with improved handling
+//     // Custom Date Formatter using Luxon and date-fns
+//     eleventyConfig.addFilter("formatDate", function(date, format, lang) {
+//       const locale = lang === "nl" ? 'nl' : 'en'; // Set locale based on language
+//       return DateTime.fromISO(date).setLocale(locale).toFormat(format);
+//     });
+    
+
+
+//     // **Custom Filters for Concerts**
+// // Future Concerts Filter with improved handling
+// eleventyConfig.addFilter("futureConcerts", (concerts) => {
+//   const now = DateTime.local();
+//   console.log("Current time (now):", now.toISO()); // Log the current time
+  
+//   return concerts.filter(concert => {
+//     let concertDate = concert.data.date;
+
+//     // If concertDate is a JavaScript Date object, convert it to ISO string
+//     if (concertDate instanceof Date) {
+//       concertDate = concertDate.toISOString();
+//     }
+
+//     console.log(`Raw Concert Date: ${concert.data.date} | Converted to ISO: ${concertDate}`);
+
+//     const concertDateTime = DateTime.fromISO(concertDate); // Parse the ISO date
+//     console.log(`Parsed Concert Date: ${concertDateTime.toISO()}`); // Log the parsed date
+
+//     return concertDateTime >= now;
+//   });
+// });
+
+
+// // Past Concerts Filter
+// eleventyConfig.addFilter("pastConcerts", (concerts) => {
+//   const now = DateTime.local();
+//   console.log("Current time (now):", now.toISO()); // Log current time
+  
+//   return concerts
+//     .filter(concert => {
+//       let concertDate = concert.data.date;
+
+//       // If concertDate is a JavaScript Date object, convert to ISO string
+//       if (concertDate instanceof Date) {
+//         concertDate = concertDate.toISOString();
+//       }
+
+//       console.log(`Raw Concert Date: ${concert.data.date} | Converted to ISO: ${concertDate}`);
+      
+//       const concertDateTime = DateTime.fromISO(concertDate); // Parse the ISO date
+//       console.log(`Parsed Concert Date: ${concertDateTime.toISO()}`); // Log the parsed date
+      
+//       // Check if the concert has passed
+//       return concertDateTime < now && concert.data.in_archive;
+//     })
+//     .sort((a, b) => {
+//       const aDate = DateTime.fromISO(a.data.date);
+//       const bDate = DateTime.fromISO(b.data.date);
+//       return bDate - aDate; // Sort past concerts in descending order
+//     });
+// });
+
+// // Next Concert Filter
+// eleventyConfig.addFilter("nextConcert", (concerts) => {
+//   const now = DateTime.local();
+ 
+  
+//   const futureConcerts = concerts
+//     .filter(concert => {
+//       let concertDate = concert.data.date;
+
+//       // If concertDate is a JavaScript Date object, convert to ISO string
+//       if (concertDate instanceof Date) {
+//         concertDate = concertDate.toISOString();
+//       }
+
+//       const concertDateTime = DateTime.fromISO(concertDate); // Parse the ISO date
+     
+//       return concertDateTime >= now; // Return only future concerts
+//     })
+//     .sort((a, b) => {
+//       const aDate = DateTime.fromISO(a.data.date);
+//       const bDate = DateTime.fromISO(b.data.date);
+//       return aDate - bDate; // Sort by ascending date to get the next concert
+//     });
+
+//   return futureConcerts.length > 0 ? futureConcerts[0] : null; // Return the next concert
+// });
+// eleventyConfig.addFilter("formatTime", function(time) {
+//   return DateTime.fromISO(time, { zone: 'utc' }) // Assume time in the .md file is in UTC
+//     .setZone('Europe/Amsterdam')                 // Convert to Amsterdam timezone
+//     .toFormat('HH:mm');                          // Format in 24-hour format
+// });
+
+function parseDate(value) {
+  console.log(`parseDate called with value:`, value);
+
+  let isoString;
+
+  if (value instanceof Date) {
+    console.log('Value is a Date object:', value);
+    // Convert Date object to ISO string
+    isoString = value.toISOString();
+    console.log('Converted Date object to ISO string:', isoString);
+  } else if (typeof value === 'string') {
+    console.log('Value is a string:', value);
+    isoString = value;
+  } else {
+    console.log(`Invalid date value:`, value);
+    return null;
+  }
+
+  // Parse the ISO string with Luxon
+  const dateTime = DateTime.fromISO(isoString);
+  if (!dateTime.isValid) {
+    console.log(`Invalid ISO date: ${isoString}`);
+  }
+  return dateTime;
+}
+
+function parseTime(value) {
+  if (typeof value === 'string') {
+    // Value is a string in 'HH:mm' format
+    return DateTime.fromFormat(value, 'HH:mm');
+  } else {
+    console.log(`Invalid time value:`, value);
+    return null;
+  }
+}
+eleventyConfig.addFilter("formatDate", function(date, formatStr, lang) {
+  console.log(`formatDate called with date:`, date);
+
+  const locale = lang === "nl" ? 'nl' : 'en';
+  const dateTime = parseDate(date);
+
+  if (!dateTime || !dateTime.isValid) {
+    console.log(`Invalid date format: ${date}`);
+    return 'Invalid Date';
+  }
+
+  const formattedDate = dateTime.setLocale(locale).toFormat(formatStr);
+  console.log(`Formatted date:`, formattedDate);
+  return formattedDate;
+});
+
+
+function parseTime(value) {
+  console.log(`parseTime called with value:`, value);
+
+  if (typeof value === 'string') {
+    console.log('Value is a string:', value);
+    const dateTime = DateTime.fromFormat(value, 'HH:mm');
+    if (!dateTime.isValid) {
+      console.log(`Invalid time format: ${value}`);
+    }
+    return dateTime;
+  } else if (value instanceof Date) {
+    console.log('Value is a Date object:', value);
+    return DateTime.fromJSDate(value);
+  } else {
+    console.log(`Invalid time value:`, value);
+    return null;
+  }
+}
+
+eleventyConfig.addFilter("formatTime", function(time) {
+  let dateTime;
+
+  // Handle numbers like 1080 (assuming these are minutes from midnight)
+  if (typeof time === 'number') {
+    const hours = Math.floor(time / 60);
+    const minutes = time % 60;
+    dateTime = DateTime.fromObject({ hour: hours, minute: minutes });
+  }
+  // Handle properly formatted time strings (e.g., '13:00')
+  else if (typeof time === 'string' && time.match(/^\d{2}:\d{2}$/)) {
+    dateTime = DateTime.fromFormat(time, 'HH:mm');
+  }
+  // Handle cases where the time string might include seconds (e.g., '13:00:53.157')
+  else if (typeof time === 'string' && time.match(/^\d{2}:\d{2}:\d{2}(.\d+)?$/)) {
+    dateTime = DateTime.fromFormat(time, 'HH:mm:ss.SSS');
+  } else {
+    console.log(`Invalid time value: ${time}`);
+    return '';
+  }
+
+  // Return formatted time or log an issue if invalid
+  return dateTime.isValid ? dateTime.toFormat('HH:mm') : 'Invalid Time';
+});
+
 eleventyConfig.addFilter("futureConcerts", (concerts) => {
   const now = DateTime.local();
-  console.log("Current time (now):", now.toISO()); // Log the current time
-  
   return concerts.filter(concert => {
-    let concertDate = concert.data.date;
-
-    // If concertDate is a JavaScript Date object, convert it to ISO string
-    if (concertDate instanceof Date) {
-      concertDate = concertDate.toISOString();
+    const concertDateTime = parseDate(concert.data.date);
+    if (!concertDateTime || !concertDateTime.isValid) {
+      console.log(`Invalid concert date for ${concert.data.title}`);
+      return false;
     }
-
-    console.log(`Raw Concert Date: ${concert.data.date} | Converted to ISO: ${concertDate}`);
-
-    const concertDateTime = DateTime.fromISO(concertDate); // Parse the ISO date
-    console.log(`Parsed Concert Date: ${concertDateTime.toISO()}`); // Log the parsed date
-
     return concertDateTime >= now;
   });
 });
-
-
-// Past Concerts Filter
 eleventyConfig.addFilter("pastConcerts", (concerts) => {
   const now = DateTime.local();
-  console.log("Current time (now):", now.toISO()); // Log current time
-  
   return concerts
     .filter(concert => {
-      let concertDate = concert.data.date;
-
-      // If concertDate is a JavaScript Date object, convert to ISO string
-      if (concertDate instanceof Date) {
-        concertDate = concertDate.toISOString();
+      const concertDateTime = parseDate(concert.data.date);
+      if (!concertDateTime || !concertDateTime.isValid) {
+        console.log(`Invalid concert date for ${concert.data.title}`);
+        return false;
       }
-
-      console.log(`Raw Concert Date: ${concert.data.date} | Converted to ISO: ${concertDate}`);
-      
-      const concertDateTime = DateTime.fromISO(concertDate); // Parse the ISO date
-      console.log(`Parsed Concert Date: ${concertDateTime.toISO()}`); // Log the parsed date
-      
-      // Check if the concert has passed
       return concertDateTime < now && concert.data.in_archive;
     })
     .sort((a, b) => {
-      const aDate = DateTime.fromISO(a.data.date);
-      const bDate = DateTime.fromISO(b.data.date);
-      return bDate - aDate; // Sort past concerts in descending order
+      const aDate = parseDate(a.data.date);
+      const bDate = parseDate(b.data.date);
+      return bDate - aDate;
     });
 });
-
-// Next Concert Filter
 eleventyConfig.addFilter("nextConcert", (concerts) => {
   const now = DateTime.local();
- 
-  
   const futureConcerts = concerts
     .filter(concert => {
-      let concertDate = concert.data.date;
-
-      // If concertDate is a JavaScript Date object, convert to ISO string
-      if (concertDate instanceof Date) {
-        concertDate = concertDate.toISOString();
+      const concertDateTime = parseDate(concert.data.date);
+      if (!concertDateTime || !concertDateTime.isValid) {
+        console.log(`Invalid concert date for ${concert.data.title}`);
+        return false;
       }
-
-      const concertDateTime = DateTime.fromISO(concertDate); // Parse the ISO date
-     
-      return concertDateTime >= now; // Return only future concerts
+      return concertDateTime >= now;
     })
     .sort((a, b) => {
-      const aDate = DateTime.fromISO(a.data.date);
-      const bDate = DateTime.fromISO(b.data.date);
-      return aDate - bDate; // Sort by ascending date to get the next concert
+      const aDate = parseDate(a.data.date);
+      const bDate = parseDate(b.data.date);
+      return aDate - bDate;
     });
-
-  return futureConcerts.length > 0 ? futureConcerts[0] : null; // Return the next concert
+  return futureConcerts.length > 0 ? futureConcerts[0] : null;
 });
-eleventyConfig.addFilter("formatTime", function(time) {
-  return DateTime.fromISO(time, { zone: 'utc' }) // Assume time in the .md file is in UTC
-    .setZone('Europe/Amsterdam')                 // Convert to Amsterdam timezone
-    .toFormat('HH:mm');                          // Format in 24-hour format
-});
-eleventyConfig.addTransform("postProcessDates", function(content, outputPath) {
-  if( outputPath && outputPath.endsWith(".html") ) {
-    // Replace any date or time fields that are not quoted and wrap them in quotes
-    content = content.replace(/(date: |time: )(\d{4}-\d{2}-\d{2}|\d{2}:\d{2})/g, '$1"$2"');
-  }
-  return content;
-});
-
-
 
 
     // -------------------------

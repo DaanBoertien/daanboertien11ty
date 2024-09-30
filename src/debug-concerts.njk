@@ -2,7 +2,7 @@
 layout: layouts/layout
 title: "Debug Concerts"
 permalink: "/debug-concerts/"
-lang: "en" # Adjust as needed for testing
+lang: "en"
 ---
 
 <section class="concerts-page">
@@ -11,50 +11,29 @@ lang: "en" # Adjust as needed for testing
 
     <!-- Future Concerts Section -->
     <h2>Future Concerts</h2>
-    <ul>
-      {% for concert in collections.concerts | futureConcerts %}
-      <li>
-        {{ concert.data.date | date("MMMM d, yyyy") }} |
-        {{ concert.data.time | formatTime }} -
-        {{ concert.data.hall_nl }}
-      </li>
-      {% endfor %}
-    </ul>
-
-    <h2>Aankomende concerten</h2>
-    <ul>
-      {% for concert in collections.concerts | futureConcerts %}
-      <li>
-        {{ concert.data.date | formatDateNL("d MMMM, yyyy") }} |
-        {{ concert.data.time | formatTime }} -
-        {{ concert.data.hall_nl }}
-      </li>
-      {% endfor %}
-    </ul>
-
-    <!-- Past Concerts (Archive) Section -->
-    <h2>Past Concerts (Archive)</h2>
-    <ul>
-      {% for concert in collections.concerts | pastConcerts %}
-      <li>
-        {{ concert.data.date | date("MMMM d yyyy") }} -
-        {{ concert.data.hall_nl }}
-      </li>
-      {% endfor %}
-    </ul>
-
-    <!-- Next Concert -->
-    <h2>Next Concert</h2>
-    {% set next_concert = collections.concerts | nextConcert %} {% if
-    next_concert %}
-    <p>
-      Next concert is on {{ next_concert.data.date | date("MMMM d yyyy") }} at
-      {{ next_concert.data.hall_nl }}
-    </p>
+    
+      <h2>Future Concerts</h2>
+<ul>
+  {% for concert in collections.concerts | futureConcerts %}
+  <li>
+    {{ concert.data.date | formatDate("MMMM d, yyyy", lang) }} |
+    {{ concert.data.time | formatTime }} -
+    {{ concert.data.hall_nl }}
+  </li>
+  <p class="concert-date">
+    {{ concert.data.date | formatDate('d MMMM yyyy', lang) }}
+    {% if concert.data.time %}
+      | Raw time value: {{ concert.data.time }} |
+      Formatted time: {{ concert.data.time | formatTime }}
     {% else %}
-    <p>No upcoming concerts found.</p>
+      | Time is undefined or empty for this concert
     {% endif %}
-  </div>
+  </p>
+  {% endfor %}
+</ul>
+
+    
+
 
   >
 </section>
