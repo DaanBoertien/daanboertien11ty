@@ -1,20 +1,19 @@
 ---
 hall_en: Dutch National Opera
-date: 2020-01-14
+date:
 repertoire_en: Songs by Purcel and Britten
-musicians_en: |
-  Cameron Shahbazi, Countertenor
-  Daan Boertien, Piano
-in_archive: true
-cancelled: false
+musicians_en: Cameron Shahbazi, Countertenor
+Daan Boertien, Piano
+
 tags:
   - concerts
 hall_nl: De Nationale Opera
-time: 11:30
+time: 13:30
 place_nl: Amsterdam
 place_en: Amsterdam
 repertoire_nl: Liederen van Purcel en Britten
-musicians_nl: |
-  Cameron Shahbazi, Countertenor
-  Daan Boertien, Piano
+musicians_nl: Cameron Shahbazi, Countertenor
+Daan Boertien, Piano
+
 ---
+

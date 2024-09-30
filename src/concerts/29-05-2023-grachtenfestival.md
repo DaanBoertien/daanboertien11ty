@@ -1,24 +1,23 @@
 ---
 hall_en: Grachtenfestival
-date: 2023-08-18
+date:
 repertoire_en: Liederen van o.a. Schumann, Mahler en Brahms
-musicians_en: |
-  Éva Fahidi, Speaker 
-  Benjamin Appl, Baritone 
-  Daan Boertien, Piano
-  Jennifer Wilton, Introduction 
-in_archive: true
-cancelled: false
+musicians_en: Éva Fahidi, Speaker 
+Benjamin Appl, Baritone 
+Daan Boertien, Piano
+Jennifer Wilton, Introduction 
+
 tags:
   - concerts
 hall_nl: Grachtenfestival
-time: 17:00
+time: 19:00
 place_nl: Amsterdam
 place_en: Amsterdam
 repertoire_nl: Liederen van o.a. Schumann, Mahler en Brahms
-musicians_nl: |
-  Éva Fahidi, Spreker 
-  Benjamin Appl, Bariton 
-  Daan Boertien, Piano
-  Jennifer Wilton, Introductie
+musicians_nl: Éva Fahidi, Spreker 
+Benjamin Appl, Bariton 
+Daan Boertien, Piano
+Jennifer Wilton, Introductie
+
 ---
+

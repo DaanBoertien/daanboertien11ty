@@ -1,22 +1,20 @@
 ---
 hall_en: Slotzolder
-date: 2024-12-22
+date:
 place_en: Zeist
 repertoire_en: F. Schubert - Winterreise
-musicians_en: |
-  Michael Wilmering, Baritone
-  Daan Boertien, Piano
-organizer_url: >-
-  https://www.slotzeist.nl/agenda/michael-wilmering-bariton-&-daan-boertien-piano
-in_archive: true
-cancelled: false
+musicians_en: Michael Wilmering, Baritone
+Daan Boertien, Piano
+
+organizer_url: https://www.slotzeist.nl/agenda/michael-wilmering-bariton-&-daan-boertien-piano
 tags:
   - concerts
 hall_nl: Slotzolder
-time: 13:30
+time: 15:30
 place_nl: Zeist
 repertoire_nl: F. Schubert - Winterreise
-musicians_nl: |
-  Michael Wilmering, Bariton
-  Daan Boertien, Piano
+musicians_nl: Michael Wilmering, Bariton
+Daan Boertien, Piano
+
 ---
+

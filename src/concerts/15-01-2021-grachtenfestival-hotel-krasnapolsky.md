@@ -1,27 +1,26 @@
 ---
-date: 2020-08-14
+date:
 repertoire_en: Music by Chopin, Schumann, de Falla and Ravel
-musicians_en: |
-  Shin Sihan, Violin
-  Channa Malkin, Soprano
-  Emmy Storms, Violin
-  Marlen Korf, Soprano
-  Daan Boertien, Piano
+musicians_en: Shin Sihan, Violin
+Channa Malkin, Soprano
+Emmy Storms, Violin
+Marlen Korf, Soprano
+Daan Boertien, Piano
+
 organizer_url: https://www.grachtenfestival.nl
-in_archive: true
-cancelled: false
 tags:
   - concerts
-hall_nl: 'Grachtenfestival: Hotel Krasnapolsky'
-hall_en: 'Grachtenfestival: Hotel Krasnapolsky'
-time: 19:00
+hall_nl: Grachtenfestival: Hotel Krasnapolsky
+hall_en: Grachtenfestival: Hotel Krasnapolsky
+time: 21:00
 place_nl: Amsterdam
 place_en: Amsterdam
 repertoire_nl: Muziek van Chopin, Schumann, de Falla en Ravel
-musicians_nl: |
-  Shin Sihan, Viool
-  Channa Malkin, Sopraan
-  Emmy Storms, Viool
-  Marlen Korf, Sopraan
-  Daan Boertien, Piano
+musicians_nl: Shin Sihan, Viool
+Channa Malkin, Sopraan
+Emmy Storms, Viool
+Marlen Korf, Sopraan
+Daan Boertien, Piano
+
 ---
+

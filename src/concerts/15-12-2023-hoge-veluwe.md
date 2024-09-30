@@ -1,22 +1,20 @@
 ---
 hall_en: Hoge Veluwe
-date: 2023-12-16
+date:
 repertoire_en: Schubert - Winterreise
-musicians_en: |
-  Michael Wilmering, Baritone
-  Daan Boertien, Piano
-organizer_url: >-
-  https://www.hogeveluwe.nl/nl/agenda/winterconcert-winterreise-door-bariton-michael-wilmering
-in_archive: true
-cancelled: false
+musicians_en: Michael Wilmering, Baritone
+Daan Boertien, Piano
+
+organizer_url: https://www.hogeveluwe.nl/nl/agenda/winterconcert-winterreise-door-bariton-michael-wilmering
 tags:
   - concerts
 hall_nl: Hoge Veluwe
-time: 13:30
+time: 15:30
 place_nl: Otterlo
 place_en: Otterlo
 repertoire_nl: Schubert - Winterreise
-musicians_nl: |
-  Michael Wilmering, Bariton
-  Daan Boertien, Piano
+musicians_nl: Michael Wilmering, Bariton
+Daan Boertien, Piano
+
 ---
+

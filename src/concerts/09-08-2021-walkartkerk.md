@@ -1,20 +1,19 @@
 ---
-date: 2021-09-04
-musicians_en: |
-  Michael Wilmering, Baritone
-  Daan Boertien, Piano
-in_archive: true
-cancelled: false
+date:
+musicians_en: Michael Wilmering, Baritone
+Daan Boertien, Piano
+
 tags:
   - concerts
 hall_nl: Walkartkerk
 hall_en: Walkartkerk
-time: 13:30
+time: 15:30
 place_nl: Zeist
 place_en: Zeist
 repertoire_nl: F. Schubert - Winterreise
 repertoire_en: F. Schubert - Winterreise
-musicians_nl: |
-  Michael Wilmering, Bariton
-  Daan Boertien, Piano
+musicians_nl: Michael Wilmering, Bariton
+Daan Boertien, Piano
+
 ---
+
