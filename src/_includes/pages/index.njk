@@ -94,16 +94,16 @@
         {% endif %}
       </p>
       <p class="concert-hall">
-        {{ next_concert.data["hall_" + lang] }}
+        {{ next_concert.data["hall_" + lang] | default(next_concert.data.hall_nl) }}
       </p>
       <p class="concert-place">
-        {{ next_concert.data["place_" + lang] }}
+        {{ next_concert.data["place_" + lang] | default(next_concert.data.place_nl) }}
       </p>
       <p class="concert-repertoire">
-        {{ next_concert.data["repertoire_" + lang] }}
+        {{ next_concert.data["repertoire_" + lang] | default(next_concert.data.repertoire_nl) }}
       </p>
       <p class="concert-musicians">
-        {{ next_concert.data["musicians_" + lang] | markdown | safe }}
+        {{ next_concert.data["musicians_" + lang] | default(next_concert.data.musicians_nl) | markdown | safe }}
       </p>
       {% if next_concert.data.cancelled %}
       <p class="concert-cancelled">

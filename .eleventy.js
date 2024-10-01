@@ -297,6 +297,7 @@ eleventyConfig.addFilter("formatTime", function(time) {
   return dateTime.isValid ? dateTime.toFormat('HH:mm') : 'Invalid Time';
 });
 
+// Future Concerts Filter
 eleventyConfig.addFilter("futureConcerts", (concerts) => {
   const now = DateTime.local();
   return concerts.filter(concert => {
@@ -305,9 +306,12 @@ eleventyConfig.addFilter("futureConcerts", (concerts) => {
       console.log(`Invalid concert date for ${concert.data.title}`);
       return false;
     }
-    return concertDateTime >= now;
+    // Include concerts happening today by comparing to the end of the concert day
+    return concertDateTime.endOf('day') >= now;
   });
 });
+
+// Past Concerts Filter
 eleventyConfig.addFilter("pastConcerts", (concerts) => {
   const now = DateTime.local();
   return concerts
@@ -317,7 +321,8 @@ eleventyConfig.addFilter("pastConcerts", (concerts) => {
         console.log(`Invalid concert date for ${concert.data.title}`);
         return false;
       }
-      return concertDateTime < now && concert.data.in_archive;
+      // Include concerts in archive only if the concert is fully over (end of the day)
+      return concertDateTime.endOf('day') < now && concert.data.in_archive;
     })
     .sort((a, b) => {
       const aDate = parseDate(a.data.date);
@@ -325,6 +330,8 @@ eleventyConfig.addFilter("pastConcerts", (concerts) => {
       return bDate - aDate;
     });
 });
+
+// Next Concert Filter
 eleventyConfig.addFilter("nextConcert", (concerts) => {
   const now = DateTime.local();
   const futureConcerts = concerts
@@ -334,7 +341,8 @@ eleventyConfig.addFilter("nextConcert", (concerts) => {
         console.log(`Invalid concert date for ${concert.data.title}`);
         return false;
       }
-      return concertDateTime >= now;
+      // Include today's concerts by comparing to the end of the concert day
+      return concertDateTime.endOf('day') >= now;
     })
     .sort((a, b) => {
       const aDate = parseDate(a.data.date);
@@ -343,6 +351,7 @@ eleventyConfig.addFilter("nextConcert", (concerts) => {
     });
   return futureConcerts.length > 0 ? futureConcerts[0] : null;
 });
+
 
 
     // -------------------------

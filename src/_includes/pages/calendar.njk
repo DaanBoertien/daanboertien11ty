@@ -2,29 +2,28 @@
   <div class="container">
     <h1 class="page-title fadeIn">{{ concerts["title_" + lang] }}</h1>
 
-    {# Future Concerts #}
-    <h2>{{ concerts["upcoming_title_" + lang] }}</h2>
-    {% set future_concerts = collections.concerts | futureConcerts %} {% if
-    future_concerts.length > 0 %} {% for concert in future_concerts %}
+    {# Future Concerts #} {% set future_concerts = collections.concerts |
+    futureConcerts %} {% if future_concerts.length > 0 %} {% for concert in
+    future_concerts %}
     <div class="concert-poster fadeIn">
       <div class="concert-location">
         <p class="concert-date">
-          {{ concert.data.date |  formatDate('d MMMM yyyy', lang) }}
+          {{ concert.data.date | formatDate('d MMMM yyyy', lang) }}
           {% if concert.data.time %} |
           {{ concert.data.time | formatTime }}
           {% endif %}
         </p>
         <p class="concert-hall">
-          {{ concert.data["hall_" + lang] }}
+          {{ concert.data["hall_" + lang] | default(concert.data.hall_nl) }}
         </p>
         <p class="concert-place">
-          {{ concert.data["place_" + lang] }}
+          {{ concert.data["place_" + lang] | default(concert.data.place_nl) }}
         </p>
         <p class="concert-repertoire">
-          {{ concert.data["repertoire_" + lang] }}
+          {{ concert.data["repertoire_" + lang] | default(concert.data.repertoire_nl) }}
         </p>
         <p class="concert-musicians">
-          {{ concert.data["musicians_" + lang] | markdown | safe }}
+          {{ (concert.data["musicians_" + lang] | default(concert.data.musicians_nl)) | markdown | safe }}
         </p>
         {% if concert.data.organizer_url %}
         <p class="margin-top">
@@ -63,16 +62,16 @@
           {% endif %}
         </p>
         <p class="concert-hall">
-          {{ concert.data["hall_" + lang] }}
+          {{ concert.data["hall_" + lang] | default(concert.data.hall_nl) }}
         </p>
         <p class="concert-place">
-          {{ concert.data["place_" + lang] }}
+          {{ concert.data["place_" + lang] | default(concert.data.place_nl) }}
         </p>
         <p class="concert-repertoire">
-          {{ concert.data["repertoire_" + lang] }}
+          {{ concert.data["repertoire_" + lang] | default(concert.data.repertoire_nl) }}
         </p>
         <p class="concert-musicians">
-          {{ concert.data["musicians_" + lang] | markdown | safe }}
+          {{ (concert.data["musicians_" + lang] | default(concert.data.musicians_nl)) | markdown | safe }}
         </p>
         {% if concert.data.organizer_url %}
         <p class="margin-top">
