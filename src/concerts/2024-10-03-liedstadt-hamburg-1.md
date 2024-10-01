@@ -5,8 +5,8 @@ place_nl: Hamburg
 place_en: Hamburg
 date: 2024-10-03
 time: 16:00
-hall_nl: Liedstadt Hamburg
-hall_en: Liedstadt Hamburg
+hall_nl: Liedstadt Hamburg - UKE
+hall_en: Liedstadt Hamburg - UKE
 repertoire_nl: Liederen van o.a. Mahler
 repertoire_en: Songs by a.o. Mahler
 musicians_nl: |
