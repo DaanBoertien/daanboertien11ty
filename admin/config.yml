@@ -474,14 +474,8 @@ collections:
                 widget: "file"
                 required: false
                 media_library:
-                  config:
-                    media_folder: "src/_assets/files/uploads" # Custom folder for files
-                    public_folder: "/assets/files/uploads"
-              - label: "URL"
-                name: "url"
-                widget: "string"
-                required: false
-
+                  media_folder: "src/_assets/files/uploads" # Custom folder for files
+                  public_folder: "/assets/files/uploads"
           # Images
           - label: "Images"
             name: "images"
