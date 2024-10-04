@@ -470,10 +470,9 @@ collections:
                   name: "file",
                   widget: "file",
                   required: false,
-                  media_library:
-                    config:
-                      media_folder: "src/_assets/files/uploads" # Custom folder for files
-                      public_folder: "/assets/files/uploads"
+                  media_library:                  
+                    media_folder: "src/_assets/files/uploads" # Custom folder for files
+                    public_folder: "/assets/files/uploads"
                   hint: "Either upload a file or put in a link below",
                 }
               - { label: "URL", name: "url", widget: "string", required: false }
