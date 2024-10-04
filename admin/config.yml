@@ -420,3 +420,50 @@ collections:
         name: "cancelled"
         widget: "boolean"
         default: false
+  - name: "media"
+    label: "Media Page"
+    files:
+      - file: "src/_data/media.yml"
+        label: "Media Texts"
+        name: "media_texts"
+        fields:
+          - label: "Photos Title (EN)"
+            name: "photos_en"
+            widget: "string"
+          - label: "Photos Title (NL)"
+            name: "photos_nl"
+            widget: "string"
+          - label: "Videos Title (EN)"
+            name: "videos_en"
+            widget: "string"
+          - label: "Videos Title (NL)"
+            name: "videos_nl"
+            widget: "string"
+
+      - file: "src/_data/videos.yml"
+        label: "Videos"
+        name: "videos"
+        fields:
+          - label: "Video List"
+            name: "video"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "YouTube ID", name: "youtube_id", widget: "string" }
+
+      - file: "src/_data/photos.yml"
+        label: "Photos"
+        name: "photos"
+        fields:
+          - label: "Photo List"
+            name: "foto"
+            widget: "list"
+            fields:
+              - { label: "Photo URL", name: "url", widget: "string" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
+              - {
+                  label: "Photographer",
+                  name: "photographer",
+                  widget: "string",
+                  required: false,
+                }
