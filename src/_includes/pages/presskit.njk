@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="page-title fadeIn">{{ presskit["title_" + lang] }}</h1>
+
+  <p class="contact-invitation fadeIn">
+    {{ presskit["intro_" + lang] }}
+  </p>
+
+  {% for resource in presskit.resources %}
+  <p class="fadeIn margin-top">
+    <a
+      class="btn"
+      href="{% if resource.file %}{{ resource.file }}{% else %}{{
+        resource.url
+      }}{% endif %}"
+      target="_blank"
+    >
+      {{ resource.label }}
+    </a>
+  </p>
+  {% endfor %} {% for image in presskit.images %}
+  <img class="fadeIn imgpress" src="{{ image.src }}" alt="{{ image.alt }}" />
+  {% endfor %}
+</div>
