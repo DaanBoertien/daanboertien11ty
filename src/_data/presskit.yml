@@ -1,19 +1,18 @@
-title_nl: "Presskit"
-title_en: "Presskit"
-
-intro_nl: "Hieronder vindt u teksten en foto's, te gebruiken voor marketing en programmaboekjes."
-intro_en: "Below you will find texts and photos, to be used for marketing purposes and program booklets."
-
+title_nl: Presskit
+title_en: Presskit
+intro_nl: Hieronder vindt u teksten en foto's, te gebruiken voor marketing en
+  programmaboekjes.
+intro_en: Below you will find texts and photos, to be used for marketing
+  purposes and program booklets.
 resources:
-  - label: "Biografie (NL)"
-    file: "/assets/files/biografie-nl.pdf" # File upload
-    url: "" # Leave empty if using file
-  - label: "Biografie (EN)"
-    url: "https://docs.google.com/document/d/19tjhUBaRuRPvTBqkHgnrpS4Fp-3DGi6h4iGvU0PXDEw/edit?usp=sharing"
-    file: "" # Leave empty if using URL
-
+  - label: Biografie (NL)
+    file: https://docs.google.com/document/d/1AnUQBEPrZmWRqJ1Z6llBBo5RO6o0BpK7vs8_dzN7djI/edit#heading=h.8lh4805azqs6
+    url: ""
+  - label: Biografie (EN)
+    url: https://docs.google.com/document/d/19tjhUBaRuRPvTBqkHgnrpS4Fp-3DGi6h4iGvU0PXDEw/edit?usp=sharing
+    file: ""
 images:
-  - src: "/assets/img/Daan Boertien - Petra Teeuwsen .jpg"
-    alt: "Daan Boertien - Petra Teeuwsen"
-  - src: "/assets/img/Daan Boertien - Sebastian Galtier.png"
-    alt: "Daan Boertien - Sebastian Galtier"
+  - src: /assets/img/Daan Boertien - Petra Teeuwsen .jpg
+    alt: Daan Boertien - Petra Teeuwsen
+  - src: /assets/img/Daan Boertien - Sebastian Galtier.png
+    alt: Daan Boertien - Sebastian Galtier
