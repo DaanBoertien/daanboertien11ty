@@ -460,28 +460,40 @@ collections:
           - label: "Introduction (EN)"
             name: "intro_en"
             widget: "text"
-          - label: "Label"
-            name: "label"
-            widget: "string"
-          - label: "File"
-            name: "file"
-            widget: "file"
-            required: false
-            media_library:
-              config:
-                media_folder: "src/_assets/files/uploads" # Custom folder for files
-                public_folder: "/assets/files/uploads"
-            hint: "Either upload a file or put in a link below"
-          - label: "URL"
-            name: "url"
-            widget: "string"
-            required: false
+
+          # Resources (Grouping file, url, and label)
+          - label: "Resources"
+            name: "resources"
+            widget: "list"
+            fields:
+              - label: "Label"
+                name: "label"
+                widget: "string"
+              - label: "File"
+                name: "file"
+                widget: "file"
+                required: false
+                media_library:
+                  config:
+                    media_folder: "src/_assets/files/uploads" # Custom folder for files
+                    public_folder: "/assets/files/uploads"
+              - label: "URL"
+                name: "url"
+                widget: "string"
+                required: false
+
+          # Images
           - label: "Images"
             name: "images"
             widget: "list"
             fields:
-              - { label: "Image Source", name: "src", widget: "image" }
-              - { label: "Alt Text", name: "alt", widget: "string" }
+              - label: "Image Source"
+                name: "src"
+                widget: "image"
+              - label: "Alt Text"
+                name: "alt"
+                widget: "string"
+
   - name: "concerts"
     label: "Concerts"
     label_singular: "concert"
