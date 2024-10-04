@@ -355,7 +355,7 @@ collections:
             widget: "string"
             required: false
       - file: "src/_data/media.yml"
-        label: "Media Page"
+        label: "Media"
         name: "media"
         fields:
           # Titles
@@ -375,15 +375,19 @@ collections:
           # Videos Section
           - label: "Videos"
             name: "video"
+            label_singular: "video"
             widget: "list"
+            add_to_top: true
             fields:
               - { label: "Video Title", name: "title", widget: "string" }
               - { label: "YouTube ID", name: "youtube_id", widget: "string" }
 
           # Photos Section
           - label: "Photos"
+            label_singular: "photo"
             name: "foto"
             widget: "list"
+            add_to_top: true
             fields:
               - { label: "Photo URL", name: "url", widget: "string" }
               - { label: "Alt Text", name: "alt", widget: "string" }
@@ -393,6 +397,53 @@ collections:
                   widget: "string",
                   required: false,
                 }
+      - file: "src/_data/contact.yml"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - label: "Title (NL)"
+            name: "title_nl"
+            widget: "string"
+          - label: "Title (EN)"
+            name: "title_en"
+            widget: "string"
+
+          # Information Text
+          - label: "Information (NL)"
+            name: "information_nl"
+            widget: "text"
+          - label: "Information (EN)"
+            name: "information_en"
+            widget: "text"
+
+          # Form Fields
+          - label: "Name Field (NL)"
+            name: "naam_nl"
+            widget: "string"
+          - label: "Name Field (EN)"
+            name: "naam_en"
+            widget: "string"
+
+          - label: "Email Field (NL)"
+            name: "email_nl"
+            widget: "string"
+          - label: "Email Field (EN)"
+            name: "email_en"
+            widget: "string"
+
+          - label: "Message Field (NL)"
+            name: "message_nl"
+            widget: "text"
+          - label: "Message Field (EN)"
+            name: "message_en"
+            widget: "text"
+
+          - label: "Send Button (NL)"
+            name: "send_nl"
+            widget: "string"
+          - label: "Send Button (EN)"
+            name: "send_en"
+            widget: "string"
   - name: "concerts"
     label: "Concerts"
     label_singular: "concert"
@@ -435,10 +486,10 @@ collections:
         required: false
       - label: "Repertoire (Dutch)"
         name: "repertoire_nl"
-        widget: "string"
+        widget: "text"
       - label: "Repertoire (English)"
         name: "repertoire_en"
-        widget: "string"
+        widget: "text"
         required: false
       - label: "Musicians (Dutch)"
         name: "musicians_nl"
