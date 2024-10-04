@@ -460,22 +460,22 @@ collections:
           - label: "Introduction (EN)"
             name: "intro_en"
             widget: "text"
-          - label: "Resources"
-            name: "resources"
-            widget: "list"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - {
-                  label: "File",
-                  name: "file",
-                  widget: "file",
-                  required: false,
-                  media_library:                  
-                    media_folder: "src/_assets/files/uploads" # Custom folder for files
-                    public_folder: "/assets/files/uploads"
-                  hint: "Either upload a file or put in a link below",
-                }
-              - { label: "URL", name: "url", widget: "string", required: false }
+          - label: "Label"
+            name: "label"
+            widget: "string"
+          - label: "File"
+            name: "file"
+            widget: "file"
+            required: false
+            media_library:
+              config:
+                media_folder: "src/_assets/files/uploads" # Custom folder for files
+                public_folder: "/assets/files/uploads"
+            hint: "Either upload a file or put in a link below"
+          - label: "URL"
+            name: "url"
+            widget: "string"
+            required: false
           - label: "Images"
             name: "images"
             widget: "list"
