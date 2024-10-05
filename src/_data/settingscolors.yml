@@ -1,8 +1,8 @@
 clr_primary: "#b48231"
 clr_secondary: "#6e9399"
-text_color: rgba(255, 255, 255, 0.85)
+text_color: rgba(192, 23, 23, 0.85)
 bg_color: "#000000"
-clr_btn: white
+clr_btn: "#7e93a5"
 clr_bg_concerts: "#1b1c1d"
 bg_color_rgb: 255,255,255
 clr_secondary_hover: rgba(99, 136, 161, 0.85)
