@@ -2,10 +2,6 @@ backend:
   name: git-gateway
   branch: main
 
-media_library:
-  config:
-    multiple: true
-
 media_folder: "src/_assets/img/uploads"
 public_folder: "/assets/img/uploads"
 
