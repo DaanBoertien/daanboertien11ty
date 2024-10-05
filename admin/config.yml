@@ -397,7 +397,7 @@ collections:
             widget: "list"
             add_to_top: true
             fields:
-              - { label: "Photo URL", name: "url", widget: "string" }
+              - { label: "Photo", name: "url", widget: "image" }
               - { label: "Alt Text", name: "alt", widget: "string" }
               - {
                   label: "Photographer",
@@ -470,9 +470,11 @@ collections:
             widget: "text"
 
           # Resources (Grouping file, url, and label)
-          - label: "Resources"
+          - label: "Documents"
+            label_singular: "Document"
             name: "resources"
             widget: "list"
+            add_to_top: true
             fields:
               - label: "Label"
                 name: "label"
@@ -486,7 +488,9 @@ collections:
           # Images
           - label: "Images"
             name: "images"
+            label_singular: "image"
             widget: "list"
+            add_to_top: true
             fields:
               - label: "Image Source"
                 name: "src"
