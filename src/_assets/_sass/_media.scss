@@ -81,6 +81,11 @@
   object-fit: cover;
 }
 
+.photo-swiper-slide img {
+  // version 2
+  // border-radius: 15px;
+}
+
 /* Styles for portrait images */
 .photo-swiper-slide img.portrait {
   object-fit: contain;

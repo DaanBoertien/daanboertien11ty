@@ -2,6 +2,10 @@ backend:
   name: git-gateway
   branch: main
 
+media_library:
+  config:
+    multiple: true
+
 media_folder: "src/_assets/img/uploads"
 public_folder: "/assets/img/uploads"
 
@@ -149,6 +153,14 @@ collections:
             name: "occupation_en"
             widget: "string"
             default: "Pianist"
+            required: false
+          - label: "Instagram Handle"
+            name: "insta_handle"
+            widget: "string"
+            required: false
+          - label: "Facebook Handle"
+            name: "facebook_handle"
+            widget: "string"
             required: false
           - label: "Text Alignment"
             name: "text_alignment"
@@ -473,9 +485,8 @@ collections:
                 name: "file"
                 widget: "file"
                 required: false
-                media_library:
-                  media_folder: "src/_assets/files/uploads" # Custom folder for files
-                  public_folder: "/assets/files/uploads"
+                media_folder: "src/_assets/files/uploads" # Custom folder for files
+                public_folder: "/assets/files/uploads"
           # Images
           - label: "Images"
             name: "images"

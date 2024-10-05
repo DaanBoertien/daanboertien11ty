@@ -8,7 +8,7 @@
            </li>
        {% endfor %}
        <li class="fadeInNav"><a href="{{absolute_path_nl}}" class="">NL</a>  <a href="{{absolute_path_en}}" class="current">EN</a></li>
-       <li class="fadeInNav"><a href="https://www.instagram.com/daanboertien.pianist/" target="_blank"><i class="fa-brands fa-instagram"></i></a>  <a href="https://www.facebook.com/daan.boertien/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></li>
+       <li class="fadeInNav">{% if home.insta_handle %}<a href="https://www.instagram.com/daanboertien.pianist/" target="_blank"><i class="fa-brands fa-instagram"></i></a> {% endif %} {% if home.facebook_handle %}<a href="https://www.facebook.com/daan.boertien/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>{% endif %}</li>
        
    </ul>
    
@@ -41,14 +41,17 @@
           <a href="{{absolute_path_en}}" class="current">EN</a>
         </li>
         <li class="fadeInTitle">
+          {% if home.insta_handle %}
           <a
-            href="https://www.instagram.com/daanboertien.pianist/"
+            href="https://www.instagram.com/{{home.insta_handle}}/"
             target="_blank"
             ><i class="fa-brands fa-instagram"></i
           ></a>
+          {% endif %}
+          {% if home.facebook_handle %}
           <a href="https://www.facebook.com/daan.boertien/" target="_blank"
             ><i class="fa-brands fa-square-facebook"></i
-          ></a>
+          ></a>{% endif %}
         </li>
       </ul>
     </div>
