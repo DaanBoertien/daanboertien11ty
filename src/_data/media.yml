@@ -1,10 +1,10 @@
-photos_nl: "Foto's"
-photos_en: "Photos"
-videos_nl: "Video's"
-videos_en: "Videos"
-
+photos_nl: Foto's
+photos_en: Photos
+videos_nl: Video's
+videos_en: Videos
 video:
-  - title: Empty Concertgebouw Sessions, Roderick Williams Baritone, Daan Boertien Piano, Ralph Vaughan Williams, Songs of Travel
+  - title: Empty Concertgebouw Sessions, Roderick Williams Baritone, Daan Boertien
+      Piano, Ralph Vaughan Williams, Songs of Travel
     youtube_id: krrw7utSaio
   - title: Beethoven op. 111
     youtube_id: fcfU1_gskF8
@@ -30,7 +30,6 @@ video:
     youtube_id: nN4mGmRSaLs
   - title: Varlaam's Lied
     youtube_id: n_LmojLpPxw
-
 foto:
   - url: /assets/img/uploads/DaanBoertienSebastianGaltier.jpg
     alt: Portret Daan
@@ -56,8 +55,6 @@ foto:
   - url: /assets/img/uploads/musica-en-segura-solo-j.-ortega.jpg
     photographer: J. Ortega
     alt: Musica en Segura
-  - url: /assets/img/uploads/marlen-korf-en-daan-boertien.jpg
-    alt: Huiskamerconcert
   - url: /assets/img/uploads/unadjustednonraw_thumb_27.jpg
     alt: Daan kijkt naar rechts
     photographer: ""
