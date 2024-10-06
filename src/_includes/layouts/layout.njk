@@ -12,21 +12,8 @@
     />
     {% include "cssvariables.njk" %}
     <link rel="stylesheet" href="/assets/styles.css" />
-    {% include "cssmediaqueries.njk" %}
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-
-    {% set primary_font = settingsfonts.primary_font %} {% set secondary_font =
+    {% include "cssmediaqueries.njk" %} {% set primary_font =
+    settingsfonts.primary_font %} {% set secondary_font =
     settingsfonts.secondary_font %}
 
     <!-- Google Fonts Import based on user choice -->
@@ -49,11 +36,6 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-135437368-1"
-    ></script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>

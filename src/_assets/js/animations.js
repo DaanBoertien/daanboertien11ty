@@ -1,30 +1,14 @@
-gsapSet('.fadeInTitle', 0);
-gsapSet('.fadeIn', 50);
-gsapSet('.fadeInPhoto', 0);
-gsapSet('.fadeInLanding', 50);
-
 function gsapSet(className, yCoord) {
   document.querySelectorAll(className).forEach(el => {
     gsap.set(el, { y: yCoord, autoAlpha: 0 });
   });
 }
 
-// Show Hero Image Immediately After DOM Loads
-document.addEventListener("DOMContentLoaded", function() {
-  console.log('DOM Loaded');
-
-  // Show hero image right away
-  const videoContainer = document.querySelector(".video-container");
-  if (videoContainer) {
-    videoContainer.classList.add("loaded");
-  }
-
-  // Trigger GSAP animations
-  animate(".fadeIn");
-  animate(".fadeInTitle");
-  animate(".fadeInPhoto");
-  animate(".fadeInLanding");
-});
+// Run animations without waiting for the full DOM load
+gsapSet('.fadeInTitle', 0);
+gsapSet('.fadeIn', 50);
+gsapSet('.fadeInPhoto', 0);
+gsapSet('.fadeInLanding', 50);
 
 function animate(enterClass) {
   ScrollTrigger.batch(enterClass, {
@@ -36,6 +20,49 @@ function animate(enterClass) {
       ease: Power2.inOut
     })
   });
+}
+
+animate('.fadeIn');
+animate('.fadeInTitle');
+animate('.fadeInPhoto');
+animate('.fadeInLanding');
+
+// Lazy load YouTube videos using IntersectionObserver
+if ('IntersectionObserver' in window) {
+  requestIdleCallback(() => {
+    const iframes = document.querySelectorAll('iframe.fadeInVideo');
+    const config = {
+      rootMargin: '300px 0px',
+      threshold: 0.01
+    };
+
+    const onIntersection = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const iframe = entry.target;
+          iframe.src = iframe.dataset.src; // Set src when in view
+          gsap.to(iframe, {
+            duration: 1,
+            autoAlpha: 1,
+            ease: Power2.inOut
+          });
+          observer.unobserve(iframe);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(onIntersection, config);
+    iframes.forEach(iframe => {
+      gsap.set(iframe, { autoAlpha: 0 });
+      observer.observe(iframe);
+    });
+  });
+}
+
+// Show hero image right away
+const videoContainer = document.querySelector(".video-container");
+if (videoContainer) {
+  videoContainer.classList.add("loaded");
 }
 
 // Convert hex color to rgb for --bg-color
@@ -66,45 +93,3 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log('CSS variable --bg-color is not set');
   }
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-  console.log('Media Page Loaded');
-
-  // Lazy load YouTube videos
-  const iframes = document.querySelectorAll('iframe.fadeInVideo');
-  const config = {
-    rootMargin: '300px 0px',  // Load 300px before entering the viewport
-    threshold: 0.01
-  };
-
-  const onIntersection = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const iframe = entry.target;
-        iframe.src = iframe.dataset.src;
-        iframe.addEventListener('load', () => {
-          gsap.to(iframe, {
-            duration: 1,
-            autoAlpha: 1,
-            ease: Power2.inOut
-          });
-        });
-        observer.unobserve(iframe);
-      }
-    });
-  };
-
-  const observer = new IntersectionObserver(onIntersection, config);
-  iframes.forEach(iframe => {
-    iframe.dataset.src = iframe.src;
-    iframe.src = '';  // Empty the src initially
-    gsap.set(iframe, { autoAlpha: 0 });  // Hide iframe initially
-    observer.observe(iframe);
-  });
-});
-
-
-
-
-
-
