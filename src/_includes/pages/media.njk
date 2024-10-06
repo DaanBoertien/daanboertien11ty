@@ -1,8 +1,26 @@
 <div class="container">
   <h1 class="page-title fadeInTitle">Media</h1>
   <h2 class="media-title">{{ media["videos_" + lang] }}</h2>
-  <div class="container">
-    <div class="swiper">
+
+    <div class="mobileonly">
+      <div class="all-items video-grid">
+        {% for video in media.video %}
+        <div class="iframe-container media-video-margin fadeInTitle">
+          <iframe
+              class="fadeInVideo"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/{{
+                video.youtube_id
+              }}?enablejsapi=1&modestbranding=1&controls=1&rel=0&showinfo=0&playsinline=1"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="swiper desktoponly">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
@@ -39,36 +57,48 @@
       <div class="swiper-scrollbar"></div>
       #}
     </div>
-  </div>
+
 
   <h2 class="media-title margin-top">{{ media["photos_" + lang] }}</h2>
 
-  <div class="photo-swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      {% for photo in media.foto %}
-      <!-- Slides -->
-      <div class="swiper-slide photo-swiper-slide">
-        <div class="aspect-ratio">
-          <img src="{{ photo.url }}" alt="" />
+  <div class="desktoponly">
+    <div class="photo-swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        {% for photo in media.foto %}
+        <!-- Slides -->
+        <div class="swiper-slide photo-swiper-slide">
+          <div class="aspect-ratio">
+            <img src="{{ photo.url }}" alt="" />
+          </div>
         </div>
+        {% endfor %}
       </div>
-
+      <!-- If we need pagination -->
+      {#
+      <div class="swiper-pagination"></div>
+      #}
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev photo-swiper-button-prev"></div>
+      <div class="swiper-button-next photo-swiper-button-next"></div>
+      <!-- If we need scrollbar -->
+      {#
+      <div class="swiper-scrollbar"></div>
+      #}
+    </div>
+  </div>
+  <div class="mobileonly">
+    <div class="all-items all-photos"></div>
+      {% for photo in media.foto %}
+      <div class="media-video boxshadow fadeInPhoto photo-box">
+        <img src="{{photo.url}}" alt="{{photo.alt}}" />
+        {% if photo.photographer %}
+        <p class="photographer">© {{photo.photographer}}</p>
+        {% endif %}
+      </div>
       {% endfor %}
     </div>
-    <!-- If we need pagination -->
-    {#
-    <div class="swiper-pagination"></div>
-    #}
-
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev photo-swiper-button-prev"></div>
-    <div class="swiper-button-next photo-swiper-button-next"></div>
-
-    <!-- If we need scrollbar -->
-    {#
-    <div class="swiper-scrollbar"></div>
-    #}
   </div>
+
 </div>
