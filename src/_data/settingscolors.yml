@@ -3,7 +3,7 @@ clr_secondary: "#1c8487"
 text_color: rgba(255, 255, 255, 0.85)
 bg_color: "#0b1a25"
 clr_btn: "#00213e"
-clr_bg_concerts: "#153046"
+clr_bg_concerts: "#0f2231"
 bg_color_rgb: 255,255,255
 clr_secondary_hover: rgba(99, 136, 161, 0.85)
 clr_hero_text: "#ffffff"
