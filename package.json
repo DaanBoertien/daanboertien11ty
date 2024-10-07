@@ -18,15 +18,19 @@
     "rimraf": "^5.0.5"
   },
   "dependencies": {
+    "@11ty/eleventy-img": "^5.0.0",
     "date-fns": "^4.1.0",
     "front-matter": "^4.0.2",
     "fs-extra": "^11.2.0",
     "glob": "^11.0.0",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
+    "jsdom": "^25.0.1",
     "luxon": "^3.5.0",
     "markdown-it": "^14.1.0",
+    "node": "^20.18.0",
     "sass": "^1.78.0",
+    "sharp": "^0.33.5",
     "yaml": "^2.5.1"
   }
 }

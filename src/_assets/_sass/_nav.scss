@@ -120,7 +120,8 @@ nav li,
   top: 1.5em;
   right: 1.5em;
   z-index: 11;
-  background: var(--hamburger-bg-color);
+  // background: var(--hamburger-bg-color);
+  background: rgba(255, 255, 255, 0.75);
   opacity: 0.8;
   box-shadow: var(--boxshadow);
   border-radius: 3px;

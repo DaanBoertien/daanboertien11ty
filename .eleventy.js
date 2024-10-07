@@ -4,6 +4,8 @@ const { DateTime } = require("luxon");
 const { format } = require('date-fns');
 const { de, en } = require('date-fns/locale'); // Combined locale imports
 const markdownIt = require("markdown-it");
+const Image = require("@11ty/eleventy-img");
+const { JSDOM } = require("jsdom");
 
 
 // Initialize Markdown Library with Desired Options
@@ -212,6 +214,55 @@ eleventyConfig.addFilter("nextConcert", (concerts) => {
     });
   return futureConcerts.length > 0 ? futureConcerts[0] : null;
 });
+
+
+eleventyConfig.addTransform("optimizeImages", async (content, outputPath) => {
+  if (outputPath && outputPath.endsWith(".html")) {
+    const dom = new JSDOM(content);
+    const document = dom.window.document;
+    const images = document.querySelectorAll("img");
+
+    for (let img of images) {
+      let src = img.getAttribute("src");
+      let alt = img.getAttribute("alt") || "";
+
+      // Adjust path to include _assets directory
+      if (src && !src.includes("optimized")) {
+        let relativeSrc = src.replace(/^\/assets/, "./src/_assets");
+
+
+
+ // Adjust path to point to the correct directory
+        let metadata = await Image(relativeSrc, {
+          widths: [320, 768, 1200],
+          formats: ["webp", "jpeg"],
+          outputDir: "./_site/assets/img/optimized/",
+          urlPath: "/assets/img/optimized/",
+        });
+
+        let imageAttributes = {
+          alt,
+          sizes: "100vw",
+
+          loading: "lazy",
+          decoding: "async",
+          // Define sizes here
+        };
+        
+        // Replace img element with the generated <picture> element
+        img.outerHTML = Image.generateHTML(metadata, imageAttributes);
+        
+      }
+    }
+
+    // Return the transformed HTML
+    return dom.serialize();
+  }
+
+  return content;
+});
+
+
 
 
 
