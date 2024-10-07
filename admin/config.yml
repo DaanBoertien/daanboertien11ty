@@ -409,9 +409,19 @@ collections:
             widget: "list"
             add_to_top: true
             fields:
-              - { label: "Photo", name: "url", widget: "image", media_library: { config: { max_file_size: 3048000 } } } # 2MB limit
+              - {
+                  label: "Photo",
+                  name: "url",
+                  widget: "image",
+                  media_library: { config: { max_file_size: 3048000 } },
+                } # 2MB limit
               - { label: "Alt Text", name: "alt", widget: "string" }
-              - { label: "Photographer", name: "photographer", widget: "string", required: false }
+              - {
+                  label: "Photographer",
+                  name: "photographer",
+                  widget: "string",
+                  required: false,
+                }
 
       - file: "src/_data/contact.yml"
         label: "Contact"
@@ -493,8 +503,6 @@ collections:
                 media_library:
                   config:
                     max_file_size: 3024000
-                      required: false
-                          required: false
                 media_folder: "src/_assets/files/uploads" # Custom folder for files
                 public_folder: "/assets/files/uploads"
           # Images
