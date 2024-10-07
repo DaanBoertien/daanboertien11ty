@@ -493,8 +493,8 @@ collections:
                 media_library:
                   config:
                     max_file_size: 3024000
-            required: false
-                required: false
+                      required: false
+                          required: false
                 media_folder: "src/_assets/files/uploads" # Custom folder for files
                 public_folder: "/assets/files/uploads"
           # Images
