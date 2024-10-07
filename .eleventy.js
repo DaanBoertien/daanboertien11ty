@@ -234,7 +234,7 @@ eleventyConfig.addTransform("optimizeImages", async (content, outputPath) => {
 
  // Adjust path to point to the correct directory
         let metadata = await Image(relativeSrc, {
-          widths: [320, 768, 1200],
+          widths: [320, 768, 1800],
           formats: ["webp", "jpeg"],
           outputDir: "./_site/assets/img/optimized/",
           urlPath: "/assets/img/optimized/",
@@ -242,7 +242,7 @@ eleventyConfig.addTransform("optimizeImages", async (content, outputPath) => {
 
         let imageAttributes = {
           alt,
-          sizes: "100vw",
+          sizes: "(max-width: 768px) 100vw, (min-width: 769px) and (max-width: 1200px) 50vw, 100vw",
 
           loading: "lazy",
           decoding: "async",
