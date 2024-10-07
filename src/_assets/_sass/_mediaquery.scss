@@ -20,6 +20,26 @@
   }
 }
 
+/* For mobile screens */
+@media (max-width: 768px) {
+  .imglarge-container {
+    display: none;
+  }
+  .imgsmall-container {
+    display: block;
+  }
+}
+
+/* For desktop screens */
+@media (min-width: 769px) {
+  .imgsmall-container {
+    display: none;
+  }
+  .imglarge-container {
+    display: block;
+  }
+}
+
 @media (max-width: 600px) {
   .desktoponly {
     display: none;
