@@ -31,14 +31,15 @@
   left: 0;
   right: 0;
   bottom: 0;
-  // background: black;
+  //TODO FIX FOR SAFARI
+  background: black;
   z-index: 1;
   transition: all 1s ease-in-out;
   pointer-events: none;
 }
 
 .video-container.loaded::before {
-  background: rgba(92, 59, 33, 0.1);
+  background: rgba(0, 0, 0, 0); /* Transparent when loaded */
 }
 
 .video-container img.imglarge {
