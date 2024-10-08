@@ -1,2 +1,2 @@
-border_radius: 50px
 button_color: var(--clr-secondary)
+border_radius: 0px
