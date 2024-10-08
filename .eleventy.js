@@ -216,6 +216,54 @@ eleventyConfig.addFilter("nextConcert", (concerts) => {
 });
 
 
+// eleventyConfig.addTransform("optimizeImages", async (content, outputPath) => {
+//   if (outputPath && outputPath.endsWith(".html")) {
+//     const dom = new JSDOM(content);
+//     const document = dom.window.document;
+//     const images = document.querySelectorAll("img");
+
+//     for (let img of images) {
+//       let src = img.getAttribute("src");
+//       let alt = img.getAttribute("alt") || "";
+
+//       // Adjust path to include _assets directory
+//       if (src && !src.includes("optimized")) {
+//         let relativeSrc = src.replace(/^\/assets/, "./src/_assets");
+
+
+
+//  // Adjust path to point to the correct directory
+//         let metadata = await Image(relativeSrc, {
+//           widths: [320, 768, 1800],
+//           formats: ["webp", "jpeg"],
+//           outputDir: "./_site/assets/img/optimized/",
+//           urlPath: "/assets/img/optimized/",
+//         });
+
+//         let imageAttributes = {
+//           alt,
+//           sizes: "(max-width: 768px) 100vw, (min-width: 769px) and (max-width: 1200px) 50vw, 100vw",
+
+//           loading: "lazy",
+//           decoding: "async",
+//           // Define sizes here
+//         };
+        
+//         // Replace img element with the generated <picture> element
+//         img.outerHTML = Image.generateHTML(metadata, imageAttributes);
+        
+//       }
+//     }
+
+//     // Return the transformed HTML
+//     return dom.serialize();
+//   }
+
+//   return content;
+// });
+
+
+
 eleventyConfig.addTransform("optimizeImages", async (content, outputPath) => {
   if (outputPath && outputPath.endsWith(".html")) {
     const dom = new JSDOM(content);
@@ -226,41 +274,50 @@ eleventyConfig.addTransform("optimizeImages", async (content, outputPath) => {
       let src = img.getAttribute("src");
       let alt = img.getAttribute("alt") || "";
 
-      // Adjust path to include _assets directory
       if (src && !src.includes("optimized")) {
         let relativeSrc = src.replace(/^\/assets/, "./src/_assets");
 
+        // Get image path and cache info
+        const imagePath = path.resolve(relativeSrc);
+        const cacheFile = path.join('./cache', `${path.basename(imagePath)}-cache.json`);
 
+        let metadata;
 
- // Adjust path to point to the correct directory
-        let metadata = await Image(relativeSrc, {
-          widths: [320, 768, 1800],
-          formats: ["webp", "jpeg"],
-          outputDir: "./_site/assets/img/optimized/",
-          urlPath: "/assets/img/optimized/",
-        });
+        // Check if cache exists
+        if (fs.existsSync(cacheFile)) {
+          metadata = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'));
+        } else {
+          // Optimize the image if no cache exists
+          metadata = await Image(relativeSrc, {
+            widths: [320, 768, 1800],
+            formats: ["webp", "jpeg"],
+            outputDir: "./_site/assets/img/optimized/",
+            urlPath: "/assets/img/optimized/",
+          });
+
+          // Save metadata to cache
+          fs.mkdirSync(path.dirname(cacheFile), { recursive: true });
+          fs.writeFileSync(cacheFile, JSON.stringify(metadata));
+        }
 
         let imageAttributes = {
           alt,
           sizes: "(max-width: 768px) 100vw, (min-width: 769px) and (max-width: 1200px) 50vw, 100vw",
-
           loading: "lazy",
           decoding: "async",
-          // Define sizes here
+          class: img.getAttribute("class") || "", 
         };
-        
-        // Replace img element with the generated <picture> element
+
         img.outerHTML = Image.generateHTML(metadata, imageAttributes);
-        
       }
     }
 
-    // Return the transformed HTML
     return dom.serialize();
   }
 
   return content;
 });
+
 
 
 
