@@ -3,6 +3,7 @@
     <div class="overlay">
       <!-- Mobile image container -->
       <div class="imgsmall-container">
+        {#
         <picture>
           <!-- Generated picture for mobile -->
           <source
@@ -10,29 +11,38 @@
             srcset="{{ home.image_mobile }}"
             type="image/webp"
           />
+          #}
           <img
             src="{{ home.image_mobile }}"
             alt="Mobile image"
             class="background-video imgsmall"
           />
+          {#
         </picture>
+        #}
       </div>
 
       <!-- Desktop image container -->
       <div class="imglarge-container">
+        {#
         <picture>
+          #}
           <!-- Generated picture for desktop -->
+          {#
           <source
             media="(min-width: 769px)"
             srcset="{{ home.image_desktop }}"
             type="image/webp"
           />
+          #}
           <img
             src="{{ home.image_desktop }}"
             alt="Desktop image"
             class="background-video imglarge"
           />
+          {#
         </picture>
+        #}
       </div>
     </div>
 
