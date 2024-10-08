@@ -279,7 +279,7 @@ eleventyConfig.addTransform("optimizeImages", async (content, outputPath) => {
         let relativeSrc = src.replace(/^\/assets/, "./src/_assets");
 
         let metadata = await Image(relativeSrc, {
-          widths: [320, 768, 1200],
+          widths: [320, 768, 1200, 1800],
           formats: ["webp", "jpeg"],
           outputDir: "./_site/assets/img/optimized/",
           urlPath: "/assets/img/optimized/",

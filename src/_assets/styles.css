@@ -1324,7 +1324,6 @@ nav li,
   left: 0;
   right: 0;
   bottom: 0;
-  background: black;
   z-index: 1;
   transition: all 1s ease-in-out;
   pointer-events: none;
