@@ -1328,6 +1328,7 @@ nav li,
   z-index: 1;
   transition: all 1s ease-in-out;
   pointer-events: none;
+  will-change: background;
 }
 
 .video-container.loaded::before {
