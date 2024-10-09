@@ -243,7 +243,7 @@ eleventyConfig.addTransform("optimizeImages", async (content, outputPath) => {
           sizes: "(max-width: 768px) 100vw, (min-width: 769px) 50vw", // 100vw for mobile, 50vw for larger screens
           loading: "lazy",
           decoding: "async",
-          class: img.getAttribute("class") || "", 
+          class: `${img.getAttribute("class") || ""}`,
         };
 
         // Replace img element with the generated <picture> element

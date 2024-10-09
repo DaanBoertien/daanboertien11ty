@@ -1324,15 +1324,19 @@ nav li,
   left: 0;
   right: 0;
   bottom: 0;
-  background: black;
   z-index: 1;
   transition: all 1s ease-in-out;
   pointer-events: none;
   will-change: background;
 }
 
-.video-container.loaded::before {
-  background: rgba(0, 0, 0, 0); /* Transparent when loaded */
+img.background-image {
+  transition: opacity 1s ease;
+  opacity: 0;
+}
+
+img.background-image.loaded {
+  opacity: 1;
 }
 
 .video-container img.imglarge {

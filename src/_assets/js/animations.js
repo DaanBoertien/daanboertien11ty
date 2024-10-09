@@ -60,10 +60,10 @@ if ('IntersectionObserver' in window) {
 }
 
 // Show hero image right away
-const videoContainer = document.querySelector(".video-container");
-if (videoContainer) {
-  videoContainer.classList.add("loaded");
-}
+// const videoContainer = document.querySelector(".video-container");
+// if (videoContainer) {
+//   videoContainer.classList.add("loaded");
+// }
 
 // Convert hex color to rgb for --bg-color
 function hexToRgbValue(hex) {
@@ -92,4 +92,19 @@ document.addEventListener("DOMContentLoaded", function() {
   } else {
     console.log('CSS variable --bg-color is not set');
   }
+
+  // Select all images with the class 'background-image'
+  const images = document.querySelectorAll("img.background-image");
+
+  images.forEach((img) => {
+    // Add the 'loaded' class when the image finishes loading
+    img.addEventListener("load", () => {
+      img.classList.add("loaded");
+    });
+
+    // In case the image is cached and already loaded
+    if (img.complete) {
+      img.classList.add("loaded");
+    }
+  });
 });
